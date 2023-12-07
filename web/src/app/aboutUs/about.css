@@ -1,0 +1,19 @@
+.about-img {
+    height: 100vh;
+    background: url('/images/about.svg') no-repeat;
+    background-position: center;
+  }
+  
+.about-left-content {padding: 8rem 4rem 0 5rem;}
+/* .about-img-c{height: 200vh;} */
+.posotion-container{position: relative;}
+.about-img {
+    background: url('/images/about.svg') no-repeat;
+    background-position: center;
+    position: sticky;
+  }
+  
+.blue-container{border-radius: 1.25rem;background: #F4FBFF;padding: 2rem; display: flex;justify-content: space-between;align-items: center;margin: 1rem 0;}
+.blue-p>p{font-size: .95rem;}
+.blue-p>h4{font-weight: 600;}
+.ceo-img{border-radius: 1rem;}

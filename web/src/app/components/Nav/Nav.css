@@ -1,0 +1,17 @@
+.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light{width:97vw;background-color: transparent !important;}
+.main-nav{position: fixed;top: 0;left: 0;z-index: 5000;color: aliceblue;}
+.main-nav .bg-body-tertiary{background-color: transparent !important;    padding: 0;}
+.main-nav .bg-body-tertiary .container.scrolling{background-color: transparent!important; color:#fff}
+.navbar-nav a{ text-decoration: none; font-size: 1rem; font-weight: 500;color: #fff;}
+.navbar-nav .link{margin-right: 1.2rem;}
+.activeNav{color:#ffffff !important;border-bottom: 3px solid #ffffff;font-weight: bold;}
+.contact-btn{background: #008BC2;color-scheme: #fff !important;padding: .5rem 1rem; width: max-content;margin: 0 1rem;}
+.nav-logo{height: 5.5rem;width: 16rem;}
+@media (min-width: 1400px){
+    .main-nav .bg-body-tertiary .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {background: transparent;padding:0 2rem;  margin: 0;min-width: 99vw;} ;}
+@media(max-width:500px){
+    .navbar-nav a{ margin: .8rem 0;}
+    .main-nav .bg-body-tertiary .container{background: transparent}
+    .main-nav .bg-body-tertiary{background:transparent}
+    .contact-btn{margin: 1rem 0;}
+}
