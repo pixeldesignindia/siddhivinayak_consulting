@@ -1,0 +1,53 @@
+'use client'
+import React from 'react'
+import './ClosingNav.css'
+import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../../../../public/images/logo.svg';
+import menu from '../../../../public/images/Menu.svg';
+import Menuline from '../../../../public/images/Menuline.svg';
+import closeBtn from '../../../../public/images/close-btn.svg';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import { usePathname , useRouter } from 'next/navigation'
+function ClosiongNav() {
+    const pathname = usePathname()
+    const [show, setShow] = useState(false);
+    return (
+        <div className='closing-Nav'>
+            <div className="closing-nav-container">
+                <div className="row">
+                    <div className="col-2"><Image src={logo} height={70} width={200} className='nav-logo' /></div>
+                    <div className="col-10 menu-btn" onClick={()=>{setShow(true);}}>
+                        <Image src={Menuline}/>
+                        {/* <input id="checkbox" type="checkbox" />
+                        <label class="toggle" for="checkbox">
+                            <div id="bar1" class="bars"></div>
+                            <div id="bar2" class="bars"></div>
+                            <div id="bar3" class="bars"></div>
+                        </label> */}
+                    </div>
+                </div>
+            </div>
+            <Modal show={show} fullscreen={true} onHide={() =>setShow(false)}>
+                {/* <Modal.Header closeButton>
+                </Modal.Header> */}
+                <Modal.Body closeButton>
+                    <div className='modal-Close' onClick={() =>setShow(false)}> <Image src={closeBtn}/> </div>
+                    <div className="horizontal-nav-container" onClick={() =>setShow(false)}>
+                    <Link className={`link d-flex align-items-center ${pathname === '/' ? 'activeHorizontalNav' : 'horizontalNavLink'}`}href="/">HOME</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/aboutUs' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/aboutUs">ABOUT</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/privateEqity' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/privateEqity">PRIVATE EQUITY</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/demateAccount' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/demateAccount">DEMATE ACCOUNT</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/luxuryProperty' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/luxuryProperty">LUXURY PROPERTY</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/businessInsurance' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/businessInsurance">BUSINESS INSURANCE</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/contact' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/contact">CONTACT US</Link>
+                    </div>
+                </Modal.Body>
+            </Modal>
+        </div>
+    )
+}
+
+export default ClosiongNav

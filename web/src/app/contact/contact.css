@@ -1,0 +1,3 @@
+.input-container{display: flex; padding: 1rem; margin: 1rem 0;border-bottom: 1px solid #bababa;align-items: center;gap: 2rem; width: 45%;}
+.input-container:hover{border-bottom: 1px solid #BB0101;}
+.input-section{justify-content: space-between;}
