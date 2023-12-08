@@ -37,7 +37,7 @@ function page() {
             <ClosiongNav />
             <section class="gallery" data-scroll-section id="pin">
             <div className="row posotion-container" >
-            <div className="col-6 about-left-content" style={{paddingTop:'10rem'}}>
+            <div className="col-8 about-left-content" style={{paddingTop:'10rem'}}>
                     <div className='title'>Private Equity</div>
                     <div className='heading'>Strategies of Private Equity.</div>
                     <div className='p-container'>
@@ -55,10 +55,10 @@ function page() {
                     <p>Majority of the private equity comes from the Pensioners and contributes a larger part to the asset.The below pie-chart gives a clear picture about various investors of Private Equity.</p>
                     </div>
                 </div>
-                <div className="col-6 about-img-c">
+                <div className="col-4 about-img-c">
                     <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3"></div>
                 </div>
-                <div className="col-6 about-left-content">
+                <div className="col-7 about-left-content">
                     <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">Investors of Private Equity</div>
                     <Image src={chart} width={650} data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear'/>
                     <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">Private Equity PAN India</div>

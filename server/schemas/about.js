@@ -1,17 +1,30 @@
 export default {
-    name: 'aboutPage',
+    name: 'about',
     type: 'document',
-    title: 'About Page',
+    title: 'About',
     fields: [
-      {
-        name: 'heading',
-        type: 'string',
-        title: 'Heading'
-      },
-      {
-        name: 'description',
-        type: 'string',
-        title: 'Description'
-      },
+        {
+            name: 'aboutHeading',
+            type: 'string',
+            title: 'AboutHeading'
+        },
+        {
+            name: 'aboutDescription',
+            type: 'array',
+            title: 'Description',
+            of:[
+                {
+                    type:"block",
+                }
+            ],
+        },
+        {
+            name: 'aboutBanner',
+            type: 'image',
+            title: 'AboutBanner',
+            options: {
+                hotspot: true
+            }
+        }
     ]
-  }
+}
