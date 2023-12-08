@@ -1,6 +1,6 @@
 .about-img {
     height: 100vh;
-    background: url('/images/about.svg') no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
   }
   
@@ -12,7 +12,6 @@
     background-position: center;
     position: sticky;
   }
-  
 .blue-container{border-radius: 1.25rem;background: #F4FBFF;padding: 2rem; display: flex;justify-content: space-between;align-items: center;margin: 1rem 0;}
 .blue-p>p{font-size: .95rem;}
 .blue-p>h4{font-weight: 600;}
