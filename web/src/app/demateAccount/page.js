@@ -37,7 +37,7 @@ function page() {
             <ClosiongNav />
             <section class="gallery" data-scroll-section id="pin">
             <div className="row posotion-container" >
-                <div className="col-6 about-left-content">
+                <div className="col-8 about-left-content">
                     <div className='title'>International Demat Accounts</div>
                     <div className='heading'>Have you ever thought of investing in a foreign market?</div>
                     <div className='p-container'>
@@ -46,7 +46,7 @@ function page() {
                         <p>So, if you want to build a diversified portfolio by investing globally then you are on the right page. Get in touch with us and we will help you in shaping your portfolio by investing overseas.</p>
                     </div>
                 </div>
-                <div className="col-6 about-img-c">
+                <div className="col-4 about-img-c">
                     <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3"></div>
                 </div>
                 <div className="col-7 about-left-content">

@@ -1,35 +1,51 @@
 'use client'
 import React, { useEffect, useRef } from 'react';
-import dot from '../../../public/images/dot.svg'
-import '../aboutUs/about.css'
+import dot from '../../../public/images/dot.svg';
+import '../aboutUs/about.css';
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import 'gsap/dist/gsap'; 
 import Image from 'next/image';
-import chart from '../../../public/images/chart.svg'
+import chart from '../../../public/images/chart.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function page() {
+  const containerRef = useRef(null);
+  const sectionRef = useRef(null);
 
-    const containerRef = useRef(null);
-    const sectionRef = useRef(null);
+  useEffect(() => {
+    let scroll;
 
+    import('locomotive-scroll').then((locomotiveModule) => {
+      scroll = new locomotiveModule.default({
+        el: containerRef.current,
+        smooth: true,
+        direction: 'vertical',
+      });
 
-    useEffect(() => {
-        let scroll;
-        import("locomotive-scroll").then((locomotiveModule) => {
-            scroll = new locomotiveModule.default({
-                el: containerRef.current,
-                smooth: true,
-                direction: 'vertical',
-            });
-        });
-        return () => {
-            if (scroll) scroll.destroy();
+      return () => {
+        if (scroll) {
+          scroll.destroy();
         }
+      };
     });
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Ensure that window.location.hash is always empty on scroll
+      window.location.hash = '';
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      // Remove the scroll event listener on component unmount
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scroll]);
 
 
     return (
@@ -37,7 +53,7 @@ function page() {
             <ClosiongNav />
             <section class="gallery" data-scroll-section id="pin">
             <div className="row posotion-container" >
-            <div className="col-6 about-left-content" style={{paddingTop:'10rem'}}>
+            <div className="col-8 about-left-content" style={{paddingTop:'10rem'}}>
                     <div className='title'>Business Insurance</div>
                     <div className='heading'>While you concentrate on your business, we take care of your insurance</div>
                     <p>Security in business is a crucial aspect and that security comes from insurance. We know that as an entrepreneur you are always juggling multiple responsibilities and activities to grow your business with a constant thought of getting secured. And here we come to guide you through the best process of getting your business secured.</p>
@@ -61,7 +77,7 @@ Terms and conditions apply.</p>
                     <p className='disappear' data-scroll data-scroll-class="appear" data-scroll-repeat="true">Professional liability insurance is used to protect businesses against claims of negligence such as accountants, architects, information technology specialists, doctors, and professionals against negligence and other claims initiated by their clients.  Professionals with expertise in a specific area require this type of insurance because general liability insurance policies do not offer protection against claims arising from negligence, malpractice, mistakes, or misrepresentation.</p>
                     </div>
                 </div>
-                <div className="col-6 about-img-c">
+                <div className="col-4 about-img-c">
                     <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3"></div>
                 </div>
 

@@ -175,3 +175,27 @@ body{overflow: hidden;}
 
 
 
+.Scroll-container {
+	position: relative;
+	overflow-y: auto;
+	overscroll-behavior-y: contain;
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+	width: 100%;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	/* &::-webkit-scrollbar {
+	  display: none;
+	} */
+  }
+  .dot-btns{position: fixed !important;right: 45px; z-index: 50;top: 35%;}
+.dot-btns> button{    margin: 1.5rem 0;
+  background: #b8b8b8;
+  height: 0.7rem;
+  width: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border-radius: 0 !important;opacity: .9;transition: all 0.3s ease;box-sizing: border-box;}
+  .dot-btns> button:hover{  height: .8rem;
+opacity: 1;  background: #ffffff;}

@@ -54,7 +54,7 @@ function page() {
             <ClosiongNav />
             <section class="gallery" data-scroll-section id="pin">
             <div className="row posotion-container" >
-            <div className="col-6 about-left-content" style={{paddingTop:'10rem'}}>
+            <div className="col-8 about-left-content" style={{paddingTop:'10rem'}}>
                     <div className='title'>Luxury Properties</div>
                     <div className='heading'>Buy your dream home and live in grandeur at one of the finest locations in the World!</div>
                     <div className='p-container'>
@@ -64,7 +64,7 @@ function page() {
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                     </div>
                 </div>
-                <div className="col-6 about-img-c">
+                <div className="col-4 about-img-c">
                     <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3"></div>
                 </div>
                 <div className="col-7 about-left-content">
