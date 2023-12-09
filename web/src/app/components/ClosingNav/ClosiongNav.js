@@ -19,7 +19,7 @@ function ClosiongNav() {
             <div className="closing-nav-container">
                 <div className="row">
                     <div className="col-2"><Image src={logo} height={70} width={200} className='nav-logo' /></div>
-                    <div className="col-10 menu-btn" onClick={()=>{setShow(true);}}>
+                    <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} style={{cursor:'pointer'}}>
                         <Image src={Menuline}/>
                         {/* <input id="checkbox" type="checkbox" />
                         <label class="toggle" for="checkbox">
@@ -34,7 +34,7 @@ function ClosiongNav() {
                 {/* <Modal.Header closeButton>
                 </Modal.Header> */}
                 <Modal.Body closeButton>
-                    <div className='modal-Close' onClick={() =>setShow(false)}> <Image src={closeBtn}/> </div>
+                    <div className='modal-Close' onClick={() =>setShow(false)} style={{cursor:'pointer'}}> <Image src={closeBtn}/> </div>
                     <div className="horizontal-nav-container" onClick={() =>setShow(false)}>
                     <Link className={`link d-flex align-items-center ${pathname === '/' ? 'activeHorizontalNav' : 'horizontalNavLink'}`}href="/">HOME</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/aboutUs' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/aboutUs">ABOUT</Link>

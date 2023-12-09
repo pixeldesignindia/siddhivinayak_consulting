@@ -46,7 +46,6 @@ function page() {
                 console.error('Error fetching data from Sanity:', error);
             }
         };
-
         aboutData();
     }, []);
     return (

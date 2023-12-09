@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import dot from '../../../public/images/dot.svg'
 import '../aboutUs/about.css'
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
@@ -8,15 +8,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'gsap/dist/gsap'; 
 import Image from 'next/image';
 import chart from '../../../public/images/chart.svg'
-
+import client from '../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
 
 function page() {
-
     const containerRef = useRef(null);
     const sectionRef = useRef(null);
-
-
     useEffect(() => {
         let scroll;
         import("locomotive-scroll").then((locomotiveModule) => {
@@ -31,7 +28,29 @@ function page() {
         }
     });
 
+    const [data, setData] = useState()
+    useEffect(() => {
+        const newData = async () => {
+            try {
+                const fetchData = await client.fetch(`*[_type == "equity"] {
+                    equityHeading,
+                    "equityBanner": equityBanner.asset->{
+                        url
+                    },
+                    "chart": chart.asset->{
+                        url
+                    },
+                    equityDescription
+                }`);
+                console.log(fetchData[0]);
+                setData(fetchData[0]);
+            } catch (error) {
+                console.error('Error fetching data from Sanity:', error);
+            }
+        };
 
+        newData();
+    }, []);
     return (
         <div ref={containerRef}>
             <ClosiongNav />
@@ -56,19 +75,23 @@ function page() {
                     </div>
                 </div>
                 <div className="col-4 about-img-c">
-                    <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3"></div>
+                    <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
+            backgroundImage: `url(${data && data.equityBanner.url})`,
+          }}></div>
                 </div>
                 <div className="col-7 about-left-content p0">
                     <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">Investors of Private Equity</div>
-                    <Image src={chart} width={650} data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear'/>
-                    <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">Private Equity PAN India</div>
-                    <p data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear'>Looking for expert Private Equity assistance? Siddhi Vinayak Consulting is your trusted partner. We offer comprehensive support to businesses throughout their journey. From fundraising and mentorship to strategic advisory, we excel in every aspect. Our specialized team manages portfolio companies, identifies growth opportunities, and ensures optimal financial outcomes. Whether you’re a startup or an established firm, our tailored solutions cater to your unique needs. Experience the power of Private Equity in Mumbai, Pune, India with us, and take your business to new heights. Partner with Siddhi Vinayak Consulting for unparalleled expertise and success.</p>
+                    <Image src={data && data.chart.url} width={650} height={400} data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear'/>
+                    <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">{data && data.equityHeading}</div>
+                    <p data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear'>{data && data.equityDescription && data.equityDescription.map((block, index) => (
+      <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text }
+      </p>
+
+    ))}</p>
                 </div>
             </div></section>
         </div>
     );
 }
 
-// Export the component
 export default page;
-// 
