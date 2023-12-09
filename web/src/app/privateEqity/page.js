@@ -35,7 +35,7 @@ function page() {
     return (
         <div ref={containerRef}>
             <ClosiongNav />
-            <section class="gallery" data-scroll-section id="pin">
+            <section className="gallery" data-scroll-section id="pin">
             <div className="row posotion-container" >
             <div className="col-8 about-left-content" style={{paddingTop:'10rem'}}>
                     <div className='title'>Private Equity</div>
@@ -58,7 +58,7 @@ function page() {
                 <div className="col-4 about-img-c">
                     <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3"></div>
                 </div>
-                <div className="col-7 about-left-content">
+                <div className="col-7 about-left-content p0">
                     <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">Investors of Private Equity</div>
                     <Image src={chart} width={650} data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear'/>
                     <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">Private Equity PAN India</div>

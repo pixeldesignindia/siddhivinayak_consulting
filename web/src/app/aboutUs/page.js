@@ -68,10 +68,10 @@ function page() {
             backgroundImage: `url(${data && data.aboutBanner.url})`,
           }}></div>
                     </div>
-                    <div className="col-8 about-left-content">
-                        <div data-scroll data-scroll-speed="5"><div className='title' >Mission Statement</div>
+                    <div className="col-8 about-left-content p0">
+                        <div data-scroll data-scroll-speed="2"><div className='title' >Mission Statement</div>
                             <span data-scroll >Assisting companies to raise the required capital</span></div>
-                        <div data-scroll data-scroll-speed="5">
+                        <div data-scroll data-scroll-speed="2">
                             <div className='title' style={{ marginTop: '2rem' }} >Values</div>
                             <span >Honesty – Strategic Thinking- Innovation</span>
                         </div>
