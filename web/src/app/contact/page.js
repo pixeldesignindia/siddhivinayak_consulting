@@ -14,7 +14,7 @@ import gmail from '../../../public/images/gmail.svg'
 import profile from '../../../public/images/profile.svg'
 import client from '../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
-
+import Footer from '../components/footer/Footer';
 function page() {
 
     const containerRef = useRef(null);
@@ -75,12 +75,12 @@ function page() {
     return (
         <div ref={containerRef}>
             <ClosiongNav />
-            <section class="gallery" data-scroll-section id="pin">
-            <div className="row posotion-container" >
+            <section class="gallery" data-scroll-section >
+            <div className="row posotion-container" id="pin" >
                 <div className="col-8 about-left-content" style={{ paddingTop: '10rem' }}>
                     <div className='title'>Contact Us</div>
 
-                    <div className='p-container'>
+                    <div className='p-container top-heading'>
                         <p>If you are looking to expand your business and financial consultation then you knocked on the right door! Get in touch with us and we will suggest you the best solution for your company.</p>
                         <p className='contact-data' style={{marginTop:'2rem'}}><Image src={place} />{data && data.address}</p>
                         <p className='contact-data'><Image src={mail} />{data && data.email}</p>
@@ -105,14 +105,16 @@ function page() {
                         </form>
                     </div>
                 </div>
-                <div className="col-4 about-img-c">
+                <div className="col-4 about-img-c image-disappear">
                     <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
                             backgroundImage: `url(${data && data.banner.url})`
                         }}></div>
                 </div>
                 <div className="col-7 about-left-content">
                 </div>
-            </div></section>
+            </div>
+            <Footer/>
+            </section>
         </div>
     );
 }

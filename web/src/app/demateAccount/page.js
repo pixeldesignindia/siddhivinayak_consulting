@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'gsap/dist/gsap'; 
 import client from '../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
-
+import Footer from '../components/footer/Footer';
 function page() {
 
     const containerRef = useRef(null);
@@ -50,11 +50,11 @@ function page() {
     return (
         <div ref={containerRef}>
             <ClosiongNav />
-            <section class="gallery" data-scroll-section id="pin">
-            <div className="row posotion-container" >
+            <section class="gallery" data-scroll-section >
+            <div className="row posotion-container" id="pin">
                 <div className="col-8 about-left-content">
                     <div className='title'>International Demat Accounts</div>
-                    <div className='heading'>{data && data.heading}</div>
+                    <div className='heading top-heading'>{data && data.heading}</div>
                     <div className='p-container'>
                     {data && data.description && data.description.map((block, index) => (
       <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text } {block.children[2] && block.children[2].text }
@@ -66,7 +66,7 @@ function page() {
     ))}
                     </div>
                 </div>
-                <div className="col-4 about-img-c">
+                <div className="col-4 about-img-c image-disappear">
                     <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
             backgroundImage: `url(${data && data.banner.url})`,
         }}></div>
@@ -95,7 +95,9 @@ function page() {
                         </div>
                     </div> */}
                 </div>
-            </div></section>
+            </div>
+            <Footer/>
+            </section>
         </div>
     );
 }
