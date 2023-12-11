@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import "./Mysection.css";
@@ -21,40 +22,47 @@ export default function Mysection({
   const router = useRouter()
   const headlineRef = useRef();
   const sectionRef = useRef();
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
   useEffect(() => {
-    const handleResize = () => {
+    if (typeof window !== 'undefined') {
       setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   useEffect(() => {
-    gsap.fromTo(
-      headlineRef.current,
-      {
-        autoAlpha: 0,
-        y: -50,
-      },
-      {
-        y: 0,
-        autoAlpha: 1,
-        duration: 3,
-        ease: "power3.out",
-      }
-    );
+    if (typeof window !== 'undefined') {
+      gsap.fromTo(
+        headlineRef.current,
+        {
+          autoAlpha: 0,
+          y: -50,
+        },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 3,
+          ease: "power3.out",
+        }
+      );
 
-    gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.create({
-      trigger: headlineRef.current,
-      start: "top 0%",
-      end: "bottom 0%",
-      toggleActions: "play none restart reverse",
-    });
+      ScrollTrigger.create({
+        trigger: headlineRef.current,
+        start: "top 0%",
+        end: "bottom 0%",
+        toggleActions: "play none restart reverse",
+      });
+    }
 
     return () => {};
   }, []);
@@ -72,28 +80,28 @@ export default function Mysection({
 
   return (
     <>
-    {windowWidth > 500 ? (
+      {windowWidth > 500 ? (
         <MainNav ref={headlineRef} />
       ) : (
         <ClosiongNav/>
       )}
     
-    <div className='section' ref={sectionRef}>
-      
-      <div className='copy'>
-        <h1 className="heading">{headline}</h1> 
-        <button onClick={() => router.push('/fundRising')} > <div> EXPLORE NOW  </div> <div><Image src={arr}/></div> </button>
-      </div>
-      
-      <Image src={image} layout={`fill`} />
+      <div className='section' ref={sectionRef}>
+        
+        <div className='copy'>
+          <h1 className="heading">{headline}</h1> 
+          <button onClick={() => router.push('/fundRising')} > <div> EXPLORE NOW  </div> <div><Image src={arr}/></div> </button>
+        </div>
+        
+        <Image src={image} layout={`fill`} />
 
-      {showArrow && (
-        <button
-          className='downarrow'
-          onClick={() => handleGoToNextSection()}
-        ></button>
-      )}
-    </div>
+        {showArrow && (
+          <button
+            className='downarrow'
+            onClick={() => handleGoToNextSection()}
+          ></button>
+        )}
+      </div>
     </>
   );
 }
