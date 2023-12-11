@@ -10,7 +10,7 @@ import Image from 'next/image';
 import chart from '../../../public/images/chart.svg'
 import client from '../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
-
+import Footer from '../components/footer/Footer';
 function page() {
 
     const containerRef = useRef(null);
@@ -71,11 +71,11 @@ function page() {
     return (
         <div ref={containerRef}>
             <ClosiongNav />
-            <section class="gallery" data-scroll-section id="pin">
-                <div className="row posotion-container" >
+            <section class="gallery" data-scroll-section >
+                <div className="row posotion-container" id="pin">
                     <div className="col-8 about-left-content" style={{ paddingTop: '10rem' }}>
                         <div className='title'>Luxury Properties</div>
-                        <div className='heading'>{data && data.heading}</div>
+                        <div className='heading top-heading'>{data && data.heading}</div>
                         <div className='p-container'>
 
                             {data && data.description && data.description.map((block, index) => (
@@ -87,7 +87,7 @@ function page() {
                             ))}
                         </div>
                     </div>
-                    <div className="col-4 about-img-c">
+                    <div className="col-4 about-img-c image-disappear">
                         <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
                             backgroundImage: `url(${data && data.banner.url})`
                         }}></div>
@@ -99,7 +99,9 @@ function page() {
                     <div className='heading' style={{margin:'2rem 0'}}>Private Equity PAN India</div>
                     <p>Looking for expert Private Equity assistance? Siddhi Vinayak Consulting is your trusted partner. We offer comprehensive support to businesses throughout their journey. From fundraising and mentorship to strategic advisory, we excel in every aspect. Our specialized team manages portfolio companies, identifies growth opportunities, and ensures optimal financial outcomes. Whether you’re a startup or an established firm, our tailored solutions cater to your unique needs. Experience the power of Private Equity in Mumbai, Pune, India with us, and take your business to new heights. Partner with Siddhi Vinayak Consulting for unparalleled expertise and success.</p> */}
                     </div>
-                </div></section>
+                </div>
+                <Footer/>
+                </section>
         </div>
     );
 }

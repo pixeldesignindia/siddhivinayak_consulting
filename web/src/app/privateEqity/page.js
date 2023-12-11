@@ -10,6 +10,7 @@ import Image from 'next/image';
 import chart from '../../../public/images/chart.svg'
 import client from '../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
+import Footer from '../components/footer/Footer';
 
 function page() {
     const containerRef = useRef(null);
@@ -48,17 +49,16 @@ function page() {
                 console.error('Error fetching data from Sanity:', error);
             }
         };
-
         newData();
     }, []);
     return (
         <div ref={containerRef}>
             <ClosiongNav />
-            <section className="gallery" data-scroll-section id="pin">
-            <div className="row posotion-container" >
+            <section className="gallery" data-scroll-section >
+            <div className="row posotion-container" id="pin">
             <div className="col-8 about-left-content" style={{paddingTop:'10rem'}}>
                     <div className='title'>Private Equity</div>
-                    <div className='heading'>Strategies of Private Equity.</div>
+                    <div className='heading top-heading'>Strategies of Private Equity.</div>
                     <div className='p-container'>
                         <div className="row yellow-section-row">
                             <div className="col-4 yellow-section"><Image src={dot}/> <p>Angel investing</p> </div>
@@ -74,22 +74,23 @@ function page() {
                     <p>Majority of the private equity comes from the Pensioners and contributes a larger part to the asset.The below pie-chart gives a clear picture about various investors of Private Equity.</p>
                     </div>
                 </div>
-                <div className="col-4 about-img-c">
+                <div className="col-4 about-img-c image-disappear">
                     <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
             backgroundImage: `url(${data && data.equityBanner.url})`,
-          }}></div>
+        }}></div>
                 </div>
-                <div className="col-7 about-left-content p0">
+                <div className="col-7 about-left-content p0 bot-left">
                     <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">Investors of Private Equity</div>
-                    <Image src={data && data.chart.url} width={650} height={400} data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear'/>
+                    <Image src={data && data.chart.url} width={650} height={400} data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear private-chart'/>
                     <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">{data && data.equityHeading}</div>
                     <p data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear'>{data && data.equityDescription && data.equityDescription.map((block, index) => (
-      <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text }
-      </p>
-
+    <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text }
+    </p>
     ))}</p>
                 </div>
-            </div></section>
+            </div>
+            <Footer/>
+            </section>
         </div>
     );
 }

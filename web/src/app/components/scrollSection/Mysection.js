@@ -1,11 +1,13 @@
-// Mysection.js
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import "./Mysection.css";
 import { gsap } from 'gsap';
 import MainNav from "../Nav/Nav";
+import ClosiongNav from "../ClosingNav/ClosiongNav"; 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+import arr from '../../../../public/images/homeArrow.svg'
+import { usePathname , useRouter } from 'next/navigation'
 
 export default function Mysection({
   image,
@@ -16,8 +18,20 @@ export default function Mysection({
   sectionIndex,
   totalSections,
 }) {
+  const router = useRouter()
   const headlineRef = useRef();
   const sectionRef = useRef();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     gsap.fromTo(
@@ -49,19 +63,29 @@ export default function Mysection({
     const nextIndex = (sectionIndex + 1) % totalSections;
     scrollTo(goToSectionRef[nextIndex]);
   }
+
   function scrollToSection(section) {
     if (section && section.current) {
       section.current.scrollIntoView({ behavior: "smooth" });
     }
   }
+
   return (
+    <>
+    {windowWidth > 500 ? (
+        <MainNav ref={headlineRef} />
+      ) : (
+        <ClosiongNav/>
+      )}
+    
     <div className='section' ref={sectionRef}>
-      <MainNav ref={headlineRef} />
+      
       <div className='copy'>
         <h1 className="heading">{headline}</h1> 
+        <button onClick={() => router.push('/fundRising')} > <div> EXPLORE NOW  </div> <div><Image src={arr}/></div> </button>
       </div>
+      
       <Image src={image} layout={`fill`} />
-
 
       {showArrow && (
         <button
@@ -70,5 +94,6 @@ export default function Mysection({
         ></button>
       )}
     </div>
+    </>
   );
 }
