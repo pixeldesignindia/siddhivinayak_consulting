@@ -55,7 +55,7 @@ function page() {
             <section class="gallery" data-scroll-section >
                 <div id="pin">
                 <div className="row posotion-container" >
-                    <div className="col-8 about-left-content">
+                    <div className="col-8 about-left-content" style={{paddingBottom:'0'}}>
                         <div className='title'>About Us</div>
                         <div className='heading top-heading' >{data && data.aboutHeading}</div>
                         <div className='p-container'>
@@ -70,17 +70,17 @@ function page() {
           }}></div>
                     </div>
                     <div className="col-8 about-left-content bot-left p0">
-                        <div data-scroll ><div className='title' >Mission Statement</div>
+                        <div data-scroll ><div className='title' style={{marginTop:'1rem'}}>Mission Statement</div>
                             <span data-scroll >Assisting companies to raise the required capital</span></div>
                         <div data-scroll >
                             <div className='title' style={{ marginTop: '2rem' }} >Values</div>
                             <span >Honesty – Strategic Thinking- Innovation</span>
                         </div>
                         <div className='p-container' >
-                            <div className="blue-container row disappear" data-scroll data-scroll-class="appear" data-scroll-repeat="true">
+                            <div className="blue-container row disappear" data-scroll data-scroll-class="appear" data-scroll-repeat="true" style={{ marginTop: '5rem' }}>
                                 <div className='col-3'> <Image src={owner1} height={170} width={170} className='ceo-img' /> </div>
                                 <div className='col-8 blue-p' >
-                                    <div className='company-person'> <h4 >Manas Survee </h4><Image src={link} height={30} width={30}  /></div>
+                                    <div className='company-person'> <h6 >Manas Survee </h6><Image src={link} height={30} width={30}  /></div>
                                     
                                     <p className='position'>CEO of Siddhi Consulting</p>
                                     <p>He has over 16 years of experience in Real Estate and Finance. The years have added to the expertise he has in the field. In his time of work, he has handled various large projects benefitting groups of people at the same time. Through this platform, he aims to facilitate the exchange of opportunities between investors and buyers of hospitals. He is a delight to work with and happens to be great at managing people and closing deals!</p>
@@ -89,7 +89,7 @@ function page() {
                             <div className="blue-container row disappear" data-scroll data-scroll-class="appear" data-scroll-repeat="true" >
                                 <div className='col-3'> <Image src={owner2} height={170} width={170} className='ceo-img' /> </div>
                                 <div className='col-8 blue-p'>
-                                <div className='company-person'> <h4 >Sanjiv Swarup</h4><Image src={link} height={30} width={30}  /></div>
+                                <div className='company-person'> <h6 >Sanjiv Swarup</h6><Image src={link} height={30} width={30}  /></div>
                                     <p className='position'>Management Consultant </p>
                                     <p>The man with over 30 years of experience has been and is an important guiding factor for the company and its team. Educated in Law, Economics, Accounting, and Finance from reputed institutes, there is no gap that he can’t fill. His knowledge and wisdom are ever-evolving which enables the company to grow and achieve goals!</p>
                                 </div>

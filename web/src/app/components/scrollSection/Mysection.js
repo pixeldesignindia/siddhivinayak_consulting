@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import arr from '../../../../public/images/homeArrow.svg'
 import { usePathname , useRouter } from 'next/navigation'
-
+import HomeResNav from "../homeResNav/HomeResNav";
 export default function Mysection({
   image,
   headline,
@@ -83,7 +83,7 @@ export default function Mysection({
       {windowWidth > 500 ? (
         <MainNav ref={headlineRef} />
       ) : (
-        <ClosiongNav/>
+        <HomeResNav/>
       )}
     
       <div className='section' ref={sectionRef}>
