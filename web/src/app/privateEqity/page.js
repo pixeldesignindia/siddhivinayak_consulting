@@ -70,7 +70,7 @@ function page() {
                             <div className="col-4 yellow-section"><Image src={dot}/> <p>Distressed investments</p> </div>
                             <div className="col-4 yellow-section"><Image src={dot}/> <p>Mezzanine capita</p> </div>
                         </div>
-                        <div className='heading' style={{margin:"6rem 0 2rem 0"}}>Who invests in Private Equity?</div>
+                        <div className='heading' style={{margin:"4rem 0 1rem 0"}}>Who invests in Private Equity?</div>
                     <p>Majority of the private equity comes from the Pensioners and contributes a larger part to the asset.The below pie-chart gives a clear picture about various investors of Private Equity.</p>
                     </div>
                 </div>
@@ -80,10 +80,10 @@ function page() {
         }}></div>
                 </div>
                 <div className="col-7 about-left-content p0 bot-left">
-                    <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">Investors of Private Equity</div>
+                    <div className='heading disappear' style={{margin:' 0 0 2rem 0'}} data-scroll data-scroll-class="appear" >Investors of Private Equity</div>
                     <Image src={data && data.chart.url} width={650} height={400} data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear private-chart'/>
-                    <div className='heading disappear' style={{margin:'2rem 0'}} data-scroll data-scroll-class="appear" data-scroll-repeat="true">{data && data.equityHeading}</div>
-                    <p data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear'>{data && data.equityDescription && data.equityDescription.map((block, index) => (
+                    <div className='heading disappear' style={{margin:'3rem 0 1rem 0'}} data-scroll data-scroll-class="appear" >{data && data.equityHeading}</div>
+                    <p data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear' style={{marginBottom:'5rem'}}>{data && data.equityDescription && data.equityDescription.map((block, index) => (
     <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text }
     </p>
     ))}</p>

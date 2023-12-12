@@ -15,7 +15,7 @@
   position: absolute;
   bottom: 25%;
   left: 3.5%;
-  z-index: 550;
+  z-index: 10;
 width: 45rem;
 }
 .copy h1 {
