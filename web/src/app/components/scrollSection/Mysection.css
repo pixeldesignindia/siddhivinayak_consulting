@@ -47,6 +47,6 @@ width: 45rem;
 .copy button{display: flex; align-items: center; gap: 1.2rem; margin-top: 2rem;}
 
 @media(max-width:500px){
-  .copy button{margin-left: 2rem;}
+  .copy button{margin-left: 1rem;}
   .copy{bottom: 18%;}
 }
