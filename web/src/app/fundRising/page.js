@@ -38,12 +38,17 @@ function page() {
     useEffect(() => {
         const newData = async () => {
             try {
-                const fetchData = await client.fetch(`*[_type == "luxurious"] {
-                    heading,
-                    "banner": banner.asset->{
+                const fetchData = await client.fetch(`*[_type == "fund"] {
+                    "img1": img1.asset->{
                         url
                     },
-                    description
+                    "img2": img2.asset->{
+                        url
+                    },
+                    "img3": img3.asset->{
+                        url
+                    },
+                    philosophy
                 }`);
                 console.log(fetchData[0]);
                 setData(fetchData[0]);
@@ -65,7 +70,9 @@ function page() {
                         <div className="row fund-box-c">
                         <div className="col-4">
                             <div className="row">
-                                <div className="col-12 fund-img">
+                                <div className="col-12 fund-img" style={{
+                            backgroundImage: `url(${data && data.img1.url})`
+                        }}>
                                 </div>
                                 <div className="col-12 fund-box-content">
                                     <h6 className='box-head'>Sector Power Plant Maintenance</h6>
@@ -83,7 +90,7 @@ function page() {
                                         <p>Unique id SERVICE0001</p>
                                     </div>
                                     <div className='fund-mail'>
-                                        <p>For details email us</p>
+                                        <p>For details email us </p>
                                         <Image src={mail} alt='dot' width={20} height={20}/>
                                     </div>
                                 </div>
@@ -91,22 +98,24 @@ function page() {
                         </div>
                         <div className="col-4">
                             <div className="row">
-                                <div className="col-12 fund-img">
+                                <div className="col-12 fund-img" style={{
+                            backgroundImage: `url(${data && data.img2.url})`
+                        }}>
                                 </div>
                                 <div className="col-12 fund-box-content">
-                                    <h6 className='box-head'>Sector Power Plant Maintenance</h6>
-                                    <h6 className='title'>Company looking to raise Rs. 5 cr</h6>
+                                    <h6 className='box-head'>Sector Edtech</h6>
+                                    <h6 className='title'>Company looking to raise Rs. 6 CR</h6>
                                     <div className='fund-point'>
                                         <Image src={dot} alt='dot' width={5} height={5}/>
-                                        <p>willing to dilute below 5% stake</p>
+                                        <p>Last year’s turnover Rs. pre-revenue</p>
                                     </div>
                                     <div className='fund-point'>
                                         <Image src={dot} alt='dot' width={5} height={5}/>
-                                        <p>Last year’s turnover Rs. 15 cr</p>
+                                        <p>willing to dilute 13% stake</p>
                                     </div>
                                     <div className='fund-point'>
                                         <Image src={dot} alt='dot' width={5} height={5}/>
-                                        <p>Unique id SERVICE0001</p>
+                                        <p>Unique id EDTECH0003</p>
                                     </div>
                                     <div className='fund-mail'>
                                         <p>For details email us</p>
@@ -117,22 +126,24 @@ function page() {
                         </div>
                         <div className="col-4">
                             <div className="row">
-                                <div className="col-12 fund-img">
+                                <div className="col-12 fund-img" style={{
+                            backgroundImage: `url(${data && data.img3.url})`
+                        }}>
                                 </div>
                                 <div className="col-12 fund-box-content">
-                                    <h6 className='box-head'>Sector Power Plant Maintenance</h6>
-                                    <h6 className='title'>Company looking to raise Rs. 5 cr</h6>
+                                    <h6 className='box-head'>Sector Tour Operators</h6>
+                                    <h6 className='title'>Company looking to raise Rs. 2 CR</h6>
                                     <div className='fund-point'>
                                         <Image src={dot} alt='dot' width={5} height={5}/>
-                                        <p>willing to dilute below 5% stake</p>
+                                        <p>Willing to dilute 10%</p>
                                     </div>
                                     <div className='fund-point'>
                                         <Image src={dot} alt='dot' width={5} height={5}/>
-                                        <p>Last year’s turnover Rs. 15 cr</p>
+                                        <p>Last year turnover 3.5 Cr</p>
                                     </div>
                                     <div className='fund-point'>
                                         <Image src={dot} alt='dot' width={5} height={5}/>
-                                        <p>Unique id SERVICE0001</p>
+                                        <p>Code: TRAVEL001</p>
                                     </div>
                                     <div className='fund-mail'>
                                         <p>For details email us</p>
@@ -147,8 +158,13 @@ function page() {
                     <div className="fund-blue-section">
                         <div className="blue-section-sm">
                         <h3>Our Philosophy</h3>
-                        <p>We believe that a consulting firm should be more than an advisor. Our approach and recommendations are highly customized. We help clients decide where they want to go and how to get there. We assure those decision get translated quickly into action.</p>
-                        <p>We specialize in diverse financial consulting and advisory services. We are committed to helping our clients towards Growth Trajectory.</p>
+                        {data && data.philosophy && data.philosophy.map((block, index) => (
+                                <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text} {block.children[2] && block.children[2].text}
+                                    {block.children[3] && block.children[3].text}
+                                    {block.children[4] && block.children[4].text}
+                                    {block.children[5] && block.children[5].text}
+                                </p>
+                            ))}
                         <p>Unlock growth potential with Siddhi Vinayak Consulting’s expert solutions in Private Equity and Builder Loans. As a leading consultancy, we specialize in facilitating funding for <span className='fund-link'>unlisted shares in India</span>  and providing seamless startup funding opportunities. Our wide network of freelance channel partners enables us to connect businesses with the right investors, ensuring success at every step.</p>
                         </div>
                         <div className="row fund-box-c fund-bot-links">

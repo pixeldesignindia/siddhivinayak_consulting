@@ -5,4 +5,5 @@ import demate from "./demate"
 import luxurious from "./luxurious"
 import insurence from "./insurence"
 import contact from "./contact"
-export const schemaTypes = [home,about,eqity,demate, luxurious, insurence, contact]
+import fund from "./fund" 
+export const schemaTypes = [home,about,eqity,demate, luxurious, insurence, contact , fund]
