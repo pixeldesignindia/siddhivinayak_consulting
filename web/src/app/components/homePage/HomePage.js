@@ -2,7 +2,7 @@
 import { useRef, useEffect , useState} from "react";
 import Mysection from "../scrollSection/Mysection";
 import client from "@/app/sanity/client";
-
+import ClosiongNav from "../ClosingNav/ClosiongNav";
 export default function Home() {
   const [data,setData]=useState()
   useEffect(() => {
@@ -50,7 +50,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className='Scroll-container'>
+      <div className='Scroll-container sectionContainer'>
         <div className='dot-btns'>
           <button onClick={() => scrollTo(section1)}></button>
           <button onClick={() => scrollTo(section2)}></button>

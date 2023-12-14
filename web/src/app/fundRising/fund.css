@@ -1,0 +1,39 @@
+.fund-box-c{display: flex; justify-content: space-between;align-items: center;padding: 2rem .8rem;}
+.fund-box-c>.col-4{width: 30%;}
+.fund-point{display: flex;gap: 1.5rem; align-items: center;}
+.fund-point>p{margin: 0;}
+.fund-box-content{display: flex;flex-direction: column;gap: 1.2rem;}
+.fund-page-content{padding: 8rem 4rem 2rem 4rem ;}
+.fund-box-content{border-right: 1px solid #EAE7E7;
+    border-bottom: 1px solid #EAE7E7;
+    border-left: 1px solid #EAE7E7;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);padding: 1.5rem 2rem;}
+.ft{margin-top: 1.5rem !important;}
+    .fund-img{background: url('/images/Banner1.svg'); height: 20rem;background-repeat: no-repeat;background-position: center;}
+    .box-head{font-weight: 550;}
+    .fund-mail{display: flex; justify-content: space-between; align-items: center;color: #FFF;background: #BB0101;padding: 0.525rem 1.1rem;cursor: pointer;}
+    .fund-mail>p{color: #FFF;margin: 0;}
+    .fund-blue-section{padding: 4rem 3rem;background: #F6FBFC;display: flex;justify-content: center;flex-direction: column;align-items: center;}
+    .blue-section-sm>h3{text-align: center;font-weight: 550;}
+    .blue-section-sm{width: 85%;display: flex; flex-direction: column;gap: 2rem;margin-bottom: 2rem;}
+    .blue-section-sm>p{text-align: center;color: #000;line-height: 180%}
+    .fund-link{color: #BB0101 !important;}
+    .fund-bot-links>.col-4{border-radius: 6.25rem;background: #FFF;box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);display:flex;flex-direction: column;justify-content: center;align-items: center;padding: 1rem;}
+    .fund-bot-links>.col-4>p{color: #BB0101;margin: 0;}
+    .fund-bot-links{justify-content: space-between;width: 100%;}
+    .fund-bot-links>.col-4>h4{color: #000;font-weight: bold;}
+    .call-back{background: #030D23;box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.10);width: 100%;}
+    .call-top{display: flex; justify-content: center;align-items: center;flex-direction: column;gap: 1.2rem;padding: 2rem;}
+    .call-top .heading{color: #FFF;}
+    .call-top p{color: #d3d3d3;text-align: center;font-size: 1rem;}
+
+
+    @media(max-width:500px){
+        .fund-page-content{padding: 8rem 2rem 2rem 2rem !important;}
+        .fund-box-c>.col-4{margin: .5rem 0 !important;}
+        .blue-section-sm{width: 100% !important}
+        .call-top .heading{font-size: 1.2rem;}
+        .fund-blue-section{padding: 1.5rem !important;}
+        .fund-bot-links>.col-4>p{text-align: center !important;}
+    }

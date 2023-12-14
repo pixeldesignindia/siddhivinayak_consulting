@@ -1,5 +1,5 @@
 .closing-Nav{position: fixed;top: 0;width: 100%;z-index: 100;}
-.closing-nav-container {padding: 0 1.8rem;}
+.home-nav-container {padding: 0 1.8rem;}
 .fade.modal.show{background: url("../../../../public//images/close-banner.svg");background-repeat: no-repeat; background-position: cover;}
 .modal-Close{width: 100%; text-align: right;}
 .modal-fullscreen .modal-body {
@@ -74,6 +74,4 @@
     transition-duration: .5s;
     transform: rotate(180deg);
   }
-
-  @media(max-width:500px){.closing-nav-container{background:#fff;}
-  .nav-logo{position: relative;left: -25px;}}
+  @media(max-width:500px){.home-nav-logo{height: 4rem !important; position: relative; left: -66px;}}

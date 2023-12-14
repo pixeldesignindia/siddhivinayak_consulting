@@ -1,21 +1,17 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef,useState } from 'react';
 import '../aboutUs/about.css';
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'gsap/dist/gsap'; 
-import Image from 'next/image';
-import owner1 from '../../../public/images/owner1.jpg'
-import owner2 from '../../../public/images/owner2.svg'
+import client from '../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
-
+import Footer from '../components/footer/Footer';
 function page() {
 
     const containerRef = useRef(null);
     const sectionRef = useRef(null);
-
-
     useEffect(() => {
         let scroll;
         import("locomotive-scroll").then((locomotiveModule) => {
@@ -30,24 +26,50 @@ function page() {
         }
     });
 
+    const [data, setData] = useState()
+    useEffect(() => {
+        const newData = async () => {
+            try {
+                const fetchData = await client.fetch(`*[_type == "demate"] {
+                    heading,
+                    "banner": banner.asset->{
+                        url
+                    },
+                    description
+                }`);
+                console.log(fetchData[0]);
+                setData(fetchData[0]);
+            } catch (error) {
+                console.error('Error fetching data from Sanity:', error);
+            }
+        };
 
+        newData();
+    }, []);
 
     return (
         <div ref={containerRef}>
             <ClosiongNav />
-            <section class="gallery" data-scroll-section id="pin">
-            <div className="row posotion-container" >
+            <section class="gallery" data-scroll-section >
+            <div className="row posotion-container" id="pin">
                 <div className="col-8 about-left-content">
                     <div className='title'>International Demat Accounts</div>
-                    <div className='heading'>Have you ever thought of investing in a foreign market?</div>
+                    <div className='heading top-heading'>{data && data.heading}</div>
                     <div className='p-container'>
-                        <p>Now is the best time to make your portfolio better by investing globally. Indian markets are witnessing volatility as an after-effect of the COVID-19 pandemic. Those who still haven’t invested in the foreign market are now looking for efficient ways to invest there. Moreover, the last-minute amendment to the Finance Bill 2023 which is the removal of the indexation benefit on the long-term capital gains of debt funds makes investing in the Indian market a more volatile one. Which is why it is the best time to invest overseas. Over the past few years, the portfolio investment outside India by Indian residents has increased manifold.</p>
-                        <p>Investing overseas gives scope for investing in stocks such as Apple, Microsoft, Tesla, Amazon, and others and also helps in diversifying the portfolio.  Investing in overseas stocks is not very difficult as far as the setting up of an account is concerned. Many Indian brokers have tie-ups with overseas brokers and facilitate trading in overseas markets facilitating investing in international stocks through their various financial platforms.</p>
-                        <p>So, if you want to build a diversified portfolio by investing globally then you are on the right page. Get in touch with us and we will help you in shaping your portfolio by investing overseas.</p>
+                    {data && data.description && data.description.map((block, index) => (
+      <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text } {block.children[2] && block.children[2].text }
+      {block.children[3] && block.children[3].text }
+      {block.children[4] && block.children[4].text }
+      {block.children[5] && block.children[5].text }
+      </p>
+
+    ))}
                     </div>
                 </div>
-                <div className="col-4 about-img-c">
-                    <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3"></div>
+                <div className="col-4 about-img-c image-disappear">
+                    <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
+            backgroundImage: `url(${data && data.banner.url})`,
+        }}></div>
                 </div>
                 <div className="col-7 about-left-content">
                     {/* <div className='title'>Mission Statement</div>
@@ -73,7 +95,9 @@ function page() {
                         </div>
                     </div> */}
                 </div>
-            </div></section>
+            </div>
+            <Footer/>
+            </section>
         </div>
     );
 }

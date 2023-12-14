@@ -1,6 +1,6 @@
 'use client'
 import React,{useState, useEffect} from 'react'
-import './ClosingNav.css'
+import './HomeRers.css'
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../../../public/images/logo.svg';
@@ -11,7 +11,7 @@ import closeBtn from '../../../../public/images/close-btn.svg';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { usePathname , useRouter } from 'next/navigation'
-function ClosiongNav() {
+function HomeResNav() {
 
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
@@ -36,14 +36,14 @@ function ClosiongNav() {
     const [show, setShow] = useState(false);
     return (
         <div className='closing-Nav'>
-            <div className="closing-nav-container">
+            <div className="home-nav-container">
                 <div className="row">
-                    <div className="col-2" onClick={()=>{router.push('/')}} style={{cursor:'pointer'}}><Image src={logo} height={70} width={200} className='nav-logo' /></div>
+                    <div className="col-2" onClick={()=>{router.push('/')}}><Image src={logo} height={70} width={200} className='nav-logo home-nav-logo' /></div>
                     <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} style={{cursor:'pointer'}}>
                     {windowWidth > 500 ? (
         <Image src={Menuline}/>
       ) : (
-        <Image src={blackMenuline}/>
+        <Image src={Menuline}/>
       )}
                         
                     </div>
@@ -67,4 +67,4 @@ function ClosiongNav() {
     )
 }
 
-export default ClosiongNav
+export default HomeResNav
