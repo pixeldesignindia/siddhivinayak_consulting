@@ -50,7 +50,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className='Scroll-container'>
+      <div className='Scroll-container sectionContainer'>
         <div className='dot-btns'>
           <button onClick={() => scrollTo(section1)}></button>
           <button onClick={() => scrollTo(section2)}></button>

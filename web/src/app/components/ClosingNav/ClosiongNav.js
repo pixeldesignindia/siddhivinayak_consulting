@@ -38,7 +38,7 @@ function ClosiongNav() {
         <div className='closing-Nav'>
             <div className="closing-nav-container">
                 <div className="row">
-                    <div className="col-2" onClick={()=>{router('/')}}><Image src={logo} height={70} width={200} className='nav-logo' /></div>
+                    <div className="col-2" onClick={()=>{router.push('/')}} style={{cursor:'pointer'}}><Image src={logo} height={70} width={200} className='nav-logo' /></div>
                     <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} style={{cursor:'pointer'}}>
                     {windowWidth > 500 ? (
         <Image src={Menuline}/>

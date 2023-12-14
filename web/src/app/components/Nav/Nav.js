@@ -31,7 +31,7 @@ function MainNav() {
             <Link className={`link d-flex align-items-center ${pathname === '/demateAccount' ? 'activeNav' : ''}`}href="/demateAccount">DEMATE ACCOUNT</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/luxuryProperty' ? 'activeNav' : ''}`}href="/luxuryProperty">LUXURY PROPERTY</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/businessInsurance' ? 'activeNav' : ''}`}href="/businessInsurance">BUSINESS INSURANCE</Link>
-            <Link className={`link d-flex align-items-center contact-btn ${pathname === '/contact' ? 'activeNav' : ''}`}href="/contact" style={{color:'#fff'}}>CONTACT US</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/contact' ? 'activeNav' : ''}`}href="/contact" style={{color:'#fff'}}>CONTACT US</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
