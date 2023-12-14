@@ -20,8 +20,6 @@ export default function Mysection({
   totalSections,
 }) {
   const router = useRouter()
-  const headlineRef = useRef();
-  const sectionRef = useRef();
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
   useEffect(() => {
@@ -40,30 +38,56 @@ export default function Mysection({
     }
   }, []);
 
+  const headlineRef = useRef();
+  const sectionRef = useRef();
+  const imageRef = useRef();
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      gsap.fromTo(
-        headlineRef.current,
-        {
-          autoAlpha: 0,
-          y: -50,
+    gsap.fromTo(
+      headlineRef.current,
+      {
+        autoAlpha: .5,
+        y: -30,
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        duration: 3,
+        ease: "power3.out",
+        marker:true,
+        scrollTrigger: {
+          scroller: ".sectionContainer",
+          trigger: headlineRef.current,
+          start: "top 70%",
+          end: "bottom 0%",
+          toggleActions: "play none restart reverse",
         },
-        {
-          y: 0,
-          autoAlpha: 1,
-          duration: 3,
-          ease: "power3.out",
-        }
-      );
-
-      ScrollTrigger.create({
-        trigger: headlineRef.current,
-        start: "top 0%",
-        end: "bottom 0%",
-        toggleActions: "play none restart reverse",
-      });
-    }
-
+      }
+    );
+    return () => {};
+  }, []);
+  useEffect(() => {
+    gsap.fromTo(
+      imageRef.current,
+      {
+        autoAlpha: .5,
+        scale:.8
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        scale:1,
+        duration: 3,
+        ease: "power3.out",
+        marker:true,
+        scrollTrigger: {
+          scroller: ".sectionContainer",
+          trigger: imageRef.current,
+          start: "top 80%",
+          end: "bottom 0%",
+          toggleActions: "play none restart reverse",
+        },
+      }
+    );
     return () => {};
   }, []);
 
@@ -81,19 +105,19 @@ export default function Mysection({
   return (
     <>
       {windowWidth > 500 ? (
-        <MainNav ref={headlineRef} />
+        <MainNav/>
       ) : (
         <HomeResNav/>
       )}
     
       <div className='section' ref={sectionRef}>
         
-        <div className='copy'>
+        <div className='copy' ref={headlineRef}>
           <h1 className="heading">{headline}</h1> 
           <button onClick={() => router.push('/fundRising')} > <div> EXPLORE NOW  </div> <div><Image src={arr}/></div> </button>
         </div>
         
-        <Image src={image} layout={`fill`} />
+        <Image src={image} layout={`fill`} ref={imageRef} className="image-bg"/>
 
         {showArrow && (
           <button

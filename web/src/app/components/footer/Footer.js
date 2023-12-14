@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className='container'>
                     <div className="row footer-row" >
                         <div className='col-6'>
-                            <p>@Coyright 2023. All rights reserved.</p>
+                            <p>@ Coyright 2023. All rights reserved.</p>
                         </div>
                         <div className="col-6 develop-by" >
                         <p>Website Design & Developed By <a href="https://pixeldesignindia.com/lp/">Pixel Design India</a> </p>
