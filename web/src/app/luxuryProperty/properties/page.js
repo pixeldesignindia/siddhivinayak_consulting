@@ -1,9 +1,9 @@
 'use client'
-import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation'
 import { useEffect, useState , useRef } from 'react';
 import '../../aboutUs/about.css';
 import './property.css'
+import { useRouter } from 'next/navigation'
 import ClosiongNav from '../../components/ClosingNav/ClosiongNav';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -15,8 +15,8 @@ import Footer from '../../components/footer/Footer';
 function page(props) {
 
   const containerRef = useRef(null);
-  const slug = props.params.slug
-
+  // const slug = props.params.slug
+const slug =localStorage.getItem('slug')
   const [propertyData, setPropertyData] = useState(null);
   useEffect(() => {
     let scroll;
@@ -32,31 +32,36 @@ function page(props) {
     }
 });
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await client.fetch(`
-      *[slug.current == "${slug}"] {
-        title,
-        slug,
-        body,
-        mainImage {
-          asset -> {
-            _id,
-            url
+    
+    if (slug){
+      const fetchData = async () => {
+        try {
+          const data = await client.fetch(`
+        *[slug.current == "${slug}"] {
+          title,
+          slug,
+          body,
+          mainImage {
+            asset -> {
+              _id,
+              url
+            },
+            alt,
           },
-          alt,
-        },
-        "name":author -> name, 
-      } 
-    `);
-        console.log(data[0]);
-        setPropertyData(data[0]);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+          "name":author -> name, 
+        } 
+      `);
+          console.log(data[0]);
+          setPropertyData(data[0]);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      fetchData();
+    }
 
-    fetchData();
+
+    
   }, [slug]);
   return (
     <div ref={containerRef}>

@@ -13,12 +13,16 @@ gsap.registerPlugin(ScrollTrigger);
 import Footer from '../components/footer/Footer';
 import Link from 'next/link';
 import './property.css'
+import { useRouter } from 'next/navigation';
 function page() {
-
+    const router = useRouter()
     const containerRef = useRef(null);
     const sectionRef = useRef(null);
 
-
+    const handleRoute = (slug) => {
+        localStorage.setItem('slug', slug);
+        router.push('/luxuryProperty/properties')
+    }
     useEffect(() => {
         let scroll;
         import("locomotive-scroll").then((locomotiveModule) => {
@@ -83,16 +87,16 @@ function page() {
             <ClosiongNav />
             <section class="gallery" data-scroll-section >
                 <div className="row posotion-container" id="pin">
-                    <div className="col-8 about-left-content" style={{ paddingTop: '10rem'}}>
+                    <div className="col-8 about-left-content" style={{ paddingTop: '10rem' }}>
                         <div className='title'>Luxury Properties</div>
                         <div className='heading top-heading'>{data && data.heading}</div>
                         <div className='p-container property-card-container' >
-                        {propertyCard && propertyCard.map((item, index) => (<Link href={`/luxuryProperty/${item.slug.current}`} key={index} >
-                            <div className='property-card'>
-                                <div className="image-property"><Image src={item.mainImage.asset.url} width={500} height={200} /></div>
-                                <h3>{item.title}</h3>
-                            </div>
-                        </Link>))}
+                            {propertyCard && propertyCard.map((item, index) => (<div onClick={() => handleRoute(item.slug.current)} key={index} >
+                                <div className='property-card'>
+                                    <div className="image-property"><Image src={item.mainImage.asset.url} width={500} height={200} /></div>
+                                    <h3>{item.title}</h3>
+                                </div>
+                            </div>))}
                         </div>
                     </div>
                     <div className="col-4 about-img-c image-disappear">
