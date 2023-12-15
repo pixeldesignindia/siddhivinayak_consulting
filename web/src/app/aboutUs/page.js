@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef , useState } from 'react';
 import './about.css';
+import Head from 'next/head';
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
 import dynamic from 'next/dynamic';
 import client from '../sanity/client';
@@ -15,6 +16,7 @@ import Footer from '../components/footer/Footer';
 gsap.registerPlugin(ScrollTrigger);
 
 function page() {
+
     const containerRef = useRef(null);
     const sectionRef = useRef(null);
     useEffect(() => {
@@ -51,6 +53,11 @@ function page() {
     }, []);
     return (
         <div ref={containerRef} className='over-hidden'>
+              <Head>
+                <title>Your Page Title</title>
+                <meta name="description" content="Description of your page" />
+                {/* Add more meta tags as needed */}
+            </Head>
             <ClosiongNav />
             <section class="gallery" data-scroll-section >
                 <div id="pin">
