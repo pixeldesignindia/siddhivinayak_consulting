@@ -16,7 +16,7 @@ function page(props) {
 
   const containerRef = useRef(null);
   // const slug = props.params.slug
-const slug =localStorage.getItem('slug')
+  const slug = typeof window !== 'undefined' ? localStorage.getItem('slug') : null;
   const [propertyData, setPropertyData] = useState(null);
   useEffect(() => {
     let scroll;

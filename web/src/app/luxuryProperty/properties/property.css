@@ -2,3 +2,5 @@
 .propertyImageTop{height: 50vh; width: 100%;background-repeat: no-repeat;background-position: center;}
 .property-content{background: rgb(232, 245, 253);min-height: 100vh; display: flex; justify-content: center; align-items: center;flex-direction: column;padding: 3rem ;}
 .property-heading{text-align: center; width: max-content; padding: 1.5rem 0 1rem 0; border-bottom: 2px solid rgb(255, 119, 0); font-weight: 500 !important;margin-bottom: 2rem !important;}
+
+@media(max-width:500px){.property-content{padding: 1.5rem 1rem;}}
