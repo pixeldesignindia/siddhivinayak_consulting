@@ -8,9 +8,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'gsap/dist/gsap';
 import Image from 'next/image';
+import office from '../../../public/images/office.svg'
 import place from '../../../public/images/place.svg'
 import mail from '../../../public/images/mail.svg'
 import gmail from '../../../public/images/gmail.svg'
+import mobile from '../../../public/images/mobile.svg'
 import profile from '../../../public/images/profile.svg'
 import client from '../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
@@ -77,7 +79,7 @@ function page() {
             <ClosiongNav />
             <section class="gallery" data-scroll-section >
             <div className="row posotion-container" id="pin" >
-                <div className="col-8 about-left-content" style={{ paddingTop: '10rem' }}>
+                <div className="col-8 about-left-content bg" style={{ paddingTop: '10rem' }}>
                     <div className='title'>Contact Us</div>
 
                     <div className='p-container top-heading'>
@@ -94,15 +96,15 @@ function page() {
                                 <input type="email" placeholder='Enter Email' name='userEmail' autoComplete='off' required/>
                             </div>
                             <div class="input-container col-6" >
-                                <Image src={profile} />
-                                <input type="text" placeholder='Enter Message' name='message' autoComplete='off' required/>
+                                <Image src={mobile} />
+                                <input type="text" placeholder='Enter Phone No' name='phoneNumber' autoComplete='off' required  />
                             </div>
-                            {/* <div class="input-container col-6" >
-                                <Image src={gmail} />
-                                <input type="email" placeholder='Enter Email'/>
-                            </div> */}
-                            <input type="submit" value='send' className='submit-btn'/>
-                            {/* <button type='submit' className='submit-btn' style={{marginTop:'3rem'}}>SUBMIT</button> */}
+                            <div class="input-container col-6" >
+                                <Image src={office} />
+                                <input type="text" placeholder='Enter Message' name='message' autoComplete='off' required />
+                            </div>
+                            <input type="submit" value='SUBMIT' className='submit-btn' style={{marginTop:'3rem'}}/>
+                            {/* <button type='submit' className='submit-btn' >SUBMIT</button> */}
                         </form>
                     </div>
                 </div>

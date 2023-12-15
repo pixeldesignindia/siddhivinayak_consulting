@@ -23,13 +23,18 @@
     .fund-bot-links>.col-4>p{color: #BB0101;margin: 0;}
     .fund-bot-links{justify-content: space-between;width: 100%;}
     .fund-bot-links>.col-4>h4{color: #000;font-weight: bold;}
-    .call-back{background: #030D23;box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.10);width: 100%;}
+    .call-back{background: #030D23;box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.10);width: 100%; padding: 2rem 2.5rem 3.5rem 2.5rem;}
     .call-top{display: flex; justify-content: center;align-items: center;flex-direction: column;gap: 1.2rem;padding: 2rem;}
     .call-top .heading{color: #FFF;}
     .call-top p{color: #d3d3d3;text-align: center;font-size: 1rem;}
 
-
+    .input-fcontainer{display: flex; padding: 1rem; margin: 1rem 0;border-bottom: 1px solid #929292;align-items: center;gap: 2rem; width: 45%;}
+    .input-fcontainer>input{color: #FFF !important;}
+    .input-fcontainer:hover{border-bottom: 1px solid #eeeeee;}
+    .input-section{justify-content: space-between;}
+    
     @media(max-width:500px){
+        .call-top{padding: 0 !important;}
         .fund-page-content{padding: 8rem 2rem 2rem 2rem !important;}
         .fund-box-c>.col-4{margin: .5rem 0 !important;}
         .blue-section-sm{width: 100% !important}

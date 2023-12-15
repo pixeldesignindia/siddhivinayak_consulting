@@ -58,7 +58,7 @@ function page() {
             <ClosiongNav />
             <section class="gallery" data-scroll-section >
                 <div className="row posotion-container" id="pin">
-                    <div className="col-8 about-left-content" style={{ paddingTop: '10rem' }}>
+                    <div className="col-8 about-left-content bg" style={{ paddingTop: '10rem' }}>
                         <div className='title'>Business Insurance</div>
                         <div className='heading top-heading'>While you concentrate on your business, we take care of your insurance</div>
                         <p>Security in business is a crucial aspect and that security comes from insurance. We know that as an entrepreneur you are always juggling multiple responsibilities and activities to grow your business with a constant thought of getting secured. And here we come to guide you through the best process of getting your business secured.</p>

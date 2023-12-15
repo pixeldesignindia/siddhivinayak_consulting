@@ -15,14 +15,18 @@ import Link from 'next/link';
 import './property.css'
 import { useRouter } from 'next/navigation';
 function page() {
-    const router = useRouter()
+    const router = useRouter();
     const containerRef = useRef(null);
-    const sectionRef = useRef(null);
+
+    const [data, setData] = useState();
+    const [propertyCard, setPropertyCard] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const cardsPerPage = 10;
 
     const handleRoute = (slug) => {
         localStorage.setItem('slug', slug);
-        router.push('/luxuryProperty/properties')
-    }
+        router.push('/luxuryProperty/properties');
+    };
     useEffect(() => {
         let scroll;
         import("locomotive-scroll").then((locomotiveModule) => {
@@ -36,51 +40,55 @@ function page() {
             if (scroll) scroll.destroy();
         }
     });
-
-    const [data, setData] = useState()
-    const [propertyCard, setPropertyCard] = useState()
     useEffect(() => {
-        const newData = async () => {
+        const fetchData = async () => {
             try {
-                const fetchData = await client.fetch(`*[_type == "luxurious"] {
-                    heading,
-                    "banner": banner.asset->{
-                        url
-                    },
-                    description
-                }`);
-                console.log(fetchData[0]);
-                setData(fetchData[0]);
+                const luxuriousData = await client.fetch(`*[_type == "luxurious"] {
+            heading,
+            "banner": banner.asset->{
+              url
+            },
+            description
+          }`);
+                setData(luxuriousData[0]);
             } catch (error) {
                 console.error('Error fetching data from Sanity:', error);
             }
         };
 
-        newData();
+        fetchData();
     }, []);
 
     useEffect(() => {
         client
             .fetch(`
-            *[_type== "post"] {
-              title,
-              slug,
-              body,
-              mainImage {
-                asset -> {
-                  _id,
-                  url
-                },
-                alt,
+          *[_type == "post"] {
+            title,
+            slug,
+            body,
+            mainImage {
+              asset -> {
+                _id,
+                url
               },
-            }
-          `)
+              alt,
+            },
+          }
+        `)
             .then((data) => {
-                console.log(data)
                 setPropertyCard(data);
             })
             .catch(console.error);
     }, []);
+
+    // Calculate total number of pages
+    const totalPages = Math.ceil(propertyCard.length / cardsPerPage);
+
+    // Slice property cards based on current page
+    const indexOfLastCard = currentPage * cardsPerPage;
+    const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+    const currentPropertyCards = propertyCard.slice(indexOfFirstCard, indexOfLastCard);
+
 
     return (
         <div ref={containerRef}>
@@ -90,13 +98,29 @@ function page() {
                     <div className="col-8 about-left-content" style={{ paddingTop: '10rem' }}>
                         <div className='title'>Luxury Properties</div>
                         <div className='heading top-heading'>{data && data.heading}</div>
-                        <div className='p-container property-card-container' >
-                            {propertyCard && propertyCard.map((item, index) => (<div onClick={() => handleRoute(item.slug.current)} key={index} >
-                                <div className='property-card'>
-                                    <div className="image-property"><Image src={item.mainImage.asset.url} width={500} height={200} /></div>
-                                    <h3>{item.title}</h3>
+                        <div className='p-container property-card-container bg' >
+                            {currentPropertyCards.map((item, index) => (
+                                <div onClick={() => handleRoute(item.slug.current)} key={index}>
+                                    <div className="property-card">
+                                        <div className="image-property">
+                                            <Image src={item.mainImage.asset.url} width={500} height={200} />
+                                        </div>
+                                        <h3>{item.title}</h3>
+                                    </div>
                                 </div>
-                            </div>))}
+                            ))}
+                        </div>
+                        <div className="pagination">
+                            
+                            <button onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))} disabled={currentPage === 1}>
+                                Prev
+                            </button>
+                            <span>
+                                Page {currentPage} of {totalPages}
+                            </span>
+                            <button onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))} disabled={currentPage === totalPages}>
+                                Next
+                            </button>
                         </div>
                     </div>
                     <div className="col-4 about-img-c image-disappear">
@@ -105,10 +129,7 @@ function page() {
                         }}></div>
                     </div>
                     <div className="col-7 about-left-content">
-                        {/* <div className='heading' style={{margin:'2rem 0'}}>Investors of Private Equity</div>
-                    <Image src={chart} width={650}/>
-                    <div className='heading' style={{margin:'2rem 0'}}>Private Equity PAN India</div>
-                    <p>Looking for expert Private Equity assistance? Siddhi Vinayak Consulting is your trusted partner. We offer comprehensive support to businesses throughout their journey. From fundraising and mentorship to strategic advisory, we excel in every aspect. Our specialized team manages portfolio companies, identifies growth opportunities, and ensures optimal financial outcomes. Whether you’re a startup or an established firm, our tailored solutions cater to your unique needs. Experience the power of Private Equity in Mumbai, Pune, India with us, and take your business to new heights. Partner with Siddhi Vinayak Consulting for unparalleled expertise and success.</p> */}
+
                     </div>
                 </div>
                 <Footer />

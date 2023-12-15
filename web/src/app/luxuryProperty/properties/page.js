@@ -70,7 +70,7 @@ function page(props) {
         <div className='propertyImageTop' style={{
                             backgroundImage: `url(${propertyData && propertyData.mainImage.asset.url})`
                         }}></div>
-        <div className="property-content">
+        <div className="property-content bg">
           <h2 className="property-heading">
           {propertyData && propertyData.title}
           </h2>

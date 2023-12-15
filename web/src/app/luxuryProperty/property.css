@@ -1,8 +1,8 @@
 .property-card {
     position: relative;
     overflow: hidden;
-    width: 20rem; /* Fixed width */
-    height: 10rem; /* Fixed height */
+    width: 22rem; /* Fixed width */
+    height: 13rem; /* Fixed height */
     border: 1px solid #ccc; /* Adjust border properties as needed */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     transition: transform 0.3s ease-in-out;
@@ -43,5 +43,10 @@
   
   .property-card:hover h3 {
     opacity: 1; /* Show the text on hover */
+  }
+  .pagination{display: flex; justify-content: center;align-items: center;width: 100%;gap: 2rem;}
+
+  @media(max-width:500px){
+    .property-card{margin: 1.5rem 0;}
   }
   
