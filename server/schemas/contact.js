@@ -4,6 +4,16 @@ export default {
     title: 'ContactUs',
     fields: [
         {
+            name: 'seoDescription',
+            type: 'string',
+            title: 'Description',
+        },
+        {
+            name: 'seoTitle',
+            type: 'string',
+            title: 'SeoTitle'
+        },
+        {
             name: 'email',
             type: 'string',
             title: 'Email'

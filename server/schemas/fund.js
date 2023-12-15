@@ -4,6 +4,16 @@ export default {
     title: 'FundRising',
     fields: [
         {
+            name: 'seoDescription',
+            type: 'string',
+            title: 'Description',
+        },
+        {
+            name: 'seoTitle',
+            type: 'string',
+            title: 'SeoTitle'
+        },
+        {
             name: 'philosophy',
             type: 'array',
             title: 'Philosophy',
