@@ -120,6 +120,4 @@ function page() {
     );
 }
 
-// Export the component
 export default page;
-// 
