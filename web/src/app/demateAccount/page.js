@@ -52,7 +52,7 @@ function page() {
             <ClosiongNav />
             <section class="gallery" data-scroll-section >
             <div className="row posotion-container" id="pin">
-                <div className="col-8 about-left-content">
+                <div className="col-8 about-left-content bg">
                     <div className='title'>International Demat Accounts</div>
                     <div className='heading top-heading'>{data && data.heading}</div>
                     <div className='p-container'>

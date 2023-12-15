@@ -8,6 +8,11 @@
 html,body {max-width: 100vw;overflow:hidden;}
 .over-hidden{overflow: hidden;}
 .gallery{min-height: 100vh;}
+ 
+/* background */
+.bg{background: url('/images/background.svg') ; background-repeat: no-repeat; background-position: cover;}
+
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {font-weight:bold;line-height: 1.2;margin: 0 !important;font-family: Montserrat;padding: 0 ; }
 
@@ -39,7 +44,7 @@ span{color: #434343;font-family: Montserrat;font-size: 1.1rem;font-weight: 650;}
 /* title */
 .title{color: #BB0101;font-family: Montserrat;font-size: 1.2rem;font-style: normal;font-weight: 700;margin-top: 2rem;}
 /* input */
-input{background: transparent;border: 0; padding: .5rem;color: #212121;font-family: Montserrat; font-size: 1.3rem;outline: none;font-weight: 550;}
+input,textarea{background: transparent;border: 0; padding: .5rem;color: #212121;font-family: Montserrat; font-size: 1.3rem;outline: none;font-weight: 550;}
 .p-container{margin:3rem 0;}
 
 /* yellow section */

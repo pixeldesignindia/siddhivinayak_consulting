@@ -12,6 +12,11 @@ import 'gsap/dist/gsap';
 import Image from 'next/image';
 import client from '../sanity/client';
 import Footer from '../components/footer/Footer';
+import office from '../../../public/images/boffice.svg'
+import gmail from '../../../public/images/gmail.svg'
+import bmail from '../../../public/images/bmail.svg'
+import mobile from '../../../public/images/bphone.svg'
+import profile from '../../../public/images/bpro.svg'
 gsap.registerPlugin(ScrollTrigger);
 
 function page() {
@@ -102,7 +107,7 @@ function page() {
                             backgroundImage: `url(${data && data.img2.url})`
                         }}>
                                 </div>
-                                <div className="col-12 fund-box-content">
+                                <div className="col-12 fund-box-content ">
                                     <h6 className='box-head'>Sector Edtech</h6>
                                     <h6 className='title'>Company looking to raise Rs. 6 CR</h6>
                                     <div className='fund-point'>
@@ -156,7 +161,7 @@ function page() {
                     </div>
                     </div>
                     <div className="fund-blue-section">
-                        <div className="blue-section-sm">
+                        <div className="blue-section-sm bg">
                         <h3>Our Philosophy</h3>
                         {data && data.philosophy && data.philosophy.map((block, index) => (
                                 <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text} {block.children[2] && block.children[2].text}
@@ -177,6 +182,28 @@ function page() {
     <h3 className='heading'>REQUEST CALL BACK</h3>
     <Image src={line} alt='line'/>
     <p>Would you like to speak to one of our financial advisers over the phone? Just submit your details and we'll be in touch shortly. You can also email us if you would prefer.</p>
+</div>
+<div className="form-bot">
+<form className='row input-section' method='POST' action='https://formspree.io/f/mvoeppnz'>
+                            <div class="input-fcontainer col-6">
+                                <Image src={profile} />
+                                <input type="text" placeholder='Enter Name' name='userName' autoComplete='off' required/>
+                            </div>
+                            <div class="input-fcontainer col-6">
+                                <Image src={bmail} />
+                                <input type="email" placeholder='Enter Email' name='userEmail' autoComplete='off' required/>
+                            </div>
+                            <div class="input-fcontainer col-6" >
+                                <Image src={mobile} />
+                                <input type="text" placeholder='Enter Phone No' name='phoneNumber' autoComplete='off' required  />
+                            </div>
+                            <div class="input-fcontainer col-6" >
+                                <Image src={office} />
+                                <input type="text" placeholder='Enter Message' name='message' autoComplete='off' required />
+                            </div>
+                            <input type="submit" value='SUBMIT' className='submit-btn' style={{marginTop:'3rem'}}/>
+                            
+                        </form>
 </div>
                         </div>
                     </div>

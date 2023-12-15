@@ -74,4 +74,4 @@
     transition-duration: .5s;
     transform: rotate(180deg);
   }
-  @media(max-width:500px){.home-nav-logo{height: 4rem !important; position: relative; left: -66px;}}
+  @media(max-width:500px){.home-nav-logo{height: 4rem !important; position: relative; left: -66px !important;}}

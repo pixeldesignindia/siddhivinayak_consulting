@@ -62,7 +62,7 @@ function page() {
             <section class="gallery" data-scroll-section >
                 <div id="pin">
                 <div className="row posotion-container" >
-                    <div className="col-8 about-left-content" style={{paddingBottom:'0'}}>
+                    <div className="col-8 about-left-content bg" style={{paddingBottom:'0'}}>
                         <div className='title'>About Us</div>
                         <div className='heading top-heading' >{data && data.aboutHeading}</div>
                         <div className='p-container'>
@@ -76,7 +76,7 @@ function page() {
             backgroundImage: `url(${data && data.aboutBanner.url})`,
           }}></div>
                     </div>
-                    <div className="col-8 about-left-content bot-left p0">
+                    <div className="col-8 about-left-content bot-left p0 bg">
                         <div data-scroll ><div className='title' style={{marginTop:'1rem'}}>Mission Statement</div>
                             <span data-scroll >Assisting companies to raise the required capital</span></div>
                         <div data-scroll >

@@ -1,14 +1,14 @@
 .property-card {
     position: relative;
     overflow: hidden;
-    width: 20rem; /* Fixed width */
-    height: 10rem; /* Fixed height */
+    width: 22rem; /* Fixed width */
+    height: 13rem; /* Fixed height */
     border: 1px solid #ccc; /* Adjust border properties as needed */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     transition: transform 0.3s ease-in-out;
     margin: 2rem;
   }
-  .property-card-container{display: flex; flex-wrap: wrap;}
+  .property-card-container{display: flex; flex-wrap: wrap;align-items: center;justify-content: space-between;}
   .property-card:hover {
     transform: scale(1.1); /* Increase the scale on hover for zoom effect */
   }
@@ -43,5 +43,11 @@
   
   .property-card:hover h3 {
     opacity: 1; /* Show the text on hover */
+  }
+  .pagination{display: flex; justify-content: center;align-items: center;width: 100%;gap: 2rem;}
+
+  @media(max-width:500px){
+    .property-card{margin: 1.5rem 0;    width: 20rem; 
+        height: 10rem; }
   }
   

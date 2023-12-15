@@ -56,7 +56,7 @@ function page() {
             <ClosiongNav />
             <section className="gallery" data-scroll-section >
             <div className="row posotion-container" id="pin">
-            <div className="col-8 about-left-content" style={{paddingTop:'10rem'}}>
+            <div className="col-8 about-left-content bg" style={{paddingTop:'10rem'}}>
                     <div className='title'>Private Equity</div>
                     <div className='heading top-heading'>Strategies of Private Equity.</div>
                     <div className='p-container'>
