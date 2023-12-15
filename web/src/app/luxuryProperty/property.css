@@ -8,7 +8,7 @@
     transition: transform 0.3s ease-in-out;
     margin: 2rem;
   }
-  .property-card-container{display: flex; flex-wrap: wrap;}
+  .property-card-container{display: flex; flex-wrap: wrap;align-items: center;justify-content: space-between;}
   .property-card:hover {
     transform: scale(1.1); /* Increase the scale on hover for zoom effect */
   }
@@ -47,6 +47,7 @@
   .pagination{display: flex; justify-content: center;align-items: center;width: 100%;gap: 2rem;}
 
   @media(max-width:500px){
-    .property-card{margin: 1.5rem 0;}
+    .property-card{margin: 1.5rem 0;    width: 20rem; 
+        height: 10rem; }
   }
   
