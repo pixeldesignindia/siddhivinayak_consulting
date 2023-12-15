@@ -147,7 +147,9 @@
 
 .loader {
   display: inline-block;
-  margin-top: 25vh;
+  margin-top: 25%;
 }
-
+@media(max-width:500px){.loader {
+  margin-top: 50vh;
+}}
  
