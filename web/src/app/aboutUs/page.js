@@ -24,8 +24,8 @@ export async function generateMetadata() {
             },
         },
         openGraph: {
-            title: 'Next.js',
-            description: 'The React Framework for the Web',
+            title:aboutData[0].seoTitle,
+            description:aboutData[0].seoDescription,
             url: url+'aboutUs',
             siteName: url,
             // images: [
