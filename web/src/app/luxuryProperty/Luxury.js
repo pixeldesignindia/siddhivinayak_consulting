@@ -128,7 +128,7 @@ function page() {
                             backgroundImage: `url(${data && data.banner.url})`
                         }}></div>
                     </div>
-                    <div className="col-7 about-left-content">
+                    <div className="col-7 about-left-content res-none">
 
                     </div>
                 </div>

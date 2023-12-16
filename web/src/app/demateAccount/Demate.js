@@ -71,7 +71,7 @@ function page() {
             backgroundImage: `url(${data && data.banner.url})`,
         }}></div>
                 </div>
-                <div className="col-7 about-left-content">
+                <div className="col-7 about-left-content res-none">
                     {/* <div className='title'>Mission Statement</div>
                     <span>Assisting companies to raise the required capital</span>
                     <div className='title' style={{marginTop:'2rem'}}>Values</div>
