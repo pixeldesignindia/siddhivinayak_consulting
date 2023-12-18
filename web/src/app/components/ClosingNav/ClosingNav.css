@@ -1,4 +1,4 @@
-.closing-Nav{position: fixed;top: 0;width: 100%;z-index: 100;}
+.closing-Nav{position: fixed;top: 0;width: 100%;z-index: 500;}
 .closing-nav-container {padding: 0 1.8rem;}
 .fade.modal.show{background: url("../../../../public//images/close-banner.svg");background-repeat: no-repeat; background-position: cover;}
 .modal-Close{width: 100%; text-align: right;}
