@@ -30,6 +30,16 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'address',
+      title: 'Address',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+    }),
+    defineField({
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
@@ -37,17 +47,6 @@ export default defineType({
         hotspot: true,
       },
     }),
-    // defineField({
-    //   name: 'categories',
-    //   title: 'Categories',
-    //   type: 'array',
-    //   of: [{type: 'reference', to: {type: 'category'}}],
-    // }),
-    // defineField({
-    //   name: 'publishedAt',
-    //   title: 'Published at',
-    //   type: 'datetime',
-    // }),
     defineField({
       name: 'body',
       title: 'Body',
@@ -58,8 +57,44 @@ export default defineType({
         }
     ],
     }),
+    defineField({
+      name: 'videoUrl',
+      title: 'YouTube Video URL',
+      type: 'url',
+    }),
+    defineField({
+      name: 'facilities',
+      title: 'Facilities',
+      type: 'array',
+      of: [
+        {
+          type: 'string',
+        },
+      ],
+    },),
+    defineField({
+      name: 'configuration',
+      title: 'Configuration',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'area',
+              title: 'Area',
+              type: 'string',
+            },
+            {
+              name: 'type',
+              title: 'Type',
+              type: 'string',
+            },
+          ],
+        },
+      ],
+    }),
   ],
-
   preview: {
     select: {
       title: 'title',

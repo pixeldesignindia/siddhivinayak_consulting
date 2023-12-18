@@ -1,6 +1,5 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
-import dot from '../../../public/images/dot.svg'
 import '../aboutUs/about.css'
 import './contact.css'
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';

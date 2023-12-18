@@ -1,13 +1,11 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
-import dot from '../../../public/images/dot.svg'
 import '../aboutUs/about.css'
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'gsap/dist/gsap';
 import Image from 'next/image';
-import chart from '../../../public/images/chart.svg'
 import client from '../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
 import Footer from '../components/footer/Footer';
