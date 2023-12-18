@@ -4,6 +4,16 @@ export default {
     title: 'About',
     fields: [
         {
+            name: 'seoDescription',
+            type: 'string',
+            title: 'Description',
+        },
+        {
+            name: 'seoTitle',
+            type: 'string',
+            title: 'SeoTitle'
+        },
+        {
             name: 'aboutHeading',
             type: 'string',
             title: 'AboutHeading'

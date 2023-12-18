@@ -4,6 +4,16 @@ export default {
     title: 'PrivateEquity',
     fields: [
         {
+            name: 'seoDescription',
+            type: 'string',
+            title: 'Description',
+        },
+        {
+            name: 'seoTitle',
+            type: 'string',
+            title: 'SeoTitle'
+        },
+        {
             name: 'equityHeading',
             type: 'string',
             title: 'EquityHeading'

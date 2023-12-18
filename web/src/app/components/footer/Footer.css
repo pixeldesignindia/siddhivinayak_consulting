@@ -6,6 +6,7 @@
 .footer-row>.col-6{display: flex;align-items: center;}
 .develop-by{justify-content:flex-end}
 /** For tablet devices **/
+.footer-container{padding: 0 3rem;}
 @media (min-width: 768px) and (max-width: 1023px) {
     .custom-shape-divider-bottom-1697269733 svg {
         width: calc(144% + 1.3px);

@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <div className='footer'>
             <div >
-                <div className='container'>
+                <div className='footer-container'>
                     <div className="row footer-row" >
                         <div className='col-6'>
                             <p>@ Coyright 2023. All rights reserved.</p>

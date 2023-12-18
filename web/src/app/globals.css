@@ -121,6 +121,8 @@ opacity: 1;  background: #ffffff;}
 
 @media (max-width:500px){
 	html,body {overflow-y:scroll !important;}
+	p {line-height: 180% !important}
+	.heading{font-size: 1.5rem !important;}
 	.copy{width:20rem !important}
 	.copy h1{font-size: 1.5rem !important;padding-left: 1rem;bottom: 15% !important;}
 	.dot-btns{right: 20px !important;}
@@ -135,6 +137,7 @@ opacity: 1;  background: #ffffff;}
 	.bot-left{padding-top:1rem !important;}
 	.yellow-section{margin: .5rem 0 !important;}
 	.yellow-section-row{margin: 0 !important;}
-	.private-chart{width: 90vw !important;}
+	.private-chart{width: 90vw !important;height:12rem !important}
 	.downarrow{left: 5% !important;}
+	.res-none{display: none !important;}
 }
