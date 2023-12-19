@@ -13,7 +13,6 @@ export async function generateMetadata() {
         address,
         
     }`);
-    console.log(metaData[0]);
     return {
         title:metaData[0].seoTitle,
         description: metaData[0].seoDescription,

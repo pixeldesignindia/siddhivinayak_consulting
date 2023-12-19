@@ -141,4 +141,5 @@ opacity: 1;  background: #ffffff;}
 	.downarrow{left: 5% !important;}
 	.res-none{display: none !important;}
 	.horizontal-nav-container{gap: 1.2rem;}
+	.menu-btn-res{height: 22px !important;}
 }

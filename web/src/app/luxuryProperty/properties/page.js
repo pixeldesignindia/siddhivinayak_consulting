@@ -5,6 +5,8 @@ import mobile from '../../../../public/images/mobile.svg'
 import profile from '../../../../public/images/profile.svg'
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import { PortableText } from "@portabletext/react";
 import '../../aboutUs/about.css';
 import './property.css'
@@ -16,7 +18,7 @@ import client from '../../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
 import Footer from '../../components/footer/Footer';
 function page(props) {
-
+  const [modalShow, setModalShow] = useState(false);
   const containerRef = useRef(null);
   // const slug = props.params.slug
   const slug = typeof window !== 'undefined' ? localStorage.getItem('slug') : null;
@@ -71,26 +73,29 @@ function page(props) {
   return (
     <div ref={containerRef} style={{position:'relative'}}>
       <ClosiongNav />
+      <section class="gallery" data-scroll-section >
       <div className='property-post-container'>
         <div className='propertyImageTop' style={{
           backgroundImage: `url(${propertyData && propertyData.mainImage.asset.url})`
         }}>
-          <h1>{propertyData && propertyData.title}</h1>
+          <h1 data-scroll data-scroll-speed="2" data-scroll-repeat="true">{propertyData && propertyData.title}</h1>
         </div>
+        
         <div className="property-content">
           <h2 className="property-heading">
             {propertyData && propertyData.title}
           </h2>
-          <div className='property-Content-Box'>
+          <div className='property-Content-Box' data-scroll data-scroll-speed="1.2" data-scroll-repeat="true">
             <PortableText value={propertyData && propertyData.address} />
           </div>
         </div>
+        
         <div className="property-content">
           <h2 className="property-heading">
             PROJECT - CONFIGURATION
           </h2>
           <div className='property-Content-Box'>
-            <table class="table table-bordered area-table">
+            <table class="table table-bordered area-table" data-scroll data-scroll-speed="1.2" data-scroll-repeat="true">
               <thead>
                 <tr>
                   <th scope="col">Type</th>
@@ -103,11 +108,54 @@ function page(props) {
                   <tr key={i}>
                     <td>{item.type}</td>
                     <td>{item.area}</td>
-                    <td > <div className='btn-price'><button>Click To Know</button></div>  </td>
+                    <td > <div className='btn-price'><button onClick={()=>{setModalShow(true)}}>Click To Know</button></div>  </td>
                   </tr>
                 ))}
               </tbody>
             </table>
+            <Modal
+            className='contactModal'
+      show={modalShow}
+      onHide={() => setModalShow(false)}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter center" >
+          <h3 >EXPRESS YOUR INTEREST</h3>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        
+        <div className=" center">
+        
+          <div className="property-contact-form">
+            <form className='input-section-property' method='POST' action='https://formspree.io/f/mvoeppnz'>
+            <h6>Please fill the form to know more</h6>
+              <div className='input-contact-property'>
+                <Image src={profile} width={35} height={20} alt='image'/>
+                <input type="text" placeholder='Name' name='userName' autoComplete='off' required />
+              </div>
+              <div className='input-contact-property'>
+              <Image src={gmail} width={35} height={20} alt='image'/>
+              <input type="email" placeholder='Email' name='userEmail' autoComplete='off' required />
+              </div>
+              <div className='input-contact-property'>
+              <Image src={mobile} width={35} height={20} alt='image'/>
+              <input type="text" placeholder='Phone No' name='phoneNumber' autoComplete='off' required />
+              </div>
+              <div className='input-contact-property'>
+              <Image src={office} width={35} height={20} alt='image'/>
+              <input type="text" placeholder='Message' name='message' autoComplete='off' required />
+              </div>
+              <input style={{marginTop:'1.2rem'}} type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' />
+              {/* <button type='submit' className='submit-btn' >SUBMIT</button> */}
+            </form>
+          </div>
+        </div>
+      </Modal.Body>
+    </Modal>
           </div>
         </div>
         <div className="property-content">
@@ -149,28 +197,29 @@ function page(props) {
           <div className="property-contact-form">
             <form className='input-section-property' method='POST' action='https://formspree.io/f/mvoeppnz'>
               <div className='input-contact-property'>
-                <Image src={profile} width={35} height={20}/>
+                <Image src={profile} width={35} height={20} alt='image'/>
                 <input type="text" placeholder='Name' name='userName' autoComplete='off' required />
               </div>
               <div className='input-contact-property'>
-              <Image src={gmail} width={35} height={20}/>
+              <Image src={gmail} width={35} height={20} alt='image'/>
               <input type="email" placeholder='Email' name='userEmail' autoComplete='off' required />
               </div>
               <div className='input-contact-property'>
-              <Image src={mobile} width={35} height={20}/>
+              <Image src={mobile} width={35} height={20} alt='image'/>
               <input type="text" placeholder='Phone No' name='phoneNumber' autoComplete='off' required />
               </div>
               <div className='input-contact-property'>
-              <Image src={office} width={35} height={20}/>
+              <Image src={office} width={35} height={20} alt='image'/>
               <input type="text" placeholder='Message' name='message' autoComplete='off' required />
               </div>
-              <input type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' />
+              <input style={{marginTop:'1.2rem'}} type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' />
               {/* <button type='submit' className='submit-btn' >SUBMIT</button> */}
             </form>
           </div>
         </div>
       </div>
       <Footer />
+      </section>
     </div>
   );
 }

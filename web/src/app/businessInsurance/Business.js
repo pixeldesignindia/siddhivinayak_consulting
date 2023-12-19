@@ -69,10 +69,10 @@ function page() {
                         <p className='disappear' data-scroll data-scroll-class="appear" data-scroll-repeat="true">If any loss or damage happens to these artworks then the art insurance company provides compensation to the policyholder. The policy provides coverage for -</p>
                         <div className='p-container'>
                             <div className="row yellow-section-row disappear" data-scroll data-scroll-class="appear" data-scroll-repeat="true">
-                                <div className="col-10 yellow-section" style={{ marginLeft: '.5rem' }}><Image src={dot} /> <p>Unforeseen and physical loss or damage</p> </div>
+                                <div className="col-10 yellow-section" style={{ marginLeft: '.5rem' }}><Image src={dot} alt='image'/> <p>Unforeseen and physical loss or damage</p> </div>
                             </div>
                             <div className="row yellow-section-row disappear" data-scroll data-scroll-class="appear" data-scroll-repeat="true">
-                                <div className="col-10 yellow-section" style={{ marginLeft: '.5rem' }}><Image src={dot} /> <p>For all insured property during transit</p> </div>
+                                <div className="col-10 yellow-section" style={{ marginLeft: '.5rem' }}><Image src={dot} alt='image'/> <p>For all insured property during transit</p> </div>
                             </div>
 
                             <p className='disappear' data-scroll data-scroll-class="appear" data-scroll-repeat="true">Some insurance companies also cover transportation of the art piece from one place to another within the country. They provide wall-to-wall coverage for paintings, designs, and other forms of artwork that can be displayed on a wall. Certain policies also include the storage of the artwork within the specified geographical or territorial limits for business or professional reasons. Damage or losses due to natural calamities like floods, earthquakes, cyclones, and other extreme weather conditions are also covered under Art Insurance.</p>

@@ -84,23 +84,23 @@ function page() {
                     <div className='p-container top-heading'>
                         <p>If you are looking to expand your business and financial consultation then you knocked on the right door! Get in touch with us and we will suggest you the best solution for your company.</p>
                         <p className='contact-data' style={{marginTop:'2rem'}}><Image src={place} />{data && data.address}</p>
-                        <p className='contact-data'><Image src={mail} />{data && data.email}</p>
+                        <p className='contact-data' style={{marginBottom:'1.5rem'}}><Image src={mail}  alt='image'/>{data && data.email}</p>
                         <form className='row input-section' method='POST' action='https://formspree.io/f/mvoeppnz'>
                             <div class="input-container col-6">
-                                <Image src={profile} />
-                                <input type="text" placeholder='Enter Name' name='userName' autoComplete='off' required/>
+                                <Image src={profile} alt='image' />
+                                <input type="text" placeholder='Name' name='userName' autoComplete='off' required/>
                             </div>
                             <div class="input-container col-6">
-                                <Image src={gmail} />
-                                <input type="email" placeholder='Enter Email' name='userEmail' autoComplete='off' required/>
+                                <Image src={gmail}  alt='image'/>
+                                <input type="email" placeholder='Email' name='userEmail' autoComplete='off' required/>
                             </div>
                             <div class="input-container col-6" >
-                                <Image src={mobile} />
-                                <input type="text" placeholder='Enter Phone No' name='phoneNumber' autoComplete='off' required  />
+                                <Image src={mobile}  alt='image'/>
+                                <input type="text" placeholder='Phone No' name='phoneNumber' autoComplete='off' required  />
                             </div>
                             <div class="input-container col-6" >
-                                <Image src={office} />
-                                <input type="text" placeholder='Enter Message' name='message' autoComplete='off' required />
+                                <Image src={office} alt='image'/>
+                                <input type="text" placeholder='Message' name='message' autoComplete='off' required />
                             </div>
                             <input type="submit" value='SUBMIT' className='submit-btn' style={{marginTop:'3rem'}}/>
                             {/* <button type='submit' className='submit-btn' >SUBMIT</button> */}

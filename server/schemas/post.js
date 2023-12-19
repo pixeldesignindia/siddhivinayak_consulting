@@ -64,7 +64,7 @@ export default defineType({
     }),
     defineField({
       name: 'facilities',
-      title: 'Facilities',
+      title: 'Amenities',
       type: 'array',
       of: [
         {

@@ -43,7 +43,6 @@ function page() {
                     },
                     equityDescription
                 }`);
-                console.log(fetchData[0]);
                 setData(fetchData[0]);
             } catch (error) {
                 console.error('Error fetching data from Sanity:', error);
@@ -61,14 +60,14 @@ function page() {
                     <div className='heading top-heading'>Strategies of Private Equity.</div>
                     <div className='p-container'>
                         <div className="row yellow-section-row">
-                            <div className="col-4 yellow-section"><Image src={dot}/> <p>Angel investing</p> </div>
-                            <div className="col-4 yellow-section"><Image src={dot}/> <p>Venture capital</p> </div>
-                            <div className="col-4 yellow-section"><Image src={dot}/> <p>Leveraged buyouts (LBO)</p> </div>
+                            <div className="col-4 yellow-section"><Image src={dot} alt='image'/> <p>Angel investing</p> </div>
+                            <div className="col-4 yellow-section"><Image src={dot} alt='image'/> <p>Venture capital</p> </div>
+                            <div className="col-4 yellow-section"><Image src={dot} alt='image'/> <p>Leveraged buyouts (LBO)</p> </div>
                         </div>
                         <div className="row yellow-section-row">
-                            <div className="col-4 yellow-section"><Image src={dot}/> <p>Growth capital</p> </div>
-                            <div className="col-4 yellow-section"><Image src={dot}/> <p>Distressed investments</p> </div>
-                            <div className="col-4 yellow-section"><Image src={dot}/> <p>Mezzanine capita</p> </div>
+                            <div className="col-4 yellow-section"><Image src={dot} alt='image'/> <p>Growth capital</p> </div>
+                            <div className="col-4 yellow-section"><Image src={dot} alt='image'/> <p>Distressed investments</p> </div>
+                            <div className="col-4 yellow-section"><Image src={dot} alt='image'/> <p>Mezzanine capita</p> </div>
                         </div>
                         <div className='heading' style={{margin:"4rem 0 1rem 0"}}>Who invests in Private Equity?</div>
                     <p>Majority of the private equity comes from the Pensioners and contributes a larger part to the asset.The below pie-chart gives a clear picture about various investors of Private Equity.</p>
@@ -81,7 +80,7 @@ function page() {
                 </div>
                 <div className="col-7 about-left-content p0 bot-left">
                     <div className='heading disappear' style={{margin:' 0 0 2rem 0'}} data-scroll data-scroll-class="appear" >Investors of Private Equity</div>
-                    <Image src={data && data.chart.url} width={650} height={400} data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear private-chart'/>
+                    <Image src={data && data.chart.url} width={650} height={400} data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear private-chart' alt='image'/>
                     <div className='heading disappear' style={{margin:'3rem 0 1rem 0'}} data-scroll data-scroll-class="appear" >{data && data.equityHeading}</div>
                     <p data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear' style={{marginBottom:'5rem'}}>{data && data.equityDescription && data.equityDescription.map((block, index) => (
     <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text }

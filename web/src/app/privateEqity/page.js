@@ -15,7 +15,6 @@ export async function generateMetadata() {
         },
         equityDescription
     }`);
-    console.log(metaData[0]);
     return {
         title:metaData[0].seoTitle,
         description: metaData[0].seoDescription,
