@@ -69,7 +69,7 @@ function page(props) {
   }, [slug]);
 
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} style={{position:'relative'}}>
       <ClosiongNav />
       <div className='property-post-container'>
         <div className='propertyImageTop' style={{
@@ -77,7 +77,7 @@ function page(props) {
         }}>
           <h1>{propertyData && propertyData.title}</h1>
         </div>
-        <div className="property-content bg">
+        <div className="property-content">
           <h2 className="property-heading">
             {propertyData && propertyData.title}
           </h2>

@@ -9,7 +9,6 @@ import Image from 'next/image';
 import client from '../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
 import Footer from '../components/footer/Footer';
-import Link from 'next/link';
 import './property.css'
 import { useRouter } from 'next/navigation';
 function page() {
@@ -99,7 +98,7 @@ function page() {
                         <div className='p-container property-card-container bg' >
                             {currentPropertyCards.map((item, index) => (
                                 <div onClick={() => handleRoute(item.slug.current)} key={index}>
-                                    <div className="property-card">
+                                    <div className="property-card" style={{cursor:'pointer'}}>
                                         <div className="image-property">
                                             <Image src={item.mainImage.asset.url} width={500} height={200} />
                                         </div>

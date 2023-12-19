@@ -20,4 +20,6 @@
     .footer-content>h6{text-align: center;}
     .footer-row>.col-6>p{font-size: 9px;text-align: center !important;}
     .footer-row>.col-6{display: flex;justify-content: center;align-items: center;}
+    .footer-container{padding: 0 1rem !important}
+	.footer-row>.col-6>p{font-size: 11px !important;}
 }

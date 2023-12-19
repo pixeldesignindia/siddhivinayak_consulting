@@ -38,12 +38,12 @@ function ClosiongNav() {
         <div className='closing-Nav'>
             <div className="closing-nav-container">
                 <div className="row">
-                    <div className="col-2" onClick={()=>{router.push('/')}} style={{cursor:'pointer'}}><Image src={logo} height={70} width={200} className='nav-logo' /></div>
-                    <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} style={{cursor:'pointer'}}>
+                    <div className="col-2" onClick={()=>{router.push('/')}} ><Image src={logo} height={70} width={200} className='nav-logo' style={{cursor:'pointer'}}/></div>
+                    <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} >
                     {windowWidth > 500 ? (
-        <Image src={Menuline}/>
+        <Image src={Menuline} style={{cursor:'pointer'}}/>
       ) : (
-        <Image src={blackMenuline}/>
+        <Image src={blackMenuline} style={{cursor:'pointer'}}/>
       )}
                         
                     </div>
@@ -54,12 +54,12 @@ function ClosiongNav() {
                     <div className='modal-Close' onClick={() =>setShow(false)} style={{cursor:'pointer'}}> <Image src={closeBtn}/> </div>
                     <div className="horizontal-nav-container" >
                     <Link className={`link d-flex align-items-center ${pathname === '/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/" onClick={() =>setShow(false)}>HOME</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/aboutUs' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/aboutUs" onClick={() =>setShow(false)}>ABOUT</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/privateEqity' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/privateEqity" onClick={() =>setShow(false)}>PRIVATE EQUITY</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/demateAccount' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/demateAccount" onClick={() =>setShow(false)}>DEMATE ACCOUNT</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/luxuryProperty' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/luxuryProperty" onClick={() =>setShow(false)}>LUXURY PROPERTY</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/businessInsurance' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/businessInsurance" onClick={() =>setShow(false)}>BUSINESS INSURANCE</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/contact' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/contact" onClick={() =>setShow(false)}>CONTACT US</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/aboutUs/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/aboutUs" onClick={() =>setShow(false)}>ABOUT</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/privateEqity/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/privateEqity" onClick={() =>setShow(false)}>PRIVATE EQUITY</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/demateAccount/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/demateAccount" onClick={() =>setShow(false)}>DEMATE ACCOUNT</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/luxuryProperty/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/luxuryProperty" onClick={() =>setShow(false)}>LUXURY PROPERTY</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/businessInsurance/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/businessInsurance" onClick={() =>setShow(false)}>BUSINESS INSURANCE</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/contact/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/contact" onClick={() =>setShow(false)}>CONTACT US</Link>
                     </div>
                 </Modal.Body>
             </Modal>
