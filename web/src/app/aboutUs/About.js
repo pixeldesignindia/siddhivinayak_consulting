@@ -43,7 +43,6 @@ function page() {
                     },
                     aboutDescription
                 }`);
-                console.log(about[0]);
                 setData(about[0]);
             } catch (error) {
                 console.error('Error fetching data from Sanity:', error);
@@ -85,18 +84,18 @@ function page() {
                         </div>
                         <div className='p-container' >
                             <div className="blue-container row disappear" data-scroll data-scroll-class="appear" data-scroll-repeat="true" style={{ marginTop: '5rem' }}>
-                                <div className='col-3'> <Image src={owner1} height={170} width={170} className='ceo-img' /> </div>
+                                <div className='col-3'> <Image src={owner1} height={170} width={170} className='ceo-img'  alt='image'/> </div>
                                 <div className='col-8 blue-p' >
-                                    <div className='company-person'> <h6 >Manas Survee </h6><Image src={link} height={30} width={30}  /></div>
+                                    <div className='company-person'> <h6 >Manas Survee </h6><Image src={link} height={30} width={30}  alt='image'/></div>
                                     
                                     <p className='position'>CEO of Siddhi Consulting</p>
                                     <p>He has over 16 years of experience in Real Estate and Finance. The years have added to the expertise he has in the field. In his time of work, he has handled various large projects benefitting groups of people at the same time. Through this platform, he aims to facilitate the exchange of opportunities between investors and buyers of hospitals. He is a delight to work with and happens to be great at managing people and closing deals!</p>
                                 </div>
                             </div>
                             <div className="blue-container row disappear" data-scroll data-scroll-class="appear" data-scroll-repeat="true" style={{marginTop:'2rem'}}>
-                                <div className='col-3'> <Image src={owner2} height={170} width={170} className='ceo-img' /> </div>
+                                <div className='col-3'> <Image src={owner2} height={170} width={170} className='ceo-img' alt='image' /> </div>
                                 <div className='col-8 blue-p'>
-                                <div className='company-person'> <h6 >Sanjiv Swarup</h6><Image src={link} height={30} width={30}  /></div>
+                                <div className='company-person'> <h6 >Sanjiv Swarup</h6><Image src={link} height={30} width={30}  alt='image'/></div>
                                     <p className='position'>Management Consultant </p>
                                     <p>The man with over 30 years of experience has been and is an important guiding factor for the company and its team. Educated in Law, Economics, Accounting, and Finance from reputed institutes, there is no gap that he can’t fill. His knowledge and wisdom are ever-evolving which enables the company to grow and achieve goals!</p>
                                 </div>

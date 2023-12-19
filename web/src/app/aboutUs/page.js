@@ -12,7 +12,6 @@ export async function generateMetadata() {
         },
         aboutDescription
     }`);
-    console.log(aboutData[0]);
     return {
         title:aboutData[0].seoTitle,
         description:aboutData[0].seoDescription,

@@ -1,11 +1,11 @@
 .closing-Nav{position: fixed;top: 0;width: 100%;z-index: 500;}
 .closing-nav-container {padding: 0 1.8rem;}
-.fade.modal.show{background: url("../../../../public//images/close-banner.svg");background-repeat: no-repeat; background-position: cover;}
+.fade-modal{background: url("../../../../public//images/close-banner.svg");background-repeat: no-repeat; background-position: cover;}
 .modal-Close{width: 100%; text-align: right;}
 .modal-fullscreen .modal-body {
   overflow-y: hidden;
 }
-.modal-content{background-color: transparent !important;}
+.modal-content{background-color: transparent }
 .horizontal-nav-container{display: flex;justify-content: center;align-items: center;flex-direction: column;gap: 1rem;height: 100%;}
 .horizontalNavLink{color: #fff; text-decoration: none; font-size: 1.5rem;}
 .activeHorizontalNavLink{color: #fff; text-decoration: none; font-size: 1.5rem; border-bottom: 2px solid #fff;}

@@ -55,7 +55,6 @@ function page() {
                     },
                     philosophy
                 }`);
-                console.log(fetchData[0]);
                 setData(fetchData[0]);
             } catch (error) {
                 console.error('Error fetching data from Sanity:', error);
@@ -186,19 +185,19 @@ function page() {
 <div className="form-bot">
 <form className='row input-section' method='POST' action='https://formspree.io/f/mvoeppnz'>
                             <div class="input-fcontainer col-6">
-                                <Image src={profile} />
+                                <Image src={profile} alt='image'/>
                                 <input type="text" placeholder='Enter Name' name='userName' autoComplete='off' required/>
                             </div>
                             <div class="input-fcontainer col-6">
-                                <Image src={bmail} />
+                                <Image src={bmail} alt='image'/>
                                 <input type="email" placeholder='Enter Email' name='userEmail' autoComplete='off' required/>
                             </div>
                             <div class="input-fcontainer col-6" >
-                                <Image src={mobile} />
+                                <Image src={mobile} alt='image'/>
                                 <input type="text" placeholder='Enter Phone No' name='phoneNumber' autoComplete='off' required  />
                             </div>
                             <div class="input-fcontainer col-6" >
-                                <Image src={office} />
+                                <Image src={office} alt='image'/>
                                 <input type="text" placeholder='Enter Message' name='message' autoComplete='off' required />
                             </div>
                             <input type="submit" value='SUBMIT' className='submit-btn' style={{marginTop:'3rem'}}/>

@@ -1,4 +1,5 @@
 'use client'
+import arrow from '../.../../../../public/images/property-arrow.svg'
 import React, { useEffect, useRef, useState } from 'react';
 import '../aboutUs/about.css'
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
@@ -95,14 +96,19 @@ function page() {
                     <div className="col-8 about-left-content" style={{ paddingTop: '10rem' }}>
                         <div className='title'>Luxury Properties</div>
                         <div className='heading top-heading'>{data && data.heading}</div>
-                        <div className='p-container property-card-container bg' >
+                        <div className='p-container bg row' >
                             {currentPropertyCards.map((item, index) => (
-                                <div onClick={() => handleRoute(item.slug.current)} key={index}>
-                                    <div className="property-card" style={{cursor:'pointer'}}>
+                                <div className='col-4' onClick={() => handleRoute(item.slug.current)} key={index} style={{cursor:'pointer'}}>
+                                    <div className="property-card" >
                                         <div className="image-property">
-                                            <Image src={item.mainImage.asset.url} width={500} height={200} />
+                                            <Image src={item.mainImage.asset.url} width={500} height={200} alt='image'/>
                                         </div>
                                         <h3>{item.title}</h3>
+                                    </div>
+                                    <div className="property-data">
+                                        <h4>{item.title}</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laborum quam laudantium harum minus sunt molestias illo libero?</p>
+                                        <div className='bot-red-property'> <p>View Details </p> <Image src={arrow} alt='arrow'/> </div>
                                     </div>
                                 </div>
                             ))}

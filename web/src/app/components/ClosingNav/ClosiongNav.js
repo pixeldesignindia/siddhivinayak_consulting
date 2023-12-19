@@ -4,11 +4,9 @@ import './ClosingNav.css'
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../../../public/images/logo.svg';
-import menu from '../../../../public/images/Menu.svg';
 import Menuline from '../../../../public/images/Menuline.svg';
 import blackMenuline from '../../../../public/images/blackMenu.svg';
 import closeBtn from '../../../../public/images/close-btn.svg';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { usePathname , useRouter } from 'next/navigation'
 function ClosiongNav() {
@@ -41,17 +39,17 @@ function ClosiongNav() {
                     <div className="col-2" onClick={()=>{router.push('/')}} ><Image src={logo} height={70} width={200} className='nav-logo' style={{cursor:'pointer'}}/></div>
                     <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} >
                     {windowWidth > 500 ? (
-        <Image src={Menuline} style={{cursor:'pointer'}}/>
+        <Image src={Menuline} style={{cursor:'pointer'}} className='menu-btn-res' alt='image'/>
       ) : (
-        <Image src={blackMenuline} style={{cursor:'pointer'}}/>
+        <Image src={blackMenuline} style={{cursor:'pointer'}} className='menu-btn-res' alt='image'/>
       )}
                         
                     </div>
                 </div>
             </div>
-            <Modal show={show} fullscreen={true} onHide={() =>setShow(false)}>
+            <Modal show={show} fullscreen={true} onHide={() =>setShow(false)} className='fade-modal'>
                 <Modal.Body closeButton>
-                    <div className='modal-Close' onClick={() =>setShow(false)} style={{cursor:'pointer'}}> <Image src={closeBtn}/> </div>
+                    <div className='modal-Close' onClick={() =>setShow(false)} style={{cursor:'pointer'}}> <Image src={closeBtn} alt='image'/> </div>
                     <div className="horizontal-nav-container" >
                     <Link className={`link d-flex align-items-center ${pathname === '/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/" onClick={() =>setShow(false)}>HOME</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/aboutUs/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/aboutUs" onClick={() =>setShow(false)}>ABOUT</Link>
