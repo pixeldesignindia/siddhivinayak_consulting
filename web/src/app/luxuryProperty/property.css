@@ -7,7 +7,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     transition: transform 0.3s ease-in-out;
   }
-  .bot-red-property{background: linear-gradient(90deg, #C5141B 0%, #E49201 100%); display: flex;align-items: center; justify-content: space-between; padding: .5rem 1rem;}
+  .bot-red-property{background: linear-gradient(90deg, #C5141B 0%, #E49201 100%); display: flex;align-items: center; justify-content: space-between; padding: .5rem 1rem; margin-top: 1rem;}
   .bot-red-property P{margin: 0;color: #fff;}
   .property-data{padding: 1.5rem;box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);background: #fff;}
   .property-data > h4{margin-bottom: 1.5rem !important;}
