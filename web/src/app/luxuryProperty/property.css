@@ -30,7 +30,7 @@
     transform: scale(1.2); 
   }
   
-  h3 {
+  .property-card h3 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,9 +45,11 @@
     opacity: 1; /* Show the text on hover */
   }
   .pagination{display: flex; justify-content: center;align-items: center;width: 100%;gap: 2rem;}
+  .pagination span{font-size: 1rem;}
 
   @media(max-width:500px){
     .property-card{margin: 1.5rem 0;    width: 20rem; 
         height: 10rem; }
+        .property-card-container{justify-content: center !important;}
   }
   

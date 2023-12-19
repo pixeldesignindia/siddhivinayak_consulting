@@ -3,7 +3,7 @@
 .main-nav .bg-body-tertiary{background-color: transparent !important;    padding: 0;}
 .main-nav .bg-body-tertiary .container.scrolling{background-color: transparent!important; color:#fff}
 .navbar-nav a{ text-decoration: none; font-size: .8rem; font-weight: 400;color: #fff;letter-spacing: 0.03rem;}
-.navbar-nav .link{margin-right: .8rem;}
+.navbar-nav .link{margin-right: .5rem;}
 .activeNav{color:#ffffff !important;border-bottom: 3px solid #ffffff;font-weight: bold;}
 .contact-btn{background: #008BC2;color-scheme: #fff !important;padding: .5rem 1rem; width: max-content;margin: 0 1rem;}
 .nav-logo{height: 5.5rem;width: 16rem;}
