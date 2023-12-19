@@ -96,7 +96,7 @@ function page() {
                             </div>
                             <div class="input-container col-6" >
                                 <Image src={mobile}  alt='image'/>
-                                <input type="text" placeholder='Phone No' name='phoneNumber' autoComplete='off' required  />
+                                <input type="number" placeholder='Phone No' name='phoneNumber' autoComplete='off' required  />
                             </div>
                             <div class="input-container col-6" >
                                 <Image src={office} alt='image'/>

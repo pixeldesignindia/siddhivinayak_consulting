@@ -142,4 +142,6 @@ opacity: 1;  background: #ffffff;}
 	.res-none{display: none !important;}
 	.horizontal-nav-container{gap: 1.2rem;}
 	.menu-btn-res{height: 22px !important;}
+	.call-back{padding: 2rem 1rem;margin-bottom: 2rem;}
+	.fund-box-c{gap: 2rem !important;}
 }

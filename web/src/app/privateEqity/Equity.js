@@ -82,7 +82,7 @@ function page() {
                     <div className='heading disappear' style={{margin:' 0 0 2rem 0'}} data-scroll data-scroll-class="appear" >Investors of Private Equity</div>
                     <Image src={data && data.chart.url} width={650} height={400} data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear private-chart' alt='image'/>
                     <div className='heading disappear' style={{margin:'3rem 0 1rem 0'}} data-scroll data-scroll-class="appear" >{data && data.equityHeading}</div>
-                    <p data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear' style={{marginBottom:'5rem'}}>{data && data.equityDescription && data.equityDescription.map((block, index) => (
+                    <p data-scroll data-scroll-class="appear" data-scroll-repeat="true" className='disappear' style={{marginBottom:'3rem'}}>{data && data.equityDescription && data.equityDescription.map((block, index) => (
     <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text }
     </p>
     ))}</p>

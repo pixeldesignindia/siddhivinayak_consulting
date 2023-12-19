@@ -52,7 +52,8 @@
   .pagination span{font-size: 1rem;}
 
   @media(max-width:500px){
-    .property-card{margin: 1.5rem 0;    width: 20rem; 
+    .lux-property{margin: 1.5rem 0; padding:0 1rem;}
+    .property-card{width: 100%; 
         height: 10rem; }
         .property-card-container{justify-content: center !important;}
         .pagination{margin-bottom: 1.5rem !important;}

@@ -10,28 +10,23 @@ import closeBtn from '../../../../public/images/close-btn.svg';
 import Modal from 'react-bootstrap/Modal';
 import { usePathname , useRouter } from 'next/navigation'
 function ClosiongNav() {
-
+  const pathname = usePathname()
+  const router = useRouter()
+  const [show, setShow] = useState(false);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setWindowWidth(window.innerWidth);
-
       const handleResize = () => {
         setWindowWidth(window.innerWidth);
       };
-
       window.addEventListener("resize", handleResize);
-
       return () => {
         window.removeEventListener("resize", handleResize);
       };
     }
   }, []);
-
-    const pathname = usePathname()
-    const router = useRouter()
-    const [show, setShow] = useState(false);
     return (
         <div className='closing-Nav'>
             <div className="closing-nav-container">

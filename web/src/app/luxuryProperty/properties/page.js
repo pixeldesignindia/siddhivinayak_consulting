@@ -143,7 +143,7 @@ function page(props) {
               </div>
               <div className='input-contact-property'>
               <Image src={mobile} width={35} height={20} alt='image'/>
-              <input type="text" placeholder='Phone No' name='phoneNumber' autoComplete='off' required />
+              <input type="number" placeholder='Phone No' name='phoneNumber' autoComplete='off' required />
               </div>
               <div className='input-contact-property'>
               <Image src={office} width={35} height={20} alt='image'/>
@@ -206,7 +206,7 @@ function page(props) {
               </div>
               <div className='input-contact-property'>
               <Image src={mobile} width={35} height={20} alt='image'/>
-              <input type="text" placeholder='Phone No' name='phoneNumber' autoComplete='off' required />
+              <input type="number" placeholder='Phone No' name='phoneNumber' autoComplete='off' required />
               </div>
               <div className='input-contact-property'>
               <Image src={office} width={35} height={20} alt='image'/>
