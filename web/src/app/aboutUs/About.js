@@ -105,9 +105,9 @@ function page() {
                 </div>
                 </div>
                 
-                
+                <Footer/>
             </section>
-            <Footer/>
+
         </div>
     );
 }

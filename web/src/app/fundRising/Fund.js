@@ -176,7 +176,9 @@ function page() {
                             <div className="col-4"><p>Buying & Selling of Hospital Simplified</p> <h4>Hospitalsforsale.biz</h4> </div>
                             <div className="col-4"><p>Dealing With Hotels</p> <h4>Hotelsforsale.com</h4> </div>
                         </div>
-                        <div className='call-back'>
+
+                    </div>
+                    <div className='call-back'>
 <div className="call-top">
     <h3 className='heading'>REQUEST CALL BACK</h3>
     <Image src={line} alt='line'/>
@@ -205,7 +207,6 @@ function page() {
                         </form>
 </div>
                         </div>
-                    </div>
                 </div>
                 <Footer/>
             </section>

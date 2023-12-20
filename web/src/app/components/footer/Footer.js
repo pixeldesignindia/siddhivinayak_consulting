@@ -10,7 +10,7 @@ export default function Footer() {
                             <p>@ Coyright 2023. All rights reserved.</p>
                         </div>
                         <div className="col-6 develop-by" >
-                        <p>Website Design & Developed By <a href="https://pixeldesignindia.com/lp/">Pixel Design India</a> </p>
+                        <p>Website Design & Developed By <a target='_blank' href="https://pixeldesignindia.com/">Pixel Design India</a> </p>
                         </div>
                     </div>
                 </div>

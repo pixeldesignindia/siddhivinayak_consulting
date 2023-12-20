@@ -31,7 +31,7 @@ function ClosingFundNav() {
         <div className='closing-Nav'>
             <div className="closing-nav-container">
                 <div className="row">
-                    <div className="col-2" onClick={()=>{router.push('/')}} ><Image src={logo} height={70} width={200} className='nav-logo' style={{cursor:'pointer'}}/></div>
+                    <div className="col-2" onClick={()=>{router.push('/')}} style={{padding:'0'}}><Image src={logo} height={70} width={200} className='nav-logo' style={{cursor:'pointer'}}/></div>
                     <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} >
         <Image src={blackMenuline} style={{cursor:'pointer'}} className='menu-btn-res' alt='image'/>
                     </div>
