@@ -98,7 +98,7 @@ function page() {
                         <div className='heading top-heading'>{data && data.heading}</div>
                         <div className='p-container bg row' >
                             {currentPropertyCards.map((item, index) => (
-                                <div className='col-4' onClick={() => handleRoute(item.slug.current)} key={index} style={{cursor:'pointer'}}>
+                                <div className='col-4 lux-property' onClick={() => handleRoute(item.slug.current)} key={index} style={{cursor:'pointer'}}>
                                     <div className="property-card" >
                                         <div className="image-property">
                                             <Image src={item.mainImage.asset.url} width={500} height={200} alt='image'/>

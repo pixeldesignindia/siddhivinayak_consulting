@@ -104,10 +104,10 @@ function page() {
                     </div>
                 </div>
                 </div>
-                <Footer/>
+                
                 
             </section>
-            
+            <Footer/>
         </div>
     );
 }

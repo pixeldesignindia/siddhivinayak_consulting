@@ -13,7 +13,7 @@ import Image from 'next/image';
 import client from '../sanity/client';
 import Footer from '../components/footer/Footer';
 import office from '../../../public/images/boffice.svg'
-import gmail from '../../../public/images/gmail.svg'
+import HomeResNav from '../components/homeResNav/HomeResNav'
 import bmail from '../../../public/images/bmail.svg'
 import mobile from '../../../public/images/bphone.svg'
 import profile from '../../../public/images/bpro.svg'
@@ -65,7 +65,7 @@ function page() {
 
     return (
         <div ref={containerRef}>
-            <ClosiongNav />
+            < HomeResNav/>
             <section class="gallery" data-scroll-section >
                 <div className="row posotion-container" >
                     <div className="col-12 fund-page-content" style={{ paddingTop: '10rem' }}>
@@ -186,19 +186,19 @@ function page() {
 <form className='row input-section' method='POST' action='https://formspree.io/f/mvoeppnz'>
                             <div class="input-fcontainer col-6">
                                 <Image src={profile} alt='image'/>
-                                <input type="text" placeholder='Enter Name' name='userName' autoComplete='off' required/>
+                                <input type="text" placeholder='Name' name='userName' autoComplete='off' required/>
                             </div>
                             <div class="input-fcontainer col-6">
                                 <Image src={bmail} alt='image'/>
-                                <input type="email" placeholder='Enter Email' name='userEmail' autoComplete='off' required/>
+                                <input type="email" placeholder='Email' name='userEmail' autoComplete='off' required/>
                             </div>
                             <div class="input-fcontainer col-6" >
                                 <Image src={mobile} alt='image'/>
-                                <input type="text" placeholder='Enter Phone No' name='phoneNumber' autoComplete='off' required  />
+                                <input type="number" placeholder='Phone No' name='phoneNumber' autoComplete='off' required  />
                             </div>
                             <div class="input-fcontainer col-6" >
                                 <Image src={office} alt='image'/>
-                                <input type="text" placeholder='Enter Message' name='message' autoComplete='off' required />
+                                <input type="text" placeholder='Message' name='message' autoComplete='off' required />
                             </div>
                             <input type="submit" value='SUBMIT' className='submit-btn' style={{marginTop:'3rem'}}/>
                             
