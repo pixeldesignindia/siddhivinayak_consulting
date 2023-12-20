@@ -42,5 +42,7 @@
         .fund-blue-section{padding:2.5rem 1.5rem !important;}
         .fund-bot-links>.col-4>p{text-align: center !important;}
         .fund-box-c > .col-4{margin-top: 2rem;}
-        .fund-box-content{padding: 2rem 1.2rem;}
+        .fund-box-content{padding: 2rem 1.2rem !important;}
+        .input-fcontainer{gap: 1rem !important; margin: 0 !important;}
+        .wIcon{height: 20px; width: 20px;}
     }

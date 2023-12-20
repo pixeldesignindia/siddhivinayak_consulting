@@ -50,4 +50,5 @@
 }
 @media(max-width:500px){
     .contact-row-property .col-6{height: 60vh !important;}
+    .input-contact-property{gap: 1rem !important;}
 }

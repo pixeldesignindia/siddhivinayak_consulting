@@ -126,7 +126,7 @@ function page(props) {
           <h3 >EXPRESS YOUR INTEREST</h3>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className='res-form'>
         
         <div className=" center">
         
@@ -138,7 +138,7 @@ function page(props) {
                 <input type="text" placeholder='Name' name='userName' autoComplete='off' required />
               </div>
               <div className='input-contact-property'>
-              <Image src={gmail} width={35} height={20} alt='image'/>
+              <Image src={gmail} width={35} height={16} alt='image' className='mail-height'/>
               <input type="email" placeholder='Email' name='userEmail' autoComplete='off' required />
               </div>
               <div className='input-contact-property'>
@@ -149,7 +149,7 @@ function page(props) {
               <Image src={office} width={35} height={20} alt='image'/>
               <input type="text" placeholder='Message' name='message' autoComplete='off' required />
               </div>
-              <input style={{marginTop:'1.2rem'}} type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' />
+              <input style={{marginTop:'1.5rem'}} type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' />
               {/* <button type='submit' className='submit-btn' >SUBMIT</button> */}
             </form>
           </div>
@@ -201,7 +201,7 @@ function page(props) {
                 <input type="text" placeholder='Name' name='userName' autoComplete='off' required />
               </div>
               <div className='input-contact-property'>
-              <Image src={gmail} width={35} height={20} alt='image'/>
+              <Image src={gmail} width={35} height={16} alt='image' className='mail-height'/>
               <input type="email" placeholder='Email' name='userEmail' autoComplete='off' required />
               </div>
               <div className='input-contact-property'>

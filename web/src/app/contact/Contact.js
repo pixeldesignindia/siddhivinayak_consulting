@@ -85,13 +85,13 @@ function page() {
                         <p>If you are looking to expand your business and financial consultation then you knocked on the right door! Get in touch with us and we will suggest you the best solution for your company.</p>
                         <p className='contact-data' style={{marginTop:'2rem'}}><Image src={place} />{data && data.address}</p>
                         <p className='contact-data' style={{marginBottom:'1.5rem'}}><Image src={mail}  alt='image'/>{data && data.email}</p>
-                        <form className='row input-section' method='POST' action='https://formspree.io/f/mvoeppnz'>
+                        <form className='row input-section res-form' method='POST' action='https://formspree.io/f/mvoeppnz'>
                             <div class="input-container col-6">
                                 <Image src={profile} alt='image' />
                                 <input type="text" placeholder='Name' name='userName' autoComplete='off' required/>
                             </div>
                             <div class="input-container col-6">
-                                <Image src={gmail}  alt='image'/>
+                                <Image src={gmail}  alt='image' className='mail-height'/>
                                 <input type="email" placeholder='Email' name='userEmail' autoComplete='off' required/>
                             </div>
                             <div class="input-container col-6" >

@@ -3,7 +3,7 @@ import React, { useEffect, useRef , useState } from 'react';
 import './about.css';
 import Head from 'next/head';
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
-import dynamic from 'next/dynamic';
+import { PortableText } from "@portabletext/react";
 import client from '../sanity/client';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
