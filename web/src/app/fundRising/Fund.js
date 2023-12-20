@@ -5,7 +5,6 @@ import mail from '../../../public/images/email.svg'
 import line from '../../../public/images/line.svg'
 import '../aboutUs/about.css'
 import './fund.css'
-import ClosiongNav from '../components/ClosingNav/ClosiongNav';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'gsap/dist/gsap';
@@ -13,7 +12,7 @@ import Image from 'next/image';
 import client from '../sanity/client';
 import Footer from '../components/footer/Footer';
 import office from '../../../public/images/boffice.svg'
-import HomeResNav from '../components/homeResNav/HomeResNav'
+import ClosingFundNav from '../components/ClosingNav/ClosingFundNav';
 import bmail from '../../../public/images/bmail.svg'
 import mobile from '../../../public/images/bphone.svg'
 import profile from '../../../public/images/bpro.svg'
@@ -65,7 +64,7 @@ function page() {
 
     return (
         <div ref={containerRef}>
-            < HomeResNav/>
+            < ClosingFundNav/>
             <section class="gallery" data-scroll-section >
                 <div className="row posotion-container" >
                     <div className="col-12 fund-page-content" style={{ paddingTop: '10rem' }}>
@@ -162,6 +161,7 @@ function page() {
                     <div className="fund-blue-section">
                         <div className="blue-section-sm bg">
                         <h3>Our Philosophy</h3>
+
                         {data && data.philosophy && data.philosophy.map((block, index) => (
                                 <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text} {block.children[2] && block.children[2].text}
                                     {block.children[3] && block.children[3].text}
@@ -185,22 +185,22 @@ function page() {
 <div className="form-bot">
 <form className='row input-section' method='POST' action='https://formspree.io/f/mvoeppnz'>
                             <div class="input-fcontainer col-6">
-                                <Image src={profile} alt='image'/>
+                                <Image src={profile} alt='image' className='wIcon'/>
                                 <input type="text" placeholder='Name' name='userName' autoComplete='off' required/>
                             </div>
                             <div class="input-fcontainer col-6">
-                                <Image src={bmail} alt='image'/>
+                                <Image src={bmail} alt='image' className='wIcon'/>
                                 <input type="email" placeholder='Email' name='userEmail' autoComplete='off' required/>
                             </div>
                             <div class="input-fcontainer col-6" >
-                                <Image src={mobile} alt='image'/>
+                                <Image src={mobile} alt='image' className='wIcon'/>
                                 <input type="number" placeholder='Phone No' name='phoneNumber' autoComplete='off' required  />
                             </div>
                             <div class="input-fcontainer col-6" >
-                                <Image src={office} alt='image'/>
+                                <Image src={office} alt='image' className='wIcon'/>
                                 <input type="text" placeholder='Message' name='message' autoComplete='off' required />
                             </div>
-                            <input type="submit" value='SUBMIT' className='submit-btn' style={{marginTop:'3rem'}}/>
+                            <input type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' style={{marginTop:'3rem'}}/>
                             
                         </form>
 </div>

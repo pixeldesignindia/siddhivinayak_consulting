@@ -55,7 +55,7 @@ input,textarea{background: transparent;border: 0; padding: .5rem;color: #212121;
 	align-items: center;
 	gap: 0.625rem;width: max-content !important;}
 .yellow-section>p{margin: 0 !important;}
-.yellow-section-row{justify-content: space-between;margin: 2rem 0;width: 92%;}
+.yellow-section-row{justify-content: space-between;margin: 2rem 0;width: 92%;padding-left: .5rem;}
 .contact-data{display: flex; align-items: center; gap: 2rem;}
 
 /* fade effect */
@@ -118,7 +118,24 @@ opacity: 1;  background: #ffffff;}
 .company-person>h6{color: #272727;font-weight: 550; font-size: 20px;}
 .position{color: #5B5B5B;font-size: 1.25rem;font-weight: 550;}
 .top-heading{margin-top: 1rem !important;}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 
+/* For older versions of Edge */
+input[type="number"]::-ms-inner-spin-button,
+input[type="number"]::-ms-outer-spin-button {
+    appearance: none;
+}
+input[type="number"] {
+	-moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 @media (max-width:500px){
 	html,body {overflow-y:scroll !important;}
 	p {line-height: 180% !important}
@@ -144,4 +161,7 @@ opacity: 1;  background: #ffffff;}
 	.menu-btn-res{height: 22px !important;}
 	.call-back{padding: 2rem 1rem;margin-bottom: 2rem;}
 	.fund-box-c{gap: 2rem !important;}
+	.res-form{padding: 0 1rem;}
+	.input-container{gap: 1rem !important;}
+	.mail-height{height: 15.5px !important;}
 }
