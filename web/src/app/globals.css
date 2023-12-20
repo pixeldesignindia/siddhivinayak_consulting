@@ -55,7 +55,7 @@ input,textarea{background: transparent;border: 0; padding: .5rem;color: #212121;
 	align-items: center;
 	gap: 0.625rem;width: max-content !important;}
 .yellow-section>p{margin: 0 !important;}
-.yellow-section-row{justify-content: space-between;margin: 2rem 0;width: 92%;padding-left: .5rem;}
+.yellow-section-row{margin: 2rem 0;width: 92%; gap: 1.2rem;}
 .contact-data{display: flex; align-items: center; gap: 2rem;}
 
 /* fade effect */
@@ -136,6 +136,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
+.navbar-brand{padding-top: 0 !important;}
 @media (max-width:500px){
 	html,body {overflow-y:scroll !important;}
 	p {line-height: 180% !important}
@@ -162,7 +163,6 @@ input[type="number"]::-webkit-outer-spin-button {
 	.call-back{padding: 2rem 1rem;margin-bottom: 2rem;}
 	.fund-box-c{gap: 2rem !important;}
 	.res-form{padding: 0 1rem;}
-	.input-container{gap: 1rem !important;}
 	.mail-height{height: 15.5px !important;}
-	.input-container{margin: 0 !important;}
+	.input-container{margin: 0 !important;gap: .5rem !important;}
 }

@@ -29,7 +29,7 @@ function HomeResNav() {
         window.removeEventListener("resize", handleResize);
       };
     }
-  }, []);
+  }, [windowWidth]);
 
     const pathname = usePathname()
     const router = useRouter()

@@ -10,35 +10,34 @@ import closeBtn from '../../../../public/images/close-btn.svg';
 import Modal from 'react-bootstrap/Modal';
 import { usePathname , useRouter } from 'next/navigation'
 function ClosiongNav() {
-  const pathname = usePathname()
-  const router = useRouter()
+  const pathname = usePathname();
+  const router = useRouter();
   const [show, setShow] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+  const [isSmallWindow, setIsSmallWindow] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setWindowWidth(window.innerWidth);
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-      };
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
+    const handleResize = () => {
+      setIsSmallWindow(window.innerWidth < 500);
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
+  const menuImage = isSmallWindow ? blackMenuline : Menuline;
     return (
         <div className='closing-Nav'>
             <div className="closing-nav-container">
                 <div className="row">
-                    <div className="col-2" onClick={()=>{router.push('/')}} ><Image src={logo} height={70} width={200} className='nav-logo' style={{cursor:'pointer'}}/></div>
+                    <div className="col-2" onClick={()=>{router.push('/')}} ><Image src={logo} height={88} width={256} className='nav-logo' style={{cursor:'pointer'}}/></div>
                     <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} >
-                    {windowWidth > 500 ? (
-        <Image src={Menuline} style={{cursor:'pointer'}} className='menu-btn-res' alt='image'/>
-      ) : (
-        <Image src={blackMenuline} style={{cursor:'pointer'}} className='menu-btn-res' alt='image'/>
-      )}
-                        
+               
+  <Image src={menuImage} style={{cursor:'pointer'}} className='menu-btn-res' alt='image'/>
+
+
                     </div>
                 </div>
             </div>
