@@ -205,7 +205,7 @@ function page(props) {
       <div className="row contact-row-property">
         <div className="col-6 center res-none bg-c" >
           <h3 >Contact</h3> 
-          <h6>Email Us </h6>
+          <h6 className='e-t-m'>Email Us </h6>
           <p>sales@siddhiconsulting.in</p>
           <h6>Address </h6>
           <p>Shop No 2, Agar Bazar, Dadar West, Mumbai</p>

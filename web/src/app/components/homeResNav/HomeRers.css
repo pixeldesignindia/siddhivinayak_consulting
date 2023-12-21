@@ -110,4 +110,7 @@
   .link:hover:after {
     width: 100%;
   }
-  @media(max-width:500px){.home-nav-logo{height: 4rem !important; position: relative; left: -66px !important;}}
+
+  @media(max-width:500px){.home-nav-logo{height: 4rem !important; position: relative; left: -66px !important;};
+
+}

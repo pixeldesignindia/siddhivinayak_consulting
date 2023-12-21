@@ -167,4 +167,5 @@ input[type="number"]::-webkit-outer-spin-button {
 	.input-container{margin: 0 !important;gap: .5rem !important;}
 	.downarrow{bottom: 75px !important;}
 	.res-m-t{margin-top: 24px !important;}
+	.h-res-n{background-color: #fff !important;}
 }

@@ -51,6 +51,7 @@
 .in-btn{padding: 0 1.3rem;}
 .in-btn input{width: 100%;}
 .bot-pro-con{ margin: 0 1.3rem; justify-content: space-between;}
+.e-t-m{margin-top: 1.2rem !important;}
 .bg-c {
   position: relative;
   background: rgba(0, 0, 0, 0.3) /* Black color with 50% opacity */
@@ -58,7 +59,6 @@
   background-size: cover;
   overflow: hidden;
   flex-direction: column;
-  gap: 1rem;
 }
 .bg-c h6{font-weight: bold;font-size: 1.2rem;}
 
