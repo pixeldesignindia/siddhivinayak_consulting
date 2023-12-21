@@ -12,39 +12,33 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { usePathname , useRouter } from 'next/navigation'
 function HomeResNav() {
-
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+  const pathname = usePathname()
+  const router = useRouter()
+  const [show, setShow] = useState(false);
+  const [isSmallWindow, setIsSmallWindow] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setWindowWidth(window.innerWidth);
+    const handleResize = () => {
+      setIsSmallWindow(window.innerWidth < 500);
+    };
 
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-      };
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
 
-      window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  const menuImage = isSmallWindow ? blackMenuline : Menuline;
 
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, [windowWidth]);
 
-    const pathname = usePathname()
-    const router = useRouter()
-    const [show, setShow] = useState(false);
     return (
         <div className='closing-Nav'>
-            <div className="home-nav-container">
+            <div className="home-nav-container h-res-n">
                 <div className="row">
                     <div className="col-2" onClick={()=>{router.push('/')}}><Image src={logo} height={70} width={200} className='nav-logo home-nav-logo' alt='image'/></div>
                     <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} style={{cursor:'pointer'}}>
-                    {windowWidth > 500 ? (
-        <Image src={Menuline} className='menu-btn-res' alt='image'/>
-      ) : (
-        <Image src={Menuline} className='menu-btn-res' alt='image'/>
-      )}
+        <Image src={blackMenuline} className='menu-btn-res' alt='image'/>
                         
                     </div>
                 </div>
