@@ -139,6 +139,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .navbar-brand{padding-top: 0 !important;}
 @media (max-width:500px){
 	html,body {overflow-y:scroll !important;}
+	input{font-size: 18px!important;}
 	p {line-height: 180% !important}
 	.heading{font-size: 1.5rem !important;}
 	.copy{width:20rem !important}
@@ -160,9 +161,10 @@ input[type="number"]::-webkit-outer-spin-button {
 	.res-none{display: none !important;}
 	.horizontal-nav-container{gap: 1.2rem;}
 	.menu-btn-res{height: 22px !important;}
-	.call-back{padding: 2rem 1rem;margin-bottom: 2rem;}
 	.fund-box-c{gap: 2rem !important;}
 	.res-form{padding: 0 1rem;}
 	.mail-height{height: 15.5px !important;}
 	.input-container{margin: 0 !important;gap: .5rem !important;}
+	.downarrow{bottom: 75px !important;}
+	.res-m-t{margin-top: 24px !important;}
 }

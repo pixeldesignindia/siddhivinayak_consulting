@@ -48,7 +48,12 @@ function page(props) {
           configuration,
           body,
           address,
-          facilities,
+          facilities[]{
+            amenity,
+            logo {
+              asset->{url}
+            }
+          },
           videoUrl,
           mainImage {
             asset -> {
@@ -94,7 +99,7 @@ function page(props) {
           <h2 className="property-heading">
             PROJECT - CONFIGURATION
           </h2>
-          <div className='property-Content-Box'>
+          <div className='property-Content-Box center'>
             <table class="table table-bordered area-table" data-scroll data-scroll-speed="1.2" data-scroll-repeat="true">
               <thead>
                 <tr>
@@ -153,7 +158,7 @@ function page(props) {
               <input type="text" placeholder='Message' name='message' autoComplete='off' required />
               </div>
             </div>
-              <div className='in-btn'><input style={{marginTop:'1.5rem'}} type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' /></div>
+              <div className='in-btn'><input style={{marginTop:'1.5rem',}} type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' /></div>
               
               {/* <button type='submit' className='submit-btn' >SUBMIT</button> */}
             </form>
@@ -167,11 +172,12 @@ function page(props) {
           <h2 className="property-heading">
             PROJECT AMENITIES
           </h2>
-          <div className='property-Content-Box'>
+          <div className='property-Content-Box center'>
             <div className="row">
               {propertyData && propertyData.facilities && propertyData.facilities.map((itemf, i) => (
-                <div key={i} className='facility-box col-md-3 col-xs-6 col-sm-6'>
-                  <div className="facility"><h5 style={{ fontWeight: '600' }}>{itemf}</h5> </div>
+                <div key={i} className='facility-box col-3 '>
+                  
+                  <div className="facility"> {itemf.logo.asset.url && <Image src={itemf.logo.asset.url} width={50} height={50} />}  <h5 style={{ fontWeight: '600' }}>{itemf.amenity}</h5> </div>
                 </div>
               ))}
             </div>
@@ -181,9 +187,9 @@ function page(props) {
           <h2 className="property-heading">
             EXPERIENCE THE WALKTHROUGH
           </h2>
-          <div className='property-Content-Box'>
-            <div className="row">
-              <iframe width="70vw" height="600" src={propertyData && propertyData.videoUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className='iframeContainer'></iframe>
+          <div className='property-Content-Box center'>
+            <div className="row center">
+              <iframe width="1500" height="600" src={propertyData && propertyData.videoUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className='iframeContainer'></iframe>
             </div>
           </div>
         </div>
@@ -205,27 +211,32 @@ function page(props) {
           <p>Shop No 2, Agar Bazar, Dadar West, Mumbai</p>
             </div>
         <div className="col-6 center">
-          <div className="property-contact-form">
-            <form className='input-section-property' method='POST' action='https://formspree.io/f/mvoeppnz'>
-              <div className='input-contact-property'>
+        <div className="property-contact-form">
+            <form className='popup' method='POST' action='https://formspree.io/f/mvoeppnz' style={{padding:'0 1rem'}}>
+            
+            <div className="row bot-pro-con">
+            <div className='input-contact-property-bot col-6 ' >
                 <Image src={profile} width={35} height={20} alt='image'/>
                 <input type="text" placeholder='Name' name='userName' autoComplete='off' required />
               </div>
-              <div className='input-contact-property'>
+              <div className='input-contact-property-bot col-6'>
               <Image src={gmail} width={35} height={16} alt='image' className='mail-height'/>
               <input type="email" placeholder='Email' name='userEmail' autoComplete='off' required />
               </div>
-              <div className='input-contact-property'>
+              <div className='input-contact-property-bot col-6'>
               <Image src={mobile} width={35} height={20} alt='image'/>
               <input type="number" placeholder='Phone No' name='phoneNumber' autoComplete='off' required />
               </div>
-              <div className='input-contact-property'>
+              <div className='input-contact-property-bot col-6'>
               <Image src={office} width={35} height={20} alt='image'/>
               <input type="text" placeholder='Message' name='message' autoComplete='off' required />
               </div>
-              <input style={{marginTop:'1.2rem'}} type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' />
+            </div>
+              <div className='in-btn'><input style={{marginTop:'1.5rem',padding:'1rem'}} type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' /></div>
+              
               {/* <button type='submit' className='submit-btn' >SUBMIT</button> */}
             </form>
+            
           </div>
         </div>
       </div>
