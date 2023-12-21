@@ -65,7 +65,7 @@ function page() {
                             <div className="col-4 yellow-section"><Image src={dot} alt='image'/> <p>Leveraged buyouts (LBO)</p> </div>
                         </div>
                         <div className="row yellow-section-row">
-                            <div className="col-4 yellow-section"><Image src={dot} alt='image'/> <p>Growth capital</p> </div>
+                            <div className="col-4 yellow-section res-m-t"><Image src={dot} alt='image'/> <p>Growth capital</p> </div>
                             <div className="col-4 yellow-section"><Image src={dot} alt='image'/> <p>Distressed investments</p> </div>
                             <div className="col-4 yellow-section"><Image src={dot} alt='image'/> <p>Mezzanine capita</p> </div>
                         </div>

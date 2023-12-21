@@ -68,10 +68,28 @@ export default defineType({
       type: 'array',
       of: [
         {
-          type: 'string',
+          type: 'object',
+          name: 'facility',
+          title: 'Facility',
+          fields: [
+            {
+              name: 'amenity',
+              title: 'Amenity',
+              type: 'string',
+            },
+            {
+              name: 'logo',
+              title: 'Logo',
+              type: 'image',
+              options: {
+                hotspot: true,
+              },
+            },
+          ],
         },
       ],
-    },),
+    }),
+
     defineField({
       name: 'configuration',
       title: 'Configuration',
