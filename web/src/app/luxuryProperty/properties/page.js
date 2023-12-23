@@ -113,7 +113,7 @@ function page(props) {
                   <tr key={i}>
                     <td>{item.type}</td>
                     <td>{item.area}</td>
-                    <td > <div className='btn-price'><button onClick={()=>{setModalShow(true)}}>Click To Know</button></div>  </td>
+                    <td onClick={()=>{setModalShow(true)}}> <div className='btn-price'><div className='button' >Click To Know</div></div>  </td>
                   </tr>
                 ))}
               </tbody>

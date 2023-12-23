@@ -13,21 +13,7 @@ function ClosiongNav() {
   const pathname = usePathname();
   const router = useRouter();
   const [show, setShow] = useState(false);
-  const [isSmallWindow, setIsSmallWindow] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallWindow(window.innerWidth < 500);
-    };
-
-    handleResize(); 
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-  const menuImage = isSmallWindow ? blackMenuline : Menuline;
     return (
         <div className='closing-Nav'>
             <div className="closing-nav-container">
@@ -35,7 +21,7 @@ function ClosiongNav() {
                     <div className="col-2" onClick={()=>{router.push('/')}} ><Image src={logo} height={88} width={256} className='nav-logo' style={{cursor:'pointer'}}/></div>
                     <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} >
                
-  <Image src={menuImage} style={{cursor:'pointer'}} className='menu-btn-res' alt='image'/>
+  <Image src={blackMenuline} style={{cursor:'pointer'}} className='menu-btn-res' alt='image'/>
 
 
                     </div>
