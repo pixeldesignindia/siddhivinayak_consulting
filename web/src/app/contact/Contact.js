@@ -109,7 +109,8 @@ function page() {
                 </div>
                 <div className="col-4 about-img-c image-disappear">
                     <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
-                            backgroundImage: `url(${data && data.banner.url})`
+                            backgroundImage: `url(${data && data.banner.url})`,
+                            backgroundPosition:'right'
                         }}></div>
                 </div>
                 <div className="col-7 about-left-content res-none">
