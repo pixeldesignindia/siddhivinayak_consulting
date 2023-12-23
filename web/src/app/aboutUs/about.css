@@ -1,7 +1,7 @@
 .about-img {
     height: 100vh;
     background-repeat: no-repeat;
-    background-position: center;
+    /* background-position: right center !important; */
   }
   
 .about-left-content {padding: 8rem 4rem 0 5rem;}

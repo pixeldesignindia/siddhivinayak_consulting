@@ -1,7 +1,7 @@
 export default {
     name: 'home',
     type: 'document',
-    title: 'Home',
+    title: 'HomeText',
     fields: [
       {
         name: 'heading',

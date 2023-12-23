@@ -116,8 +116,8 @@
   .link:hover:after {
     width: 100%;
   }
-  
-  @media(max-width:500px){.closing-nav-container{background:#fff;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+  .closing-nav-container{background:#fff;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+  @media(max-width:500px){
   
   .nav-logo{position: relative;left: -25px;height: 5.5rem; width: 16rem;}
   .f-logo{left: -14px !important;}}
