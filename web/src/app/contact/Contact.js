@@ -99,7 +99,7 @@ function page() {
                                 <input type="number" placeholder='Phone No' name='phoneNumber' autoComplete='off' required  />
                             </div>
                             <div class="input-container col-6" >
-                                <Image src={office} alt='image'/>
+                                <Image src={office} alt='image' width={24} height={24}/>
                                 <input type="text" placeholder='Message' name='message' autoComplete='off' required />
                             </div>
                             <input type="submit" value='SUBMIT' className='submit-btn' style={{marginTop:'3rem'}}/>
