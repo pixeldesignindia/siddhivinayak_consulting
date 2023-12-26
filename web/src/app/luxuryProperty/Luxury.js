@@ -115,13 +115,13 @@ function page() {
                         </div>
                         <div className="pagination">
                             
-                            <button onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))} disabled={currentPage === 1}>
+                            <button className='center' onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))} disabled={currentPage === 1}>
                                 Prev
                             </button>
                             <span>
                                 Page {currentPage} of {totalPages}
                             </span>
-                            <button onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))} disabled={currentPage === totalPages}>
+                            <button className='center' onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))} disabled={currentPage === totalPages}>
                                 Next
                             </button>
                         </div>

@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useRef , useState } from 'react';
 import './about.css';
-import Head from 'next/head';
+import Para from '@/app/components/Text/Word'
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
 import { PortableText } from "@portabletext/react";
 import client from '../sanity/client';
@@ -86,6 +86,7 @@ function page() {
                                     <p>He has over 16 years of experience in Real Estate and Finance. The years have added to the expertise he has in the field. In his time of work, he has handled various large projects benefitting groups of people at the same time. Through this platform, he aims to facilitate the exchange of opportunities between investors and buyers of hospitals. He is a delight to work with and happens to be great at managing people and closing deals!</p>
                                 </div>
                             </div>
+
                             <div className="blue-container row disappear" data-scroll data-scroll-className="appear" data-scroll-repeat="true" style={{marginTop:'2rem'}}>
                                 <div className='col-3'> <Image src={owner2} height={170} width={170} className='ceo-img' alt='image' /> </div>
                                 <div className='col-8 blue-p'>

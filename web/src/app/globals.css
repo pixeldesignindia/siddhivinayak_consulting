@@ -55,7 +55,7 @@ input,textarea{background: transparent;border: 0; padding: .5rem;color: #212121;
 	align-items: center;
 	gap: 0.625rem;width: max-content !important;}
 .yellow-section>p{margin: 0 !important;}
-.yellow-section-row{margin: 2rem 0;width: 92%; gap: 1.2rem;}
+.yellow-section-row{margin: 2rem 0;width: 100%; gap: 1.2rem;}
 .contact-data{display: flex; align-items: center; gap: 2rem;}
 
 /* fade effect */
@@ -137,6 +137,11 @@ input[type="number"]::-webkit-outer-spin-button {
 	margin: 0;
 }
 .navbar-brand{padding-top: 0 !important;}
+
+@media (min-width:1200px){
+.container{max-width: 1321px !important;}
+.cI{width: 8rem !important;}
+}
 @media (max-width:500px){
 	html,body {overflow-y:scroll !important;}
 	input{font-size: 18px!important;}
