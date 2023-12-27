@@ -228,7 +228,7 @@ function page(props) {
               <input type="number" placeholder='Phone No' name='phoneNumber' autoComplete='off' required className='cI'/>
               </div>
               <div className='input-contact-property-bot col-6'>
-              <Image src={office} width={35} height={20} alt='image'/>
+              <Image src={office} width={30} height={20} alt='image' className='mssg'/>
               <input type="text" placeholder='Message' name='message' autoComplete='off' required className='cI'/>
               </div>
             </div>
