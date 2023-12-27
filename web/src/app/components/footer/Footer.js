@@ -31,7 +31,7 @@ export default function Footer() {
                                         <input type="number" placeholder='Phone No' name='phoneNumber' autoComplete='off' required  />
                                     </div>
                                     <div class="input-fcontainer col-6" >
-                                        <Image src={office} alt='image' className='wIcon'/>
+                                        <Image src={office} alt='image' className='wIcon' height={25} />
                                         <input type="text" placeholder='Message' name='message' autoComplete='off' required />
                                     </div>
                                     <input type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' style={{marginTop:'3rem'}}/>
