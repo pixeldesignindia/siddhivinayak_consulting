@@ -56,7 +56,7 @@ export default function Footer() {
                                         {/* <input type="text" placeholder='Message' name='message' autoComplete='off' required /> */}
                                     </div>
                                     
-                                    <textarea id="message" name="message" placeholder='Message' required/>
+                                    <textarea id="message" rows="6"  name="message" placeholder='Message' required/>
       <ValidationError prefix="Message" field="message" errors={state.errors} className='txt-contact'/>
 
                                     <input type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' style={{marginTop:'3rem'}}/>
