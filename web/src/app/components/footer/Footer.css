@@ -1,4 +1,4 @@
-.footer{background: #031D28;position: relative;z-index: 10;bottom: 0;}
+.footer{background: #031D28;}
 .footer-row{padding: .5rem;}
 .footer-row>.col-6>p>a{ text-decoration: none;color: #69BA48;font-weight: 500;}
 /* .footer-row>.col-6>h6{margin: 0;padding: 4px;color: #939393;font-weight: 330 !important;} */

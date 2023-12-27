@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useRef , useState } from 'react';
 import './about.css';
-import Head from 'next/head';
+import Para from '@/app/components/Text/Word'
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
 import { PortableText } from "@portabletext/react";
 import client from '../sanity/client';
@@ -54,9 +54,14 @@ function page() {
         <div ref={containerRef} className='over-hidden'>
             <ClosiongNav />
             <section className="gallery" data-scroll-section >
-                <div id="pin">
+            <div className="col-12 about-img-c ">
+                        <div className="about-img center"  style={{
+            backgroundImage: `url(${data && data.aboutBanner.url})`,
+          }}>  <h1 data-scroll data-scroll-speed="2" data-scroll-repeat="true">About Us</h1> </div>
+                    </div>
+                <div >
                 <div className="row posotion-container" >
-                    <div className="col-8 about-left-content bg" style={{paddingBottom:'0'}}>
+                    <div className="col-12 about-left-content bg" style={{paddingBottom:'0'}}>
                         <div className='title'>About Us</div>
                         <div className='heading top-heading' >{data && data.aboutHeading}</div>
                         <div className='p-container'>
@@ -64,12 +69,8 @@ function page() {
     ))}
                         </div>
                     </div>
-                    <div className="col-4 about-img-c image-disappear">
-                        <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
-            backgroundImage: `url(${data && data.aboutBanner.url})`,
-          }}></div>
-                    </div>
-                    <div className="col-8 about-left-content bot-left p0 bg">
+                    
+                    <div className="col-10 about-left-content bot-left p0 bg">
                         <div data-scroll ><div className='title' style={{marginTop:'1rem'}}>Mission Statement</div>
                             <span data-scroll >Assisting companies to raise the required capital</span></div>
                         <div data-scroll >
@@ -78,7 +79,7 @@ function page() {
                         </div>
                         <div className='p-container' >
                             <div className="blue-container row disappear" data-scroll data-scroll-className="appear" data-scroll-repeat="true" style={{ marginTop: '5rem' }}>
-                                <div className='col-3'> <Image src={owner1} height={170} width={170} className='ceo-img'  alt='image'/> </div>
+                                <div className='col-3 center res-100'> <Image src={owner1} height={170} width={170} className='ceo-img'  alt='image'/> </div>
                                 <div className='col-8 blue-p' >
                                     <div className='company-person'> <h6 >Manas Survee </h6><Image src={link} height={30} width={30}  alt='image'/></div>
                                     
@@ -86,8 +87,9 @@ function page() {
                                     <p>He has over 16 years of experience in Real Estate and Finance. The years have added to the expertise he has in the field. In his time of work, he has handled various large projects benefitting groups of people at the same time. Through this platform, he aims to facilitate the exchange of opportunities between investors and buyers of hospitals. He is a delight to work with and happens to be great at managing people and closing deals!</p>
                                 </div>
                             </div>
+
                             <div className="blue-container row disappear" data-scroll data-scroll-className="appear" data-scroll-repeat="true" style={{marginTop:'2rem'}}>
-                                <div className='col-3'> <Image src={owner2} height={170} width={170} className='ceo-img' alt='image' /> </div>
+                                <div className='col-3 center res-100'> <Image src={owner2} height={170} width={170} className='ceo-img' alt='image' /> </div>
                                 <div className='col-8 blue-p'>
                                 <div className='company-person'> <h6 >Sanjiv Swarup</h6><Image src={link} height={30} width={30}  alt='image'/></div>
                                     <p className='position'>Management Consultant </p>

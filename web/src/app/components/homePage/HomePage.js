@@ -67,6 +67,7 @@ export default function Home() {
             sectionIndex={0}
             totalSections={sectionRefs.length}
             goToNextSection={() => goToNextSection(section1)}
+            link='/privateEqity/'
           />
         </div>
         <div ref={section2}>
@@ -78,6 +79,9 @@ export default function Home() {
             showArrow={true}
             sectionIndex={1}
             totalSections={sectionRefs.length}
+            link='/demateAccount//'
+            
+            
             goToNextSection={() => goToNextSection(section2)}
           />
         </div>
@@ -89,6 +93,7 @@ export default function Home() {
             scrollTo={() => scrollTo(section4)}
             showArrow={true}
             sectionIndex={2}
+            link='/businessInsurance/'
             totalSections={sectionRefs.length}
             goToNextSection={() => goToNextSection(section3)}
           />
@@ -101,6 +106,7 @@ export default function Home() {
             scrollTo={() => scrollTo(section1)}
             showArrow={false}
             sectionIndex={3}
+            link='/luxuryProperty/'
             totalSections={sectionRefs.length}
             goToNextSection={() => goToNextSection(section4)}
           />

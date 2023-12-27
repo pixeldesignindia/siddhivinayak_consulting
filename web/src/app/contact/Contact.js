@@ -77,46 +77,30 @@ function page() {
         <div ref={containerRef}>
             <ClosiongNav />
             <section class="gallery" data-scroll-section >
-            <div className="row posotion-container" id="pin" >
-                <div className="col-8 about-left-content bg" style={{ paddingTop: '10rem' }}>
+            <div className="col-12 about-img-c ">
+                    <div className="about-img center"  style={{
+                            backgroundImage: `url(${data && data.banner.url})`,
+                            backgroundPosition:'right'
+                        }}><h1 data-scroll data-scroll-speed="2" data-scroll-repeat="true">Contact Us</h1></div>
+                </div>
+            <div className="row posotion-container center">
+                <div className="col-9 about-left-content bg res-100" style={{ paddingTop: '10rem' }}>
                     <div className='title'>Contact Us</div>
 
                     <div className='p-container top-heading'>
                         <p>If you are looking to expand your business and financial consultation then you knocked on the right door! Get in touch with us and we will suggest you the best solution for your company.</p>
                         <p className='contact-data' style={{marginTop:'2rem'}}><Image src={place} />{data && data.address}</p>
                         <p className='contact-data' style={{marginBottom:'1.5rem'}}><Image src={mail}  alt='image'/>{data && data.email}</p>
-                        <form className='row input-section res-form' method='POST' action='https://formspree.io/f/mvoeppnz'>
-                            <div class="input-container col-6">
-                                <Image src={profile} alt='image' />
-                                <input type="text" placeholder='Name' name='userName' autoComplete='off' required/>
-                            </div>
-                            <div class="input-container col-6">
-                                <Image src={gmail}  alt='image' className='mail-height'/>
-                                <input type="email" placeholder='Email' name='userEmail' autoComplete='off' required/>
-                            </div>
-                            <div class="input-container col-6" >
-                                <Image src={mobile}  alt='image'/>
-                                <input type="number" placeholder='Phone No' name='phoneNumber' autoComplete='off' required  />
-                            </div>
-                            <div class="input-container col-6" >
-                                <Image src={office} alt='image' width={24} height={24}/>
-                                <input type="text" placeholder='Message' name='message' autoComplete='off' required />
-                            </div>
-                            <input type="submit" value='SUBMIT' className='submit-btn' style={{marginTop:'3rem'}}/>
-                            {/* <button type='submit' className='submit-btn' >SUBMIT</button> */}
-                        </form>
+
+
                     </div>
                 </div>
-                <div className="col-4 about-img-c image-disappear">
-                    <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
-                            backgroundImage: `url(${data && data.banner.url})`,
-                            backgroundPosition:'right'
-                        }}></div>
-                </div>
+
                 <div className="col-7 about-left-content res-none">
                 </div>
+                <Footer/>
             </div>
-            <Footer/>
+            
             </section>
         </div>
     );

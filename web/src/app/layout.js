@@ -1,7 +1,8 @@
 import { Inter } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css'
-import Head from 'next/head';
+import './fundRising/fund.css'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {

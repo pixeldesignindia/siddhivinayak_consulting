@@ -1,5 +1,5 @@
 .property-post-container{min-height: 100vh;}
-.propertyImageTop{height: 85vh; width: 100%;background-repeat: no-repeat;background-position: center; display: flex; align-items: center; justify-content: center;}
+.propertyImageTop{height: 80vh; width: 100%;background-repeat: no-repeat;background-position: center; display: flex; align-items: center; justify-content: center;}
 .propertyImageTop h1{color: #fff; font-size: 2.8rem; font-weight: 600; opacity: .8;}
 .property-content{ display: flex; justify-content: center; align-items: center;flex-direction: column;padding: 3rem 10rem;}
 .property-heading{text-align: center; padding: 1.5rem 0 1.5rem 0; border-bottom: 2px solid rgb(255, 119, 0); font-weight: 500 !important;margin-bottom: 2rem !important;text-transform: uppercase; width: 100%; line-height: 160%;}
