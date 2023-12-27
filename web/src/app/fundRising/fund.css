@@ -27,7 +27,7 @@
     .call-back-in{padding: 2rem 3.7rem 3.5rem 3.7rem;}
     .call-top{display: flex; justify-content: center;align-items: center;flex-direction: column;gap: 1.2rem;padding: 2rem;}
     .call-top .heading{color: #FFF;}
-    .call-top p{color: #d3d3d3;text-align: center;font-size: 18px;}
+    .call-top p{color: #ebebeb;text-align: center;font-size: 18px;}
 
     .input-fcontainer{display: flex; padding: 1rem; margin: 1rem 0;border-bottom: 1px solid #929292;align-items: center;gap: .5rem; width: 45%;}
     .input-fcontainer>input{color: #FFF !important;}

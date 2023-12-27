@@ -48,7 +48,7 @@ input,textarea{background: transparent;border: 0; padding: .5rem;color: #212121;
 textarea{margin-top: 3rem; border: 1px solid #929292;}
 #message{margin-top: 2rem;color: #fff;}
 textarea:hover{ border: 1px solid #e2e2e2;}
-select{background: transparent; color: #fff;outline: none; border: 0;}
+select{background: transparent; color: #fff;outline: none; border: 0;width: 100%;}
 option{background:#030d23 !important;padding: 10px 2px;}
 .p-container{margin:3rem 0;}
 
@@ -148,7 +148,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .cI{width: 8rem !important;}
 }
 @media (max-width:500px){
-	
 	html,body {overflow-y:scroll !important;}
 	input{font-size: 18px!important;}
 	p {line-height: 180% !important}
@@ -182,5 +181,5 @@ input[type="number"]::-webkit-outer-spin-button {
 	.h-res-n{background-color: #fff !important;}
 	.about-img > h1{font-size: 1.5rem !important;letter-spacing: .15rem !important;}
 	.about-img{height: 60vh !important;}
-	.call-back-in{padding:3rem 2rem 3.5rem 2rem !important}
+	.call-back-in{padding:3rem 1.5rem 3.5rem 1.5rem !important}
 }

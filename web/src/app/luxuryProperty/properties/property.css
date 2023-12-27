@@ -9,6 +9,7 @@
 .btn-price{width: 100%;height: 100%; display: flex; justify-content: center;align-items: center;}
 .property-about-content{background: #0E0E0E; color: #f7f7f7;padding:2rem 5rem;}
 .property-about-content .property-Content-Box p{ color: #f7f7f7;}
+.b-about>p{color:#bdbdbd !important}
 .facility {
     text-align: center;
     /* box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.2); */
