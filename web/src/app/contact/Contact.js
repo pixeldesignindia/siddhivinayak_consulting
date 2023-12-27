@@ -84,7 +84,7 @@ function page() {
                         }}><h1 data-scroll data-scroll-speed="2" data-scroll-repeat="true">Contact Us</h1></div>
                 </div>
             <div className="row posotion-container center">
-                <div className="col-9 about-left-content bg res-100" style={{ paddingTop: '10rem' }}>
+                <div className="col-9 about-left-content bg res-100" style={{ paddingTop: '5rem' }}>
                     <div className='title'>Contact Us</div>
 
                     <div className='p-container top-heading'>

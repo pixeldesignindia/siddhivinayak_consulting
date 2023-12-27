@@ -85,8 +85,8 @@ function page() {
                 </div>
                 <div className="row posotion-container" >
                     <div className="col-12 fund-page-content" style={{ paddingTop: '5rem' }}>
-                        <h5 className='heading'>Fundraising</h5>
-                        <h6 className='title ft'>List of Companies Looking for Private Equity</h6>
+                    <div className='title'>Private Equity</div>
+                        <h6 className='heading ft'>List of Companies Looking for Private Equity</h6>
                         <div className="row fund-box-c">
                         <div className="col-4">
                             <div className="row">
@@ -199,7 +199,7 @@ function page() {
                 </div>
             <div className="row posotion-container" >
             <div className="col-12 about-left-content bg" style={{paddingTop:'5rem'}}>
-                    <div className='title'>Private Equity</div>
+                    
                     <div className='heading top-heading'>Strategies of Private Equity.</div>
                     <div className='p-container'>
                         <div className="row yellow-section-row">

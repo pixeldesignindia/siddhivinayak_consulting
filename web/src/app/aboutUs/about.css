@@ -1,11 +1,11 @@
 .about-img {
-    height: 80vh;
+    height: 70vh;
     background-repeat: no-repeat;
     margin-top: 8vh;
     /* background-position: right center !important; */
   }
   
-.about-left-content {padding: 8rem 4rem 0 5rem;}
+.about-left-content {padding: 3rem 4rem 0 4rem;}
 /* .about-img-c{height: 200vh;} */
 .posotion-container{position: relative;}
 .about-img {

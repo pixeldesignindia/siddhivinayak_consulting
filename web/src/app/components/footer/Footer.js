@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Footer.css'
 import line from '../../../../public/images/line.svg'
 import office from '../../../../public/images/boffice.svg'
@@ -6,7 +6,16 @@ import bmail from '../../../../public/images/bmail.svg'
 import mobile from '../../../../public/images/bphone.svg'
 import profile from '../../../../public/images/bpro.svg'
 import Image from 'next/image';
+import { useForm, ValidationError } from '@formspree/react';
+
 export default function Footer() {
+    const [state, handleSubmit] = useForm("mvoeppnz");
+    const [messageType, setMessageType] = useState('general'); // Default value
+  
+    const handleMessageTypeChange = (event) => {
+      setMessageType(event.target.value);
+    };
+  
     return (
         <>
         <div className='call-back'>
@@ -32,8 +41,24 @@ export default function Footer() {
                                     </div>
                                     <div class="input-fcontainer col-6" >
                                         <Image src={office} alt='image' className='wIcon' height={25} />
-                                        <input type="text" placeholder='Message' name='message' autoComplete='off' required />
+                                        <select
+        id="messageType"
+        name="messageType"
+        value={messageType}
+        onChange={handleMessageTypeChange}
+      >
+        <option value="general">General Inquiry</option>
+        <option value="PrivateEquity">Private Equity</option>
+        <option value="DematAccount">Demat Account</option>
+        <option value="LuxuryProperty">Luxury Property</option>
+        <option value="BusinessInsurence">Business Insurence</option>
+      </select>
+                                        {/* <input type="text" placeholder='Message' name='message' autoComplete='off' required /> */}
                                     </div>
+                                    
+                                    <textarea id="message" name="message" placeholder='Message'/>
+      <ValidationError prefix="Message" field="message" errors={state.errors} className='txt-contact'/>
+
                                     <input type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' style={{marginTop:'3rem'}}/>
                                     
                                 </form>
