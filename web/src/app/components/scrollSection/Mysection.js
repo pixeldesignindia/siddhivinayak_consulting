@@ -18,6 +18,7 @@ export default function Mysection({
   showArrow,
   sectionIndex,
   totalSections,
+  link
 }) {
   const router = useRouter()
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -114,7 +115,7 @@ export default function Mysection({
         
         <div className='copy' ref={headlineRef}>
           <h1 className="heading">{headline}</h1> 
-          <button onClick={() => router.push('/fundRising')} > <div> EXPLORE NOW  </div> <div><Image src={arr} alt='image'/></div> </button>
+          <button onClick={() => router.push(link)} > <div> EXPLORE NOW  </div> <div><Image src={arr} alt='image'/></div> </button>
         </div>
         
         <Image src={image} layout={`fill`} ref={imageRef} className="image-bg" alt='image'/>

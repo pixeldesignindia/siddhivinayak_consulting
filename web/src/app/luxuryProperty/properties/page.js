@@ -90,7 +90,7 @@ function page(props) {
           <h2 className="property-heading">
             {propertyData && propertyData.title}
           </h2>
-          <div className='property-Content-Box' data-scroll data-scroll-speed="1.2" data-scroll-repeat="true">
+          <div className='property-Content-Box' >
             <PortableText value={propertyData && propertyData.address} />
           </div>
         </div>
@@ -100,7 +100,7 @@ function page(props) {
             PROJECT - CONFIGURATION
           </h2>
           <div className='property-Content-Box center'>
-            <table class="table table-bordered area-table" data-scroll data-scroll-speed="1.2" data-scroll-repeat="true">
+            <table class="table table-bordered area-table" >
               <thead>
                 <tr>
                   <th scope="col">Type</th>
@@ -202,7 +202,7 @@ function page(props) {
           </div>
         </div>
       </div>
-      <div className="row contact-row-property">
+      <div className="row contact-row-property" style={{display:'none'}}>
         <div className="col-6 center res-none bg-c" >
           <h3 >Contact</h3> 
           <h6 className='e-t-m'>Email Us </h6>

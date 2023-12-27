@@ -137,16 +137,18 @@ input[type="number"]::-webkit-outer-spin-button {
 	margin: 0;
 }
 .navbar-brand{padding-top: 0 !important;}
-
+.about-img > h1{font-size: 3rem ; font-weight: 600; text-transform: uppercase;color: #fff;letter-spacing: .25rem;}
 @media (min-width:1200px){
 .container{max-width: 1321px !important;}
 .cI{width: 8rem !important;}
 }
 @media (max-width:500px){
+	
 	html,body {overflow-y:scroll !important;}
 	input{font-size: 18px!important;}
 	p {line-height: 180% !important}
-	.heading{font-size: 1.5rem !important;}
+	.res-100{width: 100% !important;}
+	.heading{font-size: 1.2rem !important;}
 	.copy{width:20rem !important}
 	.copy h1{font-size: 1.5rem !important;padding-left: 1rem;bottom: 15% !important;}
 	.dot-btns{right: 20px !important;}
@@ -155,7 +157,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	.image-disappear{display: none;}
 	.col-8 , .col-4 , .col-6 , .col-7{width: 100% !important;}
 	.company-person{margin-top: 3rem;}
-	.about-left-content{padding: 5rem 2rem 2rem 2rem !important;}
+	.about-left-content{padding: 3rem 2rem 2rem 2rem !important;}
 	.name{margin: 2rem 0;}
 	.blue-container{padding: 2rem 1rem !important;}
 	.bot-left{padding-top:1rem !important;}
@@ -173,4 +175,5 @@ input[type="number"]::-webkit-outer-spin-button {
 	.downarrow{bottom: 75px !important;}
 	.res-m-t{margin-top: 24px !important;}
 	.h-res-n{background-color: #fff !important;}
+	.about-img > h1{font-size: 1.5rem !important;letter-spacing: .15rem !important;}
 }

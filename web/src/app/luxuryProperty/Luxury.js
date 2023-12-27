@@ -92,8 +92,13 @@ function page() {
         <div ref={containerRef}>
             <ClosiongNav />
             <section class="gallery" data-scroll-section >
-                <div className="row posotion-container" id="pin">
-                    <div className="col-8 about-left-content" style={{ paddingTop: '10rem' }}>
+            <div className="col-12 about-img-c ">
+                        <div className="about-img center" style={{
+                            backgroundImage: `url(${data && data.banner.url})`
+                        }}><h1 data-scroll data-scroll-speed="2" data-scroll-repeat="true">Luxury Properties</h1></div>
+                    </div>
+                <div className="row posotion-container center">
+                    <div className="col-10 about-left-content res-100" style={{ paddingTop: '5rem' }}>
                         <div className='title'>Luxury Properties</div>
                         <div className='heading top-heading'>{data && data.heading}</div>
                         <div className='p-container bg row' >
@@ -126,11 +131,7 @@ function page() {
                             </button>
                         </div>
                     </div>
-                    <div className="col-4 about-img-c image-disappear">
-                        <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
-                            backgroundImage: `url(${data && data.banner.url})`
-                        }}></div>
-                    </div>
+
                     <div className="col-7 about-left-content res-none">
 
                     </div>

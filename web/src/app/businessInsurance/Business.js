@@ -57,8 +57,13 @@ function page() {
         <div ref={containerRef}>
             <ClosiongNav />
             <section class="gallery" data-scroll-section >
-                <div className="row posotion-container" id="pin">
-                    <div className="col-8 about-left-content bg" style={{ paddingTop: '10rem' }}>
+            <div className="col-12 about-img-c ">
+                        <div className="about-img center" style={{
+                            backgroundImage: `url(${data && data.banner.url})`
+                        }}><h1 data-scroll data-scroll-speed="2" data-scroll-repeat="true">Business Insurence</h1></div>
+                    </div>
+                <div className="row posotion-container" >
+                    <div className="col-12 about-left-content bg" style={{ paddingTop: '5rem' }}>
                         <div className='title'>Business Insurance</div>
                         <div className='heading top-heading'>While you concentrate on your business, we take care of your insurance</div>
                         <p>Security in business is a crucial aspect and that security comes from insurance. We know that as an entrepreneur you are always juggling multiple responsibilities and activities to grow your business with a constant thought of getting secured. And here we come to guide you through the best process of getting your business secured.</p>
@@ -78,21 +83,10 @@ function page() {
                             <p className='disappear' data-scroll data-scroll-class="appear" data-scroll-repeat="true" style={{marginTop:'2rem'}}>Some insurance companies also cover transportation of the art piece from one place to another within the country. They provide wall-to-wall coverage for paintings, designs, and other forms of artwork that can be displayed on a wall. Certain policies also include the storage of the artwork within the specified geographical or territorial limits for business or professional reasons. Damage or losses due to natural calamities like floods, earthquakes, cyclones, and other extreme weather conditions are also covered under Art Insurance.</p>
                             <p className='disappear' data-scroll data-scroll-class="appear" data-scroll-repeat="true">Anyone who owns antique collections, priceless art pieces, musical instruments, sculptures, and statues should protect their masterpieces with art insurance. Any unforeseen damage might occur to these collections, maybe while displaying those in an exhibition or may be in some other way. So it is important to be prepared beforehand.</p>
                             <p className='disappear' data-scroll data-scroll-class="appear" data-scroll-repeat="true">If you are interested to know more about art insurance then get in touch with us.</p>
-                            {/* <div className="heading disappear" data-scroll data-scroll-class="appear" data-scroll-repeat="true">{data && data.heading}</div>
-                            <div className='disappear' data-scroll data-scroll-class="appear" data-scroll-repeat="true">{data && data.description && data.description.map((block, index) => (
-                                <p key={index}>{block.children[0].text} {block.children[1] && block.children[1].text} {block.children[2] && block.children[2].text}
-                                    {block.children[3] && block.children[3].text}
-                                    {block.children[4] && block.children[4].text}
-                                    {block.children[5] && block.children[5].text}
-                                </p>
-                            ))}</div> */}
                         </div>
+
                     </div>
-                    <div className="col-4 about-img-c image-disappear">
-                        <div className="about-img" data-scroll data-scroll-sticky data-scroll-target="#pin" data-scroll-speed="3" style={{
-                            backgroundImage: `url(${data && data.banner.url})`
-                        }}></div>
-                    </div>
+
 
                 </div>
                 <Footer />
