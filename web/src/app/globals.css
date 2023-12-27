@@ -42,9 +42,14 @@ span{color: #434343;font-family: Montserrat;font-size: 1.1rem;font-weight: 650;}
 .heading{color: #000;font-family: Montserrat; font-size: 1.8rem;font-weight: 600;margin: 3rem 0 1rem 0;}
 
 /* title */
-.title{color: #BB0101;font-family: Montserrat;font-size: 1.2rem;font-style: normal;font-weight: 700;margin-top: 2rem;}
+.title{color: #BB0101;font-family: Montserrat;font-size: 1.2rem;font-style: normal;font-weight: 700;}
 /* input */
 input,textarea{background: transparent;border: 0; padding: .5rem;color: #212121;font-family: Montserrat; font-size: 1.3rem;outline: none;font-weight: 400 !important;}
+textarea{margin-top: 3rem; border: 1px solid #929292;}
+#message{margin-top: 2rem;color: #fff;}
+textarea:hover{ border: 1px solid #e2e2e2;}
+select{background: transparent; color: #fff;outline: none; border: 0;width: 100%;}
+option{background:#030d23 !important;padding: 10px 2px;}
 .p-container{margin:3rem 0;}
 
 /* yellow section */
@@ -121,7 +126,7 @@ opacity: 1;  background: #ffffff;}
 input[type="number"] {
     -moz-appearance: textfield;
 }
-
+.txt-contact{border:1px solid #5B5B5B;}
 /* For older versions of Edge */
 input[type="number"]::-ms-inner-spin-button,
 input[type="number"]::-ms-outer-spin-button {
@@ -143,7 +148,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .cI{width: 8rem !important;}
 }
 @media (max-width:500px){
-	
 	html,body {overflow-y:scroll !important;}
 	input{font-size: 18px!important;}
 	p {line-height: 180% !important}
@@ -176,4 +180,6 @@ input[type="number"]::-webkit-outer-spin-button {
 	.res-m-t{margin-top: 24px !important;}
 	.h-res-n{background-color: #fff !important;}
 	.about-img > h1{font-size: 1.5rem !important;letter-spacing: .15rem !important;}
+	.about-img{height: 60vh !important;}
+	.call-back-in{padding:3rem 1.5rem 3.5rem 1.5rem !important}
 }

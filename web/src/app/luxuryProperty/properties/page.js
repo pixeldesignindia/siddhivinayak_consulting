@@ -197,8 +197,8 @@ function page(props) {
           <h2 className="property-heading">
             About
           </h2>
-          <div className='property-Content-Box'>
-            <PortableText value={propertyData && propertyData.body} />
+          <div className='property-Content-Box b-about'>
+            <PortableText value={propertyData && propertyData.body} style={{color:'#808080'}}/>
           </div>
         </div>
       </div>
