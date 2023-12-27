@@ -36,7 +36,7 @@
     
     @media(max-width:500px){
         .call-top{padding: 0 !important;}
-        .fund-page-content{padding: 8rem 2rem 2rem 2rem !important;}
+        .fund-page-content{padding: 5rem 2rem 2rem 2rem !important;}
         .fund-box-c>.col-4{margin: .5rem 0 !important;}
         .blue-section-sm{width: 100% !important}
         .call-top .heading{font-size: 1.2rem;}

@@ -45,7 +45,7 @@ span{color: #434343;font-family: Montserrat;font-size: 1.1rem;font-weight: 650;}
 .title{color: #BB0101;font-family: Montserrat;font-size: 1.2rem;font-style: normal;font-weight: 700;}
 /* input */
 input,textarea{background: transparent;border: 0; padding: .5rem;color: #212121;font-family: Montserrat; font-size: 1.3rem;outline: none;font-weight: 400 !important;}
-textarea{margin-top: 3rem; border: 1px solid #929292;}
+textarea{margin-top: 3rem; border: 1px solid #929292;font-family: Montserrat;}
 #message{margin-top: 2rem;color: #fff;}
 textarea:hover{ border: 1px solid #e2e2e2;}
 select{background: transparent; color: #fff;outline: none; border: 0;width: 100%;}

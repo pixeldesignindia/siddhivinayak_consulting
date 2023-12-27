@@ -7,6 +7,14 @@
 .develop-by{justify-content:flex-end}
 /** For tablet devices **/
 .footer-container{padding: 0 3rem;}
+#messageType {
+    font-size: 18px;
+    padding: 0.5rem;
+    font-family: Montserrat;
+  }
+  #messageType option{
+    padding: 1rem;
+  }
 @media (min-width: 768px) and (max-width: 1023px) {
     .custom-shape-divider-bottom-1697269733 svg {
         width: calc(144% + 1.3px);
