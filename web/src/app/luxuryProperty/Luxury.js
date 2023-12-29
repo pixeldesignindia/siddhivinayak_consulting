@@ -97,13 +97,13 @@ function page() {
                             backgroundImage: `url(${data && data.banner.url})`
                         }}><h1 data-scroll data-scroll-speed="2" data-scroll-repeat="true">Luxury Properties</h1></div>
                     </div>
-                <div className="row posotion-container center">
-                    <div className="col-10 about-left-content res-100" style={{ paddingTop: '5rem' }}>
+                <div className="row posotion-container">
+                    <div className="col-12 about-left-content res-100" style={{ paddingTop: '5rem' }}>
                         <div className='title'>Luxury Properties</div>
                         <div className='heading top-heading'>{data && data.heading}</div>
                         <div className='p-container bg row' >
                             {currentPropertyCards.map((item, index) => (
-                                <div className='col-4 lux-property' onClick={() => handleRoute(item.slug.current)} key={index} style={{cursor:'pointer'}}>
+                                <div className='col-3 lux-property' onClick={() => handleRoute(item.slug.current)} key={index} style={{cursor:'pointer'}}>
                                     <div className="property-card" >
                                         <div className="image-property">
                                             <Image src={item.mainImage.asset.url} width={500} height={200} alt='image'/>

@@ -94,7 +94,14 @@ function page(props) {
             <PortableText value={propertyData && propertyData.address} />
           </div>
         </div>
-        
+        <div className="property-about-content">
+          <h2 className="property-heading">
+            About
+          </h2>
+          <div className='property-Content-Box b-about'>
+            <PortableText value={propertyData && propertyData.body} />
+          </div>
+        </div>
         <div className="property-content">
           <h2 className="property-heading">
             PROJECT - CONFIGURATION
@@ -193,14 +200,7 @@ function page(props) {
             </div>
           </div>
         </div>
-        <div className="property-about-content">
-          <h2 className="property-heading">
-            About
-          </h2>
-          <div className='property-Content-Box b-about'>
-            <PortableText value={propertyData && propertyData.body} style={{color:'#808080'}}/>
-          </div>
-        </div>
+
       </div>
       <div className="row contact-row-property" style={{display:'none'}}>
         <div className="col-6 center res-none bg-c" >
