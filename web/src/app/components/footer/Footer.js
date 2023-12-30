@@ -18,10 +18,10 @@ export default function Footer() {
     const handleMessageTypeChange = (event) => {
         setMessageType(event.target.value);
     };
-    // style={{paddingBottom:'4rem'}}/businessInsurance/
+    // style={{paddingBottom:'4rem'}}/dubaiProperty/properties/
     return (
         <>
-         <div className={`call-back ${(pathname === '/privateEqity/' || pathname === '/contact/' || pathname === '/demateAccount/' || pathname === '/luxuryProperty/'  || pathname === '/businessInsurance/') ? 'm-b-4' : ''}`} >
+         <div className={`call-back ${(pathname === '/privateEqity/' || pathname === '/contact/' || pathname === '/demateAccount/' || pathname === '/dubaiProperty/'  || pathname === '/billDiscounting/'  ) ? 'm-b-4' : ''}`} >
 
                 <div className='call-back-in'>
                     <div className="call-top">

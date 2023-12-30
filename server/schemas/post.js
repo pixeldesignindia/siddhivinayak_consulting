@@ -89,6 +89,55 @@ export default defineType({
         },
       ],
     }),
+    defineField({
+      name: 'imgages',
+      title: 'PropertyImages',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: 'propertyImg',
+          title: 'PropertyImage',
+          fields: [
+            {
+              name: 'img',
+              title: 'ImageOfProperty',
+              type: 'image',
+              options: {
+                hotspot: true,
+              },
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: 'near',
+      title: 'NearBy',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: 'nearImg',
+          title: 'NearImages',
+          fields: [
+            {
+              name: 'near',
+              title: 'NearByImage',
+              type: 'image',
+              options: {
+                hotspot: true,
+              },
+            },
+            {
+              name: 'nearText',
+              title: 'NearByText',
+              type: 'string',
+            },
+          ],
+        },
+      ],
+    }),
 
     defineField({
       name: 'configuration',
@@ -106,6 +155,28 @@ export default defineType({
             {
               name: 'type',
               title: 'Type',
+              type: 'string',
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: 'FAQ',
+      title: 'FAQ',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'question',
+              title: 'Question',
+              type: 'string',
+            },
+            {
+              name: 'answer',
+              title: 'Answer',
               type: 'string',
             },
           ],

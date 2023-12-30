@@ -79,38 +79,38 @@ export default function Home() {
             showArrow={true}
             sectionIndex={1}
             totalSections={sectionRefs.length}
-            link='/demateAccount//'
+            link='/demateAccount/'
             
             
             goToNextSection={() => goToNextSection(section2)}
           />
         </div>
         <div ref={section3}>
-          <Mysection
+        <Mysection
+            image="/images/Banner4.svg"
+            headline={data && data[3] &&  data[3].heading}
+            goToSectionRef={sectionRefs}
+            scrollTo={() => scrollTo(section4)}
+            showArrow={true}
+            sectionIndex={3}
+            link='/dubaiProperty/'
+            totalSections={sectionRefs.length}
+            goToNextSection={() => goToNextSection(section4)}
+          />
+          
+        </div>
+        <div ref={section4}>
+        <Mysection
             image="/images/Banner3.svg"
             headline={data && data[2] && data[2].heading}
             goToSectionRef={sectionRefs}
             scrollTo={() => scrollTo(section4)}
-            showArrow={true}
+            showArrow={false}
             sectionIndex={2}
-            link='/businessInsurance/'
+            link='/billDiscounting/'
             totalSections={sectionRefs.length}
             goToNextSection={() => goToNextSection(section3)}
           />
-        </div>
-        <div ref={section4}>
-          <Mysection
-            image="/images/Banner4.svg"
-            headline={data && data[3] &&  data[3].heading}
-            goToSectionRef={sectionRefs}
-            scrollTo={() => scrollTo(section1)}
-            showArrow={false}
-            sectionIndex={3}
-            link='/luxuryProperty/'
-            totalSections={sectionRefs.length}
-            goToNextSection={() => goToNextSection(section4)}
-          />
-
         </div>
       </div>
     </div>
