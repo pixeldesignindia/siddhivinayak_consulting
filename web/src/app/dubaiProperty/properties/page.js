@@ -129,7 +129,7 @@ function page(props) {
                 <thead>
                   <tr>
                     <th scope="col">Type</th>
-                    <th scope="col">Carpet Area sqft</th>
+                    <th scope="col">Carpet Area</th>
                     <th scope="col">Price</th>
                   </tr>
                 </thead>
