@@ -10,7 +10,7 @@ import Image from 'next/image';
 import office from '../../../public/images/office.svg'
 import place from '../../../public/images/place.svg'
 import mail from '../../../public/images/mail.svg'
-import gmail from '../../../public/images/gmail.svg'
+import industry from '../../../public/images/cIndustry.svg'
 import mobile from '../../../public/images/mobile.svg'
 import profile from '../../../public/images/profile.svg'
 import client from '../sanity/client';
@@ -83,7 +83,7 @@ function page() {
                             backgroundPosition:'right'
                         }}><h1 data-scroll data-scroll-speed="2" data-scroll-repeat="true">Contact Us</h1></div>
                 </div>
-            <div className="row posotion-container center">
+            <div className="row posotion-container">
                 <div className="col-9 about-left-content bg res-100" style={{ paddingTop: '5rem' }}>
                     <div className='title'>Contact Us</div>
 

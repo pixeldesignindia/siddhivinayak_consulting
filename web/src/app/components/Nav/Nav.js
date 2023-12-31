@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Nav.css';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -29,8 +28,8 @@ function MainNav() {
             <Link className={`link d-flex align-items-center ${pathname === '/aboutUs' ? 'activeNav' : ''}`}href="/aboutUs">ABOUT</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/privateEqity' ? 'activeNav' : ''}`}href="/privateEqity">PRIVATE EQUITY</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/demateAccount' ? 'activeNav' : ''}`}href="/demateAccount">DEMATE ACCOUNT</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/luxuryProperty' ? 'activeNav' : ''}`}href="/luxuryProperty">LUXURY PROPERTY</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/businessInsurance' ? 'activeNav' : ''}`}href="/businessInsurance">BUSINESS INSURANCE</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/dubaiProperty' ? 'activeNav' : ''}`}href="/dubaiProperty">DUBAI PROPERTY</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/billDiscounting' ? 'activeNav' : ''}`}href="/billDiscounting">BILL DISCOUNTING</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/contact' ? 'activeNav' : ''}`}href="/contact" style={{color:'#fff'}}>CONTACT US</Link>
             </Nav>
           </Navbar.Collapse>
