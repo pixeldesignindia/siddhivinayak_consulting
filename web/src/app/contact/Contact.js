@@ -16,6 +16,7 @@ import profile from '../../../public/images/profile.svg'
 import client from '../sanity/client';
 gsap.registerPlugin(ScrollTrigger);
 import Footer from '../components/footer/Footer';
+import Enquiry from '../components/Enquiry/Enquiry';
 function page() {
 
     const containerRef = useRef(null);
@@ -74,7 +75,7 @@ function page() {
         newData();
     }, []);
     return (
-        <div ref={containerRef}>
+        <div ref={containerRef} style={{position:'relative'}}>
             <ClosiongNav />
             <section class="gallery" data-scroll-section >
             <div className="col-12 about-img-c ">
@@ -102,6 +103,7 @@ function page() {
             </div>
             
             </section>
+            <Enquiry/>
         </div>
     );
 }

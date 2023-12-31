@@ -3,7 +3,7 @@ import React,{useState, useEffect} from 'react'
 import './ClosingNav.css'
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../../../public/images/logo.svg';
+import logo from '../../../../public/images/redLogo.svg';
 import Menuline from '../../../../public/images/Menuline.svg';
 import blackMenuline from '../../../../public/images/blackMenu.svg';
 import closeBtn from '../../../../public/images/close-btn.svg';
@@ -31,7 +31,7 @@ function ClosingFundNav() {
         <div className='closing-Nav'>
             <div className="closing-nav-container">
                 <div className="row">
-                    <div className="col-2" onClick={()=>{router.push('/')}} style={{padding:'0'}}><Image src={logo} height={70} width={200} className='nav-logo f-logo' style={{cursor:'pointer'}} alt='logo'/></div>
+                    <div className="col-2 logo-container" onClick={()=>{router.push('/')}} style={{padding:'0'}}><Image src={logo} height={70} width={200} className='nav-logo f-logo' style={{cursor:'pointer'}} alt='logo'/></div>
                     <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} >
         <Image src={blackMenuline} style={{cursor:'pointer'}} className='menu-btn-res' alt='image'/>
                     </div>

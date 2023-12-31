@@ -8,7 +8,8 @@ import profile from '../../../../public/images/bpro.svg'
 import Image from 'next/image';
 import { useForm, ValidationError } from '@formspree/react';
 import { usePathname, useRouter } from 'next/navigation'
-
+import ye from '../../../../public/images/ye.svg'
+import yp from '../../../../public/images/yp.svg'
 
 
 export default function Footer() {
@@ -18,11 +19,22 @@ export default function Footer() {
     const handleMessageTypeChange = (event) => {
         setMessageType(event.target.value);
     };
-    // style={{paddingBottom:'4rem'}}/dubaiProperty/properties/
+    const handleCall = () => {
+        window.location.href = 'tel:+918655811111'; // Replace with your actual phone number
+      };
+    
+      const handleEmail = () => {
+        window.location.href = 'mailto:contact@tradingverge.com'; // Replace with your actual email address
+      };
     return (
         <>
-         <div className={`call-back ${(pathname === '/privateEqity/' || pathname === '/contact/' || pathname === '/demateAccount/' || pathname === '/dubaiProperty/'  || pathname === '/billDiscounting/'  ) ? 'm-b-4' : ''}`} >
-
+        <div className="question center">
+            <h3 className="heading res-h">Have more questions? Reach out to us at</h3>
+            <div className="c-at"><div onClick={handleCall} style={{cursor:'pointer'}}><Image src={yp} alt='img'height={22} width={22}/> <p>+91 - 8655811111</p> </div>
+            <div onClick={handleEmail} style={{cursor:'pointer'}}><Image src={ye} alt='img' height={22} width={22}/> <p>contact@tradingverge.com</p> </div></div>
+            <p className='bp'>Time : 10:00 AM to 6:00 PM</p>
+        </div>
+            <div className={`call-back ${(pathname === '/privateEqity/' || pathname === '/contact/' || pathname === '/demateAccount/' || pathname === '/dubaiProperty/' || pathname === '/billDiscounting/') ? 'm-b-4' : ''}`} >
                 <div className='call-back-in'>
                     <div className="call-top">
                         <h3 className='heading'>REQUEST CALL BACK</h3>
@@ -57,18 +69,13 @@ export default function Footer() {
                                     <option value="LuxuryProperty">Luxury Property</option>
                                     <option value="BusinessInsurence">Business Insurence</option>
                                 </select>
-                                {/* <input type="text" placeholder='Message' name='message' autoComplete='off' required /> */}
                             </div>
-
                             <textarea id="message" rows="6" name="message" placeholder='Message' required />
                             <ValidationError prefix="Message" field="message" errors={state.errors} className='txt-contact' />
-
                             <input type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' style={{ marginTop: '3rem' }} />
-
                         </form>
                     </div>
                 </div>
-
                 <div className='footer'>
                     <div >
                         <div className='footer-container'>
@@ -81,12 +88,9 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
-
         </>
     )
 }

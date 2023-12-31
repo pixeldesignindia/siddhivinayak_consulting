@@ -3,7 +3,8 @@ import React,{useState, useEffect} from 'react'
 import './HomeRers.css'
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../../../public/images/logo.svg';
+import wlogo from '../../../../public/images/whiteLogo.svg';
+import rlogo from '../../../../public/images/redLogo.svg';
 import menu from '../../../../public/images/Menu.svg';
 import Menuline from '../../../../public/images/Menuline.svg';
 import blackMenuline from '../../../../public/images/blackMenu.svg';
@@ -30,13 +31,14 @@ function HomeResNav() {
     };
   }, []);
   const menuImage = isSmallWindow ? blackMenuline : Menuline;
+  const logo = isSmallWindow ? rlogo : wlogo;
 
 
     return (
         <div className='closing-Nav'>
             <div className="home-nav-container h-res-n">
                 <div className="row">
-                    <div className="col-2" onClick={()=>{router.push('/')}}><Image src={logo} height={70} width={200} className='nav-logo home-nav-logo' alt='image'/></div>
+                    <div className="col-2 logo-c" onClick={()=>{router.push('/')}}><Image src={logo} height={70} width={200} className='nav-logo home-nav-logo' alt='image'/></div>
                     <div className="col-10 menu-btn" onClick={()=>{setShow(true);}} style={{cursor:'pointer'}}>
         <Image src={blackMenuline} className='menu-btn-res' alt='image'/>
                         

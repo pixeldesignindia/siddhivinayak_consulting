@@ -13,6 +13,7 @@ import owner1 from '../../../public/images/owner1.jpg'
 import link from '../../../public/images/linkdn.svg'
 import owner2 from '../../../public/images/owner2.svg'
 import Footer from '../components/footer/Footer';
+import Enquiry from '../components/Enquiry/Enquiry';
 gsap.registerPlugin(ScrollTrigger);
 
 function page() {
@@ -51,7 +52,7 @@ function page() {
         aboutData();
     }, []);
     return (
-        <div ref={containerRef} className='over-hidden'>
+        <div ref={containerRef} className='page-content over-hidden'>
             <ClosiongNav />
             <section className="gallery" data-scroll-section >
             <div className="col-12 about-img-c ">
@@ -102,6 +103,7 @@ function page() {
                 </div>
                 <Footer/>
             </section>
+            <Enquiry/>
         </div>
     );
 }

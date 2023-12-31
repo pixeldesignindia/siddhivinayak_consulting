@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 import Footer from '../components/footer/Footer';
 
 import mail from '../../../public/images/email.svg'
+import Enquiry from '../components/Enquiry/Enquiry';
 function page() {
     const containerRef = useRef(null);
     const sectionRef = useRef(null);
@@ -75,7 +76,7 @@ function page() {
         newdata();
     }, []);
     return (
-        <div ref={containerRef}>
+        <div ref={containerRef} className='page-content'>
             <ClosiongNav />
             <section className="gallery" data-scroll-section >
             <div className="col-12 about-img-c">
@@ -228,6 +229,7 @@ function page() {
             </div>
             <Footer/>
             </section>
+            <Enquiry/>
         </div>
     );
 }

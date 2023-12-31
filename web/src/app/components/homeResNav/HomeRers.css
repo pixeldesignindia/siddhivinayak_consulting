@@ -110,7 +110,8 @@
   .link:hover:after {
     width: 100%;
   }
-
-  @media(max-width:500px){.home-nav-logo{height: 4rem !important; position: relative; left: -66px !important;};
+  .logo-c{padding: 1rem;}
+  @media(max-width:500px){.home-nav-logo{height: 3rem !important; position: relative; left: -39px !important;};
+  .logo-c{padding: 10px !important;}
 
 }
