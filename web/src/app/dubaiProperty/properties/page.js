@@ -143,7 +143,10 @@ function page(props) {
                   ))}
                 </tbody>
               </table>
-              <Modal
+              
+            </div>
+          </div>}
+          <Modal
                 className='contactModal'
                 show={modalShow}
                 onHide={() => setModalShow(false)}
@@ -191,8 +194,6 @@ function page(props) {
                   </div>
                 </Modal.Body>
               </Modal>
-            </div>
-          </div>}
           {propertyData && propertyData.facilities &&  propertyData.facilities.length !== 0 &&
           <div className="property-content">
             <h2 className="property-heading">
@@ -306,8 +307,6 @@ function page(props) {
                   </div>
                 </div>
                 <div className='in-btn'><input style={{ marginTop: '1.5rem', padding: '1rem' }} type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' /></div>
-
-                {/* <button type='submit' className='submit-btn' >SUBMIT</button> */}
               </form>
 
             </div>

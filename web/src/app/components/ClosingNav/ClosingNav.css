@@ -117,7 +117,9 @@
     width: 100%;
   }
   .closing-nav-container{background:#fff;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+  .logo-container{padding: 1rem;}
+  .nav-logo{height: 3rem; width: 7rem;}
   @media(max-width:500px){
-  
-  .nav-logo{position: relative;left: -25px;height: 5.5rem; width: 16rem;}
+    .logo-container{padding: 10px;}
+  .nav-logo{position: relative;left: -11px;height: 3rem; width: 9rem;}
   .f-logo{left: -14px !important;}}

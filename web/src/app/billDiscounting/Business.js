@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import client from '../sanity/client';
 import Footer from '../components/footer/Footer';
+import Enquiry from '../components/Enquiry/Enquiry';
 gsap.registerPlugin(ScrollTrigger);
 
 function page() {
@@ -54,7 +55,7 @@ function page() {
 
 
     return (
-        <div ref={containerRef}>
+        <div ref={containerRef} className='page-content'>
             <ClosiongNav />
             <section class="gallery" data-scroll-section >
             <div className="col-12 about-img-c ">
@@ -86,6 +87,7 @@ function page() {
                 </div>
                 <Footer />
             </section>
+            <Enquiry/>
         </div>
     );
 }
