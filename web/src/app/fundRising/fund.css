@@ -23,15 +23,15 @@
     .fund-bot-links>.col-4>p{color: #BB0101;margin: 0;text-wrap: nowrap;font-size: 1rem !important;}
     .fund-bot-links{justify-content: space-between;width: 100%;}
     .fund-bot-links>.col-4>h4{color: #000;font-weight: bold;}
-    .call-back{background: #030D23;box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.10);width: 100%; }
+    .call-back{width: 100%; }
     .call-back-in{padding: 2rem 3.7rem 3.5rem 3.7rem;}
     .call-top{display: flex; justify-content: center;align-items: center;flex-direction: column;gap: 1.2rem;padding: 2rem;}
-    .call-top .heading{color: #FFF;}
-    .call-top p{color: #ebebeb;text-align: center;font-size: 18px;}
+    .call-top .heading{}
+    .call-top p{text-align: center;font-size: 18px;}
 
     .input-fcontainer{display: flex; padding: 1rem; margin: 1rem 0;border-bottom: 1px solid #929292;align-items: center;gap: .5rem; width: 45%;}
     .input-fcontainer>input{color: #FFF !important;}
-    .input-fcontainer:hover{border-bottom: 1px solid #eeeeee;}
+    .input-fcontainer:hover{border-bottom: 1px solid #db2121;}
     .input-section{justify-content: space-between;}
     
     @media(max-width:500px){

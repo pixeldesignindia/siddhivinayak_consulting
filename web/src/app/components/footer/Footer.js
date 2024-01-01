@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './Footer.css'
 import line from '../../../../public/images/line.svg'
-import office from '../../../../public/images/bIndustry.svg'
-import bmail from '../../../../public/images/bmail.svg'
-import mobile from '../../../../public/images/bphone.svg'
-import profile from '../../../../public/images/bpro.svg'
+import office from '../../../../public/images/Industry.svg'
+import bmail from '../../../../public/images/gmail.svg'
+import mobile from '../../../../public/images/phone.svg'
+import profile from '../../../../public/images/profile.svg'
 import Image from 'next/image';
 import { useForm, ValidationError } from '@formspree/react';
 import { usePathname, useRouter } from 'next/navigation'
@@ -14,17 +14,17 @@ import yp from '../../../../public/images/yp.svg'
 
 export default function Footer() {
     const [state, handleSubmit] = useForm("mvoeppnz");
-    const [messageType, setMessageType] = useState('general'); // Default value
+    const [messageType, setMessageType] = useState('general');
     const pathname = usePathname()
     const handleMessageTypeChange = (event) => {
         setMessageType(event.target.value);
     };
     const handleCall = () => {
-        window.location.href = 'tel:+918655811111'; // Replace with your actual phone number
+        window.location.href = 'tel:+918655811111'; 
       };
     
       const handleEmail = () => {
-        window.location.href = 'mailto:contact@tradingverge.com'; // Replace with your actual email address
+        window.location.href = 'mailto:contact@tradingverge.com'; 
       };
     return (
         <>
