@@ -47,9 +47,9 @@ span{color: #434343;font-family: Montserrat;font-size: 1.1rem;font-weight: 650;}
 input,textarea{background: transparent;border: 0; padding: .5rem;color: #212121;font-family: Montserrat; font-size: 1.3rem;outline: none;font-weight: 400 !important;}
 textarea{margin-top: 3rem; border: 1px solid #929292;font-family: Montserrat;}
 #message{margin-top: 2rem;color: #fff;}
-textarea:hover{ border: 1px solid #e2e2e2;}
-select{background: transparent; color: #fff;outline: none; border: 0;width: 100%;}
-option{background:#030d23 !important;padding: 10px 2px;}
+textarea:hover{ border: 1px solid #db2121;}
+select{background: transparent; color: #000;outline: none; border: 0;width: 100%;}
+option{padding: 10px 2px;}
 .p-container{margin:3rem 0;}
 
 /* yellow section */
