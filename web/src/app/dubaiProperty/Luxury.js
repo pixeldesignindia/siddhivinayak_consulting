@@ -14,18 +14,24 @@ import Footer from '../components/footer/Footer';
 import './property.css'
 import { useRouter } from 'next/navigation';
 import { PortableText } from "@portabletext/react";
+import InnerNav from '../components/Nav/InnerNav';
 function page() {
     const router = useRouter();
     const containerRef = useRef(null);
 
     const [data, setData] = useState();
     const [propertyCard, setPropertyCard] = useState([]);
+    const [newsCard, setNewsCard] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const cardsPerPage = 10;
 
     const handleRoute = (slug) => {
         localStorage.setItem('slug', slug);
         router.push('/dubaiProperty/properties');
+    };
+    const handleNews = (slug) => {
+        localStorage.setItem('news', slug);
+        router.push('/dubaiProperty/newses');
     };
     useEffect(() => {
         let scroll;
@@ -63,37 +69,78 @@ function page() {
     useEffect(() => {
         client
             .fetch(`
-          *[_type == "post"] {
-            title,
-            slug,
-            body,
-            mainImage {
-              asset -> {
-                _id,
-                url
-              },
-              alt,
-            },
-          }
-        `)
+              *[_type == "post"] {
+                title,
+                slug,
+                body,
+                mainImage {
+                  asset -> {
+                    _id,
+                    url
+                  },
+                  alt,
+                },
+              }
+            `)
             .then((data) => {
-                setPropertyCard(data);
+                const filteredData = data.filter((item) => item.title);
+                setPropertyCard(filteredData);
+            })
+            .catch(console.error);
+    }, []);
+    useEffect(() => {
+        client
+            .fetch(`
+              *[_type == "newses"] {
+                title,
+                slug,
+                news,
+                mainImage {
+                  asset -> {
+                    _id,
+                    url
+                  },
+                  alt,
+                },
+                publishBy,
+                date
+              }
+            `)
+            .then((data) => {
+                
+                console.log(data);
+                setNewsCard(data);
             })
             .catch(console.error);
     }, []);
 
-    // Calculate total number of pages
-    const totalPages = Math.ceil(propertyCard.length / cardsPerPage);
 
-    // Slice property cards based on current page
+
+    const totalPages = Math.ceil(propertyCard.length / cardsPerPage);
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
     const currentPropertyCards = propertyCard.slice(indexOfFirstCard, indexOfLastCard);
+    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        setWindowWidth(window.innerWidth);
+  
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+  
+        window.addEventListener("resize", handleResize);
+  
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }
+    }, []);
 
     return (
         <div ref={containerRef} className='page-content'>
-            <ClosiongNav />
+            {windowWidth > 500 ? (<InnerNav/>) : (<ClosiongNav/>)}
             <section class="gallery" data-scroll-section >
                 <div className="col-12 about-img-c ">
                     <div className="about-img center" style={{
@@ -112,20 +159,20 @@ function page() {
                                 <div className='col-3 lux-property' onClick={() => handleRoute(item.slug.current)} key={index} style={{ cursor: 'pointer' }}>
                                     <div className="property-card" >
                                         <div className="image-property">
-                                        {item.mainImage && <Image src={item.mainImage.asset.url} width={500} height={200} alt='image' />}
-                                            
+                                            {item.mainImage && <Image src={item.mainImage.asset.url} width={500} height={200} alt='image' />}
+
                                         </div>
                                         <h3>{item.title}</h3>
                                     </div>
                                     <div className="property-data">
                                         <h4>{item.title}</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laborum quam laudantium harum minus sunt molestias illo libero?</p>
+                                        <p>Do you want to make a tax-free investment? Then why not buy a property in Dubai? </p>
                                         <div className='bot-red-property'> <p>View Details </p> <Image src={arrow} alt='arrow' /> </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
-                        <div className="pagination">
+                        {/* <div className="pagination">
 
                             <button className='center' onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))} disabled={currentPage === 1}>
                                 Prev
@@ -136,16 +183,37 @@ function page() {
                             <button className='center' onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))} disabled={currentPage === totalPages}>
                                 Next
                             </button>
+                        </div> */}
+                        <div className='p-container bg row m-t-2' >
+                            <div className="heading">Latest News</div>
+                            {newsCard && newsCard.map((item, index) => (
+                                <div className='col-3 lux-property' onClick={() => handleNews(item.slug.current)} key={index} style={{ cursor: 'pointer' }}>
+                                    <div className="property-card" >
+                                        <div className="image-property">
+                                            {item.mainImage && <Image src={item.mainImage.asset.url} width={500} height={200} alt='image' />}
+
+                                        </div>
+                                    </div>
+                                    <div className="property-data">
+                                        <div className='property-data-inner newsData'>
+                                            <div className='news-name'><h5>{item.title}</h5></div>
+                                        
+                                        <p className='ash'>Publish by: {item.publishBy}</p>
+                                        <p>Date: {item.date}</p>
+                                        </div>
+                                        
+                                        <div className='bot-red-property'> <p>View Details </p> <Image src={arrow} alt='arrow' /> </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
-                    <div className="col-7 about-left-content res-none">
-
-                    </div>
+                    
                 </div>
                 <Footer />
             </section>
-            <Enquiry/>
+            <Enquiry />
         </div>
     );
 }

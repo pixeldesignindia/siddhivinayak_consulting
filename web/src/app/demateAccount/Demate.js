@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useRef,useState } from 'react';
+import InnerNav from '../components/Nav/InnerNav';
 import '../aboutUs/about.css';
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
 import { gsap } from 'gsap';
@@ -47,10 +48,26 @@ function page() {
 
         newData();
     }, []);
+    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        setWindowWidth(window.innerWidth);
+  
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+  
+        window.addEventListener("resize", handleResize);
+  
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }
+    }, []);
     return (
         <div ref={containerRef} className='page-content'>
-            <ClosiongNav />
+            {windowWidth > 500 ? (<InnerNav/>) : (<ClosiongNav/>)}
             
             <section class="gallery" data-scroll-section >
             <div className="col-12 about-img-c ">

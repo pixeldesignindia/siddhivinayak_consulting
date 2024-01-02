@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import './Nav.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../../../public/images/whiteLogo.svg';
+import logo from '../../../../public/images/wlogo.svg';
 import { usePathname , useRouter } from 'next/navigation'
 
 function MainNav() {

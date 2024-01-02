@@ -116,10 +116,11 @@
   .link:hover:after {
     width: 100%;
   }
+  
   .closing-nav-container{background:#fff;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
-  .logo-container{padding: 1rem;}
-  .nav-logo{height: 3rem; width: 7rem;}
+
+  .nav-logo{height: 4.5rem !important;width: 10rem !important;}
   @media(max-width:500px){
-    .logo-container{padding: 10px;}
-  .nav-logo{position: relative;left: -11px;height: 3rem; width: 9rem;}
+
+  .nav-logo{position: relative;left: 15px;height: 3rem; width: 9rem;}
   .f-logo{left: -14px !important;}}

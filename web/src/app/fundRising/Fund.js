@@ -1,8 +1,5 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
-import dot from '../../../public/images/dot.svg'
-import mail from '../../../public/images/email.svg'
-
 import '../aboutUs/about.css'
 import './fund.css'
 import { gsap } from 'gsap';
@@ -11,11 +8,8 @@ import 'gsap/dist/gsap';
 import Image from 'next/image';
 import client from '../sanity/client';
 import Footer from '../components/footer/Footer';
-// import office from '../../../public/images/boffice.svg'
 import ClosingFundNav from '../components/ClosingNav/ClosingFundNav';
-// import bmail from '../../../public/images/bmail.svg'
-// import mobile from '../../../public/images/bphone.svg'
-// import profile from '../../../public/images/bpro.svg'
+import InnerNav from '../components/Nav/InnerNav';
 gsap.registerPlugin(ScrollTrigger);
 
 function page() {
@@ -23,7 +17,23 @@ function page() {
     const containerRef = useRef(null);
     const sectionRef = useRef(null);
 
+    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        setWindowWidth(window.innerWidth);
+  
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+  
+        window.addEventListener("resize", handleResize);
+  
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }
+    }, []);
     useEffect(() => {
         let scroll;
         import("locomotive-scroll").then((locomotiveModule) => {
@@ -64,7 +74,7 @@ function page() {
 
     return (
         <div ref={containerRef}>
-            < ClosingFundNav/>
+            {windowWidth > 500 ? (<InnerNav/>) : (<ClosiongNav/>)}
             <section class="gallery" data-scroll-section >
 
                 <Footer/>

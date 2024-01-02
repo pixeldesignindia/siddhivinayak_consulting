@@ -59,7 +59,7 @@ export default function Home() {
         </div>
         <div ref={section1}>
           <Mysection
-            image="/images/Banner1.svg"
+            video='/video/homePage.mp4'
             headline={data && data[0] &&  data[0].heading}
             goToSectionRef={sectionRefs}
             scrollTo={() => scrollTo(section2)}
