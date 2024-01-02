@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useRef , useState } from 'react';
 import './about.css';
-import Para from '@/app/components/Text/Word'
+import InnerNav from '../components/Nav/InnerNav';
 import ClosiongNav from '../components/ClosingNav/ClosiongNav';
 import { PortableText } from "@portabletext/react";
 import client from '../sanity/client';
@@ -51,9 +51,26 @@ function page() {
         };
         aboutData();
     }, []);
+    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        setWindowWidth(window.innerWidth);
+  
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+  
+        window.addEventListener("resize", handleResize);
+  
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }
+    }, []);
     return (
         <div ref={containerRef} className='page-content over-hidden'>
-            <ClosiongNav />
+            {windowWidth > 500 ? (<InnerNav/>) : (<ClosiongNav/>)}
             <section className="gallery" data-scroll-section >
             <div className="col-12 about-img-c ">
                         <div className="about-img center"  style={{

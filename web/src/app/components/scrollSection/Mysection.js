@@ -4,7 +4,7 @@ import Image from "next/image";
 import "./Mysection.css";
 import { gsap } from 'gsap';
 import MainNav from "../Nav/Nav";
-import ClosiongNav from "../ClosingNav/ClosiongNav"; 
+import arrow from "../../../../public/images/arrow.svg"
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import arr from '../../../../public/images/homeArrow.svg'
@@ -18,7 +18,8 @@ export default function Mysection({
   showArrow,
   sectionIndex,
   totalSections,
-  link
+  link,
+  video
 }) {
   const router = useRouter()
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -102,7 +103,12 @@ export default function Mysection({
       section.current.scrollIntoView({ behavior: "smooth" });
     }
   }
-
+  const handleLink2Click = () => {
+    window.open("https://hospitalsforsale.biz/", '_blank');
+  };
+  const handleLink3Click = () => {
+    window.open("https://hotels4sale.co.in/", '_blank');
+  };
   return (
     <>
       {windowWidth > 500 ? (
@@ -117,14 +123,22 @@ export default function Mysection({
           <h1 className="heading">{headline}</h1> 
           <button onClick={() => router.push(link)} > <div> EXPLORE NOW  </div> <div><Image src={arr} alt='image'/></div> </button>
         </div>
-        
-        <Image src={image} layout={`fill`} ref={imageRef} className="image-bg" alt='image'/>
+        <div className="row home-link-container">
+          <div className="col-4"><div className="home-link" ><p>For Portraits</p><h5>Siddhiart.in</h5></div></div>
+          <div className="col-4"><div className="home-link" onClick={handleLink2Click}><p>M & A in healthcare sector</p><h5>Hospitalsforsale.biz</h5></div></div>
+          <div className="col-4"><div className="home-link" onClick={handleLink3Click}><p>M & A in hospitality sector</p><h5>Hotels4sale.co.in</h5></div></div>
+        </div>
+        {image &&<Image src={image} layout={`fill`} ref={imageRef} className="image-bg" alt='image'/>}
+        {video && 
+        <video autoPlay muted loop id="background-video" ref={imageRef} className="image-bg" >
+        <source src={video} type="video/mp4" />
 
+      </video>}
         {showArrow && (
           <button
-            className='downarrow'
+            className='downarrow center'
             onClick={() => handleGoToNextSection()}
-          ></button>
+          > <Image src={arrow} alt="arrow" width={50} height={50}/> </button>
         )}
       </div>
     </>

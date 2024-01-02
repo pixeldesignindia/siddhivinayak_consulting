@@ -3,8 +3,8 @@ import React,{useState, useEffect} from 'react'
 import './HomeRers.css'
 import Link from 'next/link';
 import Image from 'next/image';
-import wlogo from '../../../../public/images/whiteLogo.svg';
-import rlogo from '../../../../public/images/redLogo.svg';
+import wlogo from '../../../../public/images/wlogo.svg';
+import rlogo from '../../../../public/images/blogo.svg';
 import menu from '../../../../public/images/Menu.svg';
 import Menuline from '../../../../public/images/Menuline.svg';
 import blackMenuline from '../../../../public/images/blackMenu.svg';
@@ -53,8 +53,8 @@ function HomeResNav() {
             <Link className={`link d-flex align-items-center ${pathname === '/aboutUs/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/aboutUs" onClick={() =>setShow(false)}>ABOUT</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/privateEqity/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/privateEqity" onClick={() =>setShow(false)}>PRIVATE EQUITY</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/demateAccount/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/demateAccount" onClick={() =>setShow(false)}>DEMATE ACCOUNT</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/luxuryProperty/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/luxuryProperty" onClick={() =>setShow(false)}>LUXURY PROPERTY</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/businessInsurance/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/businessInsurance" onClick={() =>setShow(false)}>BUSINESS INSURANCE</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/dubaiProperty/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/dubaiProperty" onClick={() =>setShow(false)}>DUBAI PROPERTY</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/billDiscounting/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/billDiscounting" onClick={() =>setShow(false)}>BILL DISCOUNTING/</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/contact/' ? 'activeHorizontalNavLink' : 'horizontalNavLink'}`}href="/contact" onClick={() =>setShow(false)}>CONTACT US</Link>
                     </div>
                 </Modal.Body>

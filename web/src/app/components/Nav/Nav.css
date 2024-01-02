@@ -1,14 +1,53 @@
-.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light{width:97vw;background-color: transparent !important;padding: 1rem 0 0;}
+.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light{width:100vw;background-color: transparent !important;}
 .main-nav{position: fixed;top: 0;left: 0;z-index: 5000;color: aliceblue;}
 .main-nav .bg-body-tertiary{background-color: transparent !important;    padding: 0;}
 .main-nav .bg-body-tertiary .container.scrolling{background-color: transparent!important; color:#fff}
-.navbar-nav a{ text-decoration: none; font-size: .8rem; font-weight: 400;color: #fff;letter-spacing: 0.03rem;}
+.navbar-nav a{ text-decoration: none; font-size: .8rem; font-weight: 400;letter-spacing: 0.03rem;}
 .navbar-nav .link{margin-right: .5rem;}
 .activeNav{color:#ffffff !important;border-bottom: 3px solid #ffffff;font-weight: bold;}
+.iactiveNav{color:#E84D3D !important;border-bottom: 2px solid #E84D3D !important;font-weight: bold;}
 .contact-btn{background: #008BC2;color-scheme: #fff !important;padding: .5rem 1rem; width: max-content;margin: 0 1rem;}
-.nav-logo{height: 4.5rem;width: 9rem;}
+.nav-logo{height: auto !important;width: 12rem !important;padding: 10px 0;}
+/* inner */
+.ilink {
+    position: relative;
+    text-decoration: none;
+    color: #000 ;
+    font-weight: 500 !important;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .ilink:hover {
+    color: #000; /* Set your desired text color on hover */
+  }
+  
+  .ilink:before,
+  .ilink:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #E84D3D; /* Set your desired border color */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .ilink:before {
+    left: 0;
+    bottom: 0;
+  }
+  
+  .ilink:after {
+    right: 0;
+    bottom: 0;
+  }
+  .innerNavC{background: #fff !important;}
+  .ilink:hover:before,
+  .ilink:hover:after {
+    width: 100%;
+  }
 @media (min-width: 1400px){
-    .main-nav .bg-body-tertiary .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {background: transparent;padding:0 2rem;  margin: 0;min-width: 99vw;} ;}
+    .main-nav .bg-body-tertiary .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {background: transparent;padding:0 2rem 0 3.3rem;  margin: 0;min-width: 100vw;} ;}
 @media(max-width:500px){
     .navbar-nav a{ margin: .8rem 0;}
     .main-nav .bg-body-tertiary .container{background: transparent}

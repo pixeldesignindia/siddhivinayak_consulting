@@ -7,4 +7,5 @@ import insurence from "./insurence"
 import contact from "./contact"
 import fund from "./fund" 
 import post from "./post"
-export const schemaTypes = [home,about,eqity,demate, luxurious, insurence, contact , fund , post]
+import news from "./news"
+export const schemaTypes = [home,about,eqity,demate, luxurious, insurence, contact , fund , post,news]

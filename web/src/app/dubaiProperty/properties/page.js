@@ -6,7 +6,7 @@ import profile from '../../../../public/images/profile.svg'
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Carousel from 'react-bootstrap/Carousel';
-
+import InnerNav from '@/app/components/Nav/InnerNav'
 import Modal from 'react-bootstrap/Modal';
 import { PortableText } from "@portabletext/react";
 import '../../aboutUs/about.css';
@@ -90,10 +90,26 @@ function page(props) {
       fetchData();
     }
   }, [slug]);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
   return (
     <div ref={containerRef} style={{ position: 'relative' }}>
-      <ClosiongNav />
+      {windowWidth > 500 ? (<InnerNav/>) : (<ClosiongNav/>)}
       <section class="gallery" data-scroll-section >
         <div className='property-post-container'>
           <div className='propertyImageTop' style={{
