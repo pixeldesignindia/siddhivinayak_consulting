@@ -74,7 +74,6 @@ function page() {
 
     return (
         <div ref={containerRef}>
-            {windowWidth > 500 ? (<InnerNav/>) : (<ClosiongNav/>)}
             <section class="gallery" data-scroll-section >
 
                 <Footer/>
