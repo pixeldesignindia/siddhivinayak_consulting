@@ -17,7 +17,7 @@
     transform: scale(1.1); /* Increase the scale on hover for zoom effect */
   }
 
-  .property-data-inner{height: 13rem;}
+  .property-data-inner{height: 10rem;}
   .newsData{background: #fff; display: flex; flex-direction: column; }
   .newsData p{margin: .6rem 0 0 0;font-weight: 500;}
   .ash{color: #949494;font-weight: 500;}
@@ -43,14 +43,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff; /* Adjust text color */
+    color: #fff; 
     text-align: center;
-    opacity: .5; /* Initially hide the text, show on hover */
+    opacity: .5; 
     transition: opacity 0.3s ease-in-out;
   }
   
   .property-card:hover h3 {
-    opacity: 1; /* Show the text on hover */
+    opacity: 1; 
   }
   .propertyImageTop{height: 500px; width: 100%;background-repeat: no-repeat;background-position: center; display: flex; align-items: center; justify-content: center;}
   .pagination{display: flex; justify-content: center;align-items: center;width: 100%;gap: 2rem;}

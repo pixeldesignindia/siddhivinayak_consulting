@@ -11,8 +11,8 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'seoDescription',
-      title: 'SeoDescription',
+      name: 'description',
+      title: 'Description',
       type: 'string',
     }),
     defineField({
