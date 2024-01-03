@@ -30,7 +30,7 @@
     .call-top p{text-align: center;font-size: 18px;}
 
     .input-fcontainer{display: flex; padding: 1rem; margin: 1rem 0;border-bottom: 1px solid #929292;align-items: center;gap: .5rem; width: 45%;}
-    .input-fcontainer>input{color: #FFF !important;}
+    .input-fcontainer>input{color: #000 !important;}
     .input-fcontainer:hover{border-bottom: 1px solid #db2121;}
     .input-section{justify-content: space-between;}
     
