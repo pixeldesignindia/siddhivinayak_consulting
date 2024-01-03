@@ -72,6 +72,7 @@ function page() {
               *[_type == "post"] {
                 title,
                 slug,
+                description,
                 body,
                 mainImage {
                   asset -> {
@@ -94,6 +95,7 @@ function page() {
               *[_type == "newses"] {
                 title,
                 slug,
+
                 news,
                 mainImage {
                   asset -> {
@@ -165,10 +167,14 @@ function page() {
                                         <h3>{item.title}</h3>
                                     </div>
                                     <div className="property-data">
-                                        <h4>{item.title}</h4>
-                                        <p>Do you want to make a tax-free investment? Then why not buy a property in Dubai? </p>
-                                        <div className='bot-red-property'> <p>View Details </p> <Image src={arrow} alt='arrow' /> </div>
-                                    </div>
+    <h4>{item.title}</h4>
+    <p>{item.description.length > 70 ? `${item.description.substring(0, 100)}...` : item.description}</p>
+    <div className='bot-red-property'>
+        <p>View Details</p>
+        <Image src={arrow} alt='arrow' />
+    </div>
+</div>
+
                                 </div>
                             ))}
                         </div>
@@ -196,7 +202,8 @@ function page() {
                                     </div>
                                     <div className="property-data">
                                         <div className='property-data-inner newsData'>
-                                            <div className='news-name'><h5>{item.title}</h5></div>
+                                        
+                                            <div className='news-name'><h5>{item.title.length >20 ? `${item.title.substring(0, 45)}...` : item.title}</h5></div>
                                         
                                         <p className='ash'>Publish by: {item.publishBy}</p>
                                         <p>Date: {item.date}</p>
