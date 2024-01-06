@@ -5,13 +5,12 @@ import office from '../../../../public/images/Industry.svg'
 import bmail from '../../../../public/images/gmail.svg'
 import mobile from '../../../../public/images/phone.svg'
 import profile from '../../../../public/images/profile.svg'
-import Image from 'next/image';
 import { useForm, ValidationError } from '@formspree/react';
 import { usePathname, useRouter } from 'next/navigation'
 import ye from '../../../../public/images/ye.svg'
 import yp from '../../../../public/images/yp.svg'
-
-
+import  Image  from 'next/image'
+import logo from '../../../../public/images/wlogo.svg'
 export default function Footer() {
     const [state, handleSubmit] = useForm("mvoeppnz");
     const [messageType, setMessageType] = useState('general');
@@ -73,6 +72,25 @@ export default function Footer() {
                             <ValidationError prefix="Message" field="message" errors={state.errors} className='txt-contact' />
                             <input type="submit" value='SUBMIT' className='submit-btn pro-submit-btn' style={{ marginTop: '3rem' }} />
                         </form>
+                    </div>
+                </div>
+                <div className='footer-Links'>
+                    <div >
+                        <div className='footer-container'>
+                            <div className="row footer-row" >
+                                <div className='col-4'>
+                                    <Image src={logo} width={300} height={300} alt='logo' className='f-logo'/>
+                                </div>
+                                <div className='col-4'>
+                                    <p>Terms & Conditions.</p>
+                                    <p>Privacy Policy</p>
+                                </div>
+                                <div className="col-4 develop-by" >
+                                    <p>Disclaimers</p>
+                                    <p>Cookies Policy</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {/* <div className='footer'>
