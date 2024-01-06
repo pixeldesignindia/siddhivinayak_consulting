@@ -168,7 +168,7 @@ function page() {
                                     </div>
                                     <div className="property-data">
     <h4>{item.title}</h4>
-    <p>{item.description.length > 70 ? `${item.description.substring(0, 100)}...` : item.description}</p>
+    <p className='p-data'>{item.description.length > 70 ? `${item.description.substring(0, 100)}...` : item.description}</p>
     <div className='bot-red-property'>
         <p>View Details</p>
         <Image src={arrow} alt='arrow' />
