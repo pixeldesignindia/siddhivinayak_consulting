@@ -16,14 +16,19 @@
   #messageType option{
     padding: 1rem;
   }
-  .question{flex-direction: column;gap: 1.25rem;padding: 2.2rem;background: #F6FBFC;}
-  .c-at{display: flex; gap: 3rem;align-items: center;justify-content: center;}
+  .question{flex-direction: column;gap: 1.25rem;padding: 2.2rem;background: #03255f;}
+  .question .heading{color: #fff;}
+  .c-at{display: flex; gap: 5rem;align-items: center;justify-content: center;}
   .c-at > div{display: flex; gap: 1rem; align-items: center;justify-content: center;}
-  .c-at > div >p{ color: #E38A04; margin: 0;}
-  .bp{color: #4F6492;}
+  .c-at > div >p{ color: #E38A04; margin: 0;font-size: 21px;}
+  .bp{color: #6c9aff;}
+  .footer-c{display: flex; justify-content: space-between; align-items: center;background: #031D28;padding: 0 3rem;height: 8vh;}
+  .c-left>p , .c-right>p{margin: 0;color: #939393;}
+  .c-left>p{color: #939393;}
+  .c-right>p>a{text-decoration: none;color: #69BA48;font-weight: 500;}
 @media (min-width: 768px)  {
   .m-b-4{
-      padding-bottom: 3.5rem;
+      padding-bottom: 8vh;
     }
 }
 @media (max-width: 500px) {

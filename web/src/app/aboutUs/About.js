@@ -69,7 +69,7 @@ function page() {
       }
     }, []);
     return (
-        <div ref={containerRef} className='page-content over-hidden'>
+        <div ref={containerRef} className='page-content'>
             {windowWidth > 500 ? (<InnerNav/>) : (<ClosiongNav/>)}
             <section className="gallery" data-scroll-section >
             <div className="col-12 about-img-c ">

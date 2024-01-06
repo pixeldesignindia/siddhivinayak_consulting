@@ -16,7 +16,7 @@
   .property-card:hover {
     transform: scale(1.1); /* Increase the scale on hover for zoom effect */
   }
-
+.p-data{min-height: 8.5rem;}
   .property-data-inner{height: 10rem;}
   .newsData{background: #fff; display: flex; flex-direction: column; }
   .newsData p{margin: .6rem 0 0 0;font-weight: 500;}

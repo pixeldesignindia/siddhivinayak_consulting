@@ -33,7 +33,7 @@ export default function Footer() {
             <div onClick={handleEmail} style={{cursor:'pointer'}}><Image src={ye} alt='img' height={22} width={22}/> <p>d@dconsult.in</p> </div></div>
             <p className='bp'>Time : 10:00 AM to 6:00 PM</p>
         </div>
-            <div className={`call-back ${(pathname === '/privateEqity/' || pathname === '/contact/' || pathname === '/demateAccount/' || pathname === '/dubaiProperty/' || pathname === '/billDiscounting/') ? 'm-b-4' : ''}`} >
+            <div className={`call-back ${(pathname === '/privateEqity/' || pathname === '/contact/' || pathname === '/demateAccount/' || pathname === '/dubaiProperty/' || pathname === '/billDiscounting/' || pathname === '/aboutUs/') ? 'm-b-4' : ''}`} >
                 <div className='call-back-in'>
                     <div className="call-top">
                         <h3 className='heading'>REQUEST CALL BACK</h3>
@@ -75,7 +75,7 @@ export default function Footer() {
                         </form>
                     </div>
                 </div>
-                <div className='footer'>
+                {/* <div className='footer'>
                     <div >
                         <div className='footer-container'>
                             <div className="row footer-row" >
@@ -86,6 +86,20 @@ export default function Footer() {
                                     <p>Website Design & Developed By <a target='_blank' href="https://pixeldesignindia.com/">Pixel Design India</a> </p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div> */}
+                <div className='footer-main'>
+                    <div >
+                        <div className='footer-c'>
+
+                                <div className='c-left'>
+                                    <p>@ Coyright 2023. All rights reserved.</p>
+                                </div>
+                                <div className="c-right develop-by" >
+                                    <p>Website Design & Developed By <a target='_blank' href="https://pixeldesignindia.com/">Pixel Design India</a> </p>
+                                </div>
+
                         </div>
                     </div>
                 </div>

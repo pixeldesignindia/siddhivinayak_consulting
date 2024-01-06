@@ -75,10 +75,8 @@ function page() {
     return (
         <div ref={containerRef}>
             <section class="gallery" data-scroll-section >
-
                 <Footer/>
             </section>
-            
         </div>
     );
 }
