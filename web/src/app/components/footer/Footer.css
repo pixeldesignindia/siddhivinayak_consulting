@@ -23,7 +23,7 @@
   .question .heading{color: #fff;}
   .c-at{display: flex; gap: 5rem;align-items: center;justify-content: center;}
   .c-at > div{display: flex; gap: 1rem; align-items: center;justify-content: center;}
-  .c-at > div >p{ color: #E38A04; margin: 0;font-size: 21px;}
+  .c-at > div >p{ color: #E7B905; margin: 0;font-size: 21px;}
   .bp{color: #6c9aff;}
   .footer-c{display: flex; justify-content: space-between; align-items: center;background: #031D28;padding: 0 3.5rem;height: 8vh;}
   .c-left>p , .c-right>p{margin: 0;color: #939393;}

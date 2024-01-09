@@ -5,7 +5,7 @@
 .navbar-nav a{ text-decoration: none; font-size: .8rem; font-weight: 400;letter-spacing: 0.03rem;}
 .navbar-nav .link{margin-right: .5rem;}
 .activeNav{color:#ffffff !important;border-bottom: 3px solid #ffffff;font-weight: bold;}
-.iactiveNav{color:#E84D3D !important;border-bottom: 2px solid #E84D3D !important;font-weight: bold;}
+.iactiveNav{color:#E7B905 !important;border-bottom: 2px solid #E7B905 !important;font-weight: bold;}
 .contact-btn{background: #008BC2;color-scheme: #fff !important;padding: .5rem 1rem; width: max-content;margin: 0 1rem;}
 .nav-logo{height: auto !important;width: 12rem !important;padding: 10px 0;}
 /* inner */
@@ -28,7 +28,7 @@
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #E84D3D; /* Set your desired border color */
+    background-color: #E7B905; /* Set your desired border color */
     transition: width 0.3s ease-in-out;
   }
   
