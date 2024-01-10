@@ -11,10 +11,12 @@ import ye from '../../../../public/images/ye.svg'
 import yp from '../../../../public/images/yp.svg'
 import  Image  from 'next/image'
 import logo from '../../../../public/images/wlogo.svg'
+
 export default function Footer() {
     const [state, handleSubmit] = useForm("mvoeppnz");
     const [messageType, setMessageType] = useState('general');
     const pathname = usePathname()
+    const router=useRouter()
     const handleMessageTypeChange = (event) => {
         setMessageType(event.target.value);
     };
@@ -82,12 +84,12 @@ export default function Footer() {
                                     <Image src={logo} width={300} height={300} alt='logo' className='f-logo'/>
                                 </div>
                                 <div className='col-4'>
-                                    <p>Terms & Conditions.</p>
-                                    <p>Privacy Policy</p>
+                                    <p onClick={()=>{router.push('/terms&condition')}} >Terms & Conditions.</p>
+                                    <p onClick={()=>{router.push('/privacyPolicy')}} >Privacy Policy</p>
                                 </div>
                                 <div className="col-4 develop-by" >
-                                    <p>Disclaimers</p>
-                                    <p>Cookies Policy</p>
+                                    <p onClick={()=>{router.push('/disclaimers')}} >Disclaimers</p>
+                                    <p onClick={()=>{router.push('/cookiesPolicy')}} >Cookies Policy</p>
                                 </div>
                             </div>
                         </div>
