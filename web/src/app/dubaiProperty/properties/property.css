@@ -12,8 +12,8 @@
 .accordion-button.collapsed{width: 100%;color: #f7f7f7;padding: 1.2rem 0;font-weight: 500;}
 .accordion-button:not(.collapsed){color: #000 !important;}
 .accordion-button:focus{border-color: #fff !important;}
-.accordion-button:not(.collapsed){background-color: none !important;box-shadow: none !important;border-bottom:1px solid #E29B9A !important;padding: 1.2rem 0;font-weight: 500;}
-.accordion-body{border-bottom: 1.5px solid #E52D2D;padding: 1.2rem 0;}
+.accordion-button:not(.collapsed){background-color: none !important;box-shadow: none !important;border-bottom:1px solid #f6e18a !important;padding: 1.2rem 0;font-weight: 500;}
+.accordion-body{border-bottom: 1.5px solid #E7B905;padding: 1.2rem 0;}
 
 .facility {
     text-align: center;
