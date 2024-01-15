@@ -30,7 +30,7 @@ export default function Footer() {
         <>
         <div className="question center">
             <h3 className="heading res-h">Have more questions? Reach out to us at</h3>
-            <div className="c-at"><div onClick={handleCall} style={{cursor:'pointer'}}><Image src={yp} alt='img'height={22} width={22}/> <p>+91 - 8655811111</p> </div>
+            <div className="c-at"><div onClick={handleCall} style={{cursor:'pointer'}}><Image src={yp} alt='img'height={22} width={22} /> <p>+91 - 8655811111</p> </div>
             <div onClick={handleEmail} style={{cursor:'pointer'}}><Image src={ye} alt='img' height={22} width={22}/> <p>d@dconsult.in</p> </div></div>
             <p className='bp'>Time : 10:00 AM to 6:00 PM</p>
         </div>
@@ -114,7 +114,7 @@ export default function Footer() {
                         <div className='footer-c'>
 
                                 <div className='c-left'>
-                                    <p>@ Coyright 2023. All rights reserved.</p>
+                                    <p>@ Coyright 2024. All rights reserved.</p>
                                 </div>
                                 <div className="c-right develop-by" >
                                     <p>Website Design & Developed By <a target='_blank' href="https://pixeldesignindia.com/">Pixel Design India</a> </p>
