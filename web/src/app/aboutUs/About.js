@@ -38,6 +38,7 @@ function page() {
         const aboutData = async () => {
             try {
                 const about = await client.fetch(`*[_type == "about"] {
+                    seoTitle,
                     aboutHeading,
                     "aboutBanner": aboutBanner.asset->{
                         url

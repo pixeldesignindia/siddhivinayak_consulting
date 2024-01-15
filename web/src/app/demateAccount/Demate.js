@@ -39,7 +39,6 @@ function page() {
                     },
                     description
                 }`);
-                console.log(fetchData[0]);
                 setData(fetchData[0]);
             } catch (error) {
                 console.error('Error fetching data from Sanity:', error);
