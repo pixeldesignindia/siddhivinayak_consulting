@@ -16,7 +16,8 @@ export async function generateMetadata() {
         equityDescription
     }`);
     return {
-        title:metaData[0].seoTitle,
+        title:'Private Equity',
+        // title:metaData[0].seoTitle,
         description: metaData[0].seoDescription,
         alternates: {
             canonical: url+'privateEqity',
@@ -26,7 +27,7 @@ export async function generateMetadata() {
             },
         },
         openGraph: {
-            title: metaData[0].seoTitle,
+            title: 'Private Equity',
             description: metaData[0].seoDescription,
             url: url+'privateEqity',
             siteName: url,
@@ -61,7 +62,7 @@ export async function generateMetadata() {
         },
         twitter: {
             card: url,
-            title: metaData[0].seoTitle,
+            title:'Private Equity',
             description: metaData[0].seoDescription,
             siteId: '1467726470533754880',
             creator: '@nextjs',

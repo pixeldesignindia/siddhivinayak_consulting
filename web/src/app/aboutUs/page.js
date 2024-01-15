@@ -13,7 +13,7 @@ export async function generateMetadata() {
         aboutDescription
     }`);
     return {
-        title:aboutData[0].seoTitle,
+        title:'About D-consult',
         description:aboutData[0].seoDescription,
         alternates: {
             canonical: url+'aboutUs',

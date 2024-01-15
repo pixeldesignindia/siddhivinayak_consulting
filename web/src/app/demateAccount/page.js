@@ -13,7 +13,7 @@ export async function generateMetadata() {
         seoDescription,
     }`);
     return {
-        title:metaData[0].seoTitle,
+        title:'Demate Account',
         description: metaData[0].seoDescription,
         alternates: {
             canonical: url+'demateAccount',

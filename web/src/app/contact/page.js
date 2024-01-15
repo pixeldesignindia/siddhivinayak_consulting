@@ -14,7 +14,7 @@ export async function generateMetadata() {
         
     }`);
     return {
-        title:metaData[0].seoTitle,
+        title:'Contact D-Consult',
         description: metaData[0].seoDescription,
         alternates: {
             canonical: url+'contact',
