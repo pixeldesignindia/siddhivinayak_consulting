@@ -34,7 +34,9 @@ function page() {
         }
     });
 
-
+    const handleEmail = () => {
+        window.location.href = 'mailto:sales@dconsult.in'; 
+      };
     useEffect(() => {
         const pin = gsap.to(sectionRef.current, {
             y: 0,
@@ -46,7 +48,6 @@ function page() {
                 scrub: 1,
             },
         });
-
         return () => {
             pin.kill();
         };
@@ -105,7 +106,7 @@ function page() {
                     <div className='p-container top-heading'>
                         <p>If you are looking to expand your business and financial consultation then you knocked on the right door! Get in touch with us and we will suggest you the best solution for your company.</p>
                         <p className='contact-data' style={{marginTop:'2rem'}}><Image src={place} />{data && data.address}</p>
-                        <p className='contact-data' style={{marginBottom:'1.5rem'}}><Image src={mail}  alt='image'/>{data && data.email}</p>
+                        <p className='contact-data' style={{marginBottom:'1.5rem',cursor:'pointer'}} onClick={handleEmail}><Image src={mail}  alt='image'/>{data && data.email}</p>
                     </div>
                 </div>
                 <div className="col-7 about-left-content res-none">
