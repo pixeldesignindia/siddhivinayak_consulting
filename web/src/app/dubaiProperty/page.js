@@ -13,7 +13,7 @@ export async function generateMetadata() {
         description
     }`);
     return {
-        title:metaData[0].seoTitle,
+        title:'Dubai Properties',
         description: metaData[0].seoDescription,
         alternates: {
             canonical: url+'luxuryProperty',
