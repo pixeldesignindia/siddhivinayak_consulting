@@ -77,7 +77,9 @@ function page() {
         newdata();
     }, []);
     const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
-
+    const handleEmail = () => {
+        window.location.href = 'mailto:sales@dconsult.in'; 
+      };
     useEffect(() => {
       if (typeof window !== 'undefined') {
         setWindowWidth(window.innerWidth);
@@ -128,7 +130,7 @@ function page() {
                                         <Image src={dot} alt='dot' width={5} height={5}/>
                                         <p>Unique id SERVICE0001</p>
                                     </div>
-                                    <div className='fund-mail'>
+                                    <div className='fund-mail' onClick={handleEmail}>
                                         <p>For details email us </p>
                                         <Image src={mail} alt='dot' width={20} height={20}/>
                                     </div>
@@ -156,7 +158,7 @@ function page() {
                                         <Image src={dot} alt='dot' width={5} height={5}/>
                                         <p>Unique id EDTECH0003</p>
                                     </div>
-                                    <div className='fund-mail'>
+                                    <div className='fund-mail' onClick={handleEmail}>
                                         <p>For details email us</p>
                                         <Image src={mail} alt='dot' width={20} height={20}/>
                                     </div>
@@ -184,7 +186,7 @@ function page() {
                                         <Image src={dot} alt='dot' width={5} height={5}/>
                                         <p>Code: TRAVEL001</p>
                                     </div>
-                                    <div className='fund-mail'>
+                                    <div className='fund-mail' onClick={handleEmail}>
                                         <p>For details email us</p>
                                         <Image src={mail} alt='dot' width={20} height={20}/>
                                     </div>

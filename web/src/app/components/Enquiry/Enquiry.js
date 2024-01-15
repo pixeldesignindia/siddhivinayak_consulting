@@ -26,7 +26,7 @@ const Enquiry = () => {
                   <div className=" center">
 
                     <div className="property-contact-form">
-                      <form className='popup' method='POST' action='https://formspree.io/f/mvoeppnz'>
+                      <form className='popup' method='POST' action='https://formspree.io/f/xayrnbvv'>
                         <h3 style={{ textAlign: 'center' }}>EXPRESS YOUR INTEREST</h3>
                         <h6 style={{ marginTop: '1.2rem', textAlign: 'center' }}>Please fill the form to know more</h6>
                         <div className="row">
