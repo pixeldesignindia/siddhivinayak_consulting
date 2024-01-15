@@ -24,14 +24,14 @@ export default function Footer() {
         window.location.href = 'tel:+918655811111'; 
       };
       const handleEmail = () => {
-        window.location.href = 'mailto:d@dconsult.in'; 
+        window.location.href = 'mailto:sales@dconsult.in'; 
       };
     return (
         <>
         <div className="question center">
             <h3 className="heading res-h">Have more questions? Reach out to us at</h3>
             <div className="c-at"><div onClick={handleCall} style={{cursor:'pointer'}}><Image src={yp} alt='img'height={22} width={22} /> <p>+91 - 8655811111</p> </div>
-            <div onClick={handleEmail} style={{cursor:'pointer'}}><Image src={ye} alt='img' height={22} width={22}/> <p>d@dconsult.in</p> </div></div>
+            <div c style={{cursor:'pointer'}}><Image src={ye} alt='img' height={22} width={22}/> <p>sales@dconsult.in</p> </div></div>
             <p className='bp'>Time : 10:00 AM to 6:00 PM</p>
         </div>
             <div className={`call-back ${(pathname === '/privateEqity/' || pathname === '/contact/' || pathname === '/demateAccount/' || pathname === '/dubaiProperty/' || pathname === '/billDiscounting/' || pathname === '/aboutUs/') ? 'm-b-4' : ''}`} >
@@ -42,7 +42,7 @@ export default function Footer() {
                         <p>Would you like to speak to one of our financial advisers over the phone? Just submit your details and we'll be in touch shortly. You can also email us if you would prefer.</p>
                     </div>
                     <div className="form-bot">
-                        <form className='row input-section' method='POST' action='https://formspree.io/f/mvoeppnz'>
+                        <form className='row input-section' method='POST' action='https://formspree.io/f/xayrnbvv'>
                             <div class="input-fcontainer col-6">
                                 <Image src={profile} alt='image' className='wIcon' />
                                 <input type="text" placeholder='Name' name='userName' autoComplete='off' required />
