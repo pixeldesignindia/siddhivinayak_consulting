@@ -109,7 +109,7 @@ function page() {
               }
             `)
             .then((data) => {
-                
+
                 console.log(data);
                 setNewsCard(data);
             })
@@ -125,24 +125,24 @@ function page() {
     const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 
     useEffect(() => {
-      if (typeof window !== 'undefined') {
-        setWindowWidth(window.innerWidth);
-  
-        const handleResize = () => {
-          setWindowWidth(window.innerWidth);
-        };
-  
-        window.addEventListener("resize", handleResize);
-  
-        return () => {
-          window.removeEventListener("resize", handleResize);
-        };
-      }
+        if (typeof window !== 'undefined') {
+            setWindowWidth(window.innerWidth);
+
+            const handleResize = () => {
+                setWindowWidth(window.innerWidth);
+            };
+
+            window.addEventListener("resize", handleResize);
+
+            return () => {
+                window.removeEventListener("resize", handleResize);
+            };
+        }
     }, []);
 
     return (
         <div ref={containerRef} className='page-content'>
-            {windowWidth > 500 ? (<InnerNav/>) : (<ClosiongNav/>)}
+            {windowWidth > 500 ? (<InnerNav />) : (<ClosiongNav />)}
             <section class="gallery" data-scroll-section >
                 <div className="col-12 about-img-c ">
                     <div className="about-img center" style={{
@@ -167,19 +167,18 @@ function page() {
                                         <h3>{item.title}</h3>
                                     </div>
                                     <div className="property-data">
-    <h4>{item.title}</h4>
-    <p className='p-data'>{item.description.length > 70 ? `${item.description.substring(0, 100)}...` : item.description}</p>
-    <div className='bot-red-property'>
-        <p>View Details</p>
-        <Image src={arrow} alt='arrow' />
-    </div>
-</div>
-
+                                        <h4>{item.title}</h4>
+                                        {item.description && 
+                                        <p className='p-data'>{item.description.length > 70 ? `${item.description.substring(0, 100)}...` : item.description}</p>}
+                                        <div className='bot-red-property'>
+                                            <p>View Details</p>
+                                            <Image src={arrow} alt='arrow' />
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
                         {/* <div className="pagination">
-
                             <button className='center' onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))} disabled={currentPage === 1}>
                                 Prev
                             </button>
@@ -202,13 +201,13 @@ function page() {
                                     </div>
                                     <div className="property-data">
                                         <div className='property-data-inner newsData'>
-                                        
-                                            <div className='news-name'><h5>{item.title.length >20 ? `${item.title.substring(0, 45)}...` : item.title}</h5></div>
-                                        
-                                        <p className='ash'>Publish by: {item.publishBy}</p>
-                                        <p>Date: {item.date}</p>
+
+                                            <div className='news-name'><h5>{item.title.length > 20 ? `${item.title.substring(0, 45)}...` : item.title}</h5></div>
+
+                                            <p className='ash'>Publish by: {item.publishBy}</p>
+                                            <p>Date: {item.date}</p>
                                         </div>
-                                        
+
                                         <div className='bot-red-property'> <p>View Details </p> <Image src={arrow} alt='arrow' /> </div>
                                     </div>
                                 </div>
@@ -216,7 +215,7 @@ function page() {
                         </div>
                     </div>
 
-                    
+
                 </div>
                 <Footer />
             </section>

@@ -1,7 +1,7 @@
 export default {
     name: 'contact',
     type: 'document',
-    title: 'ContactUs',
+    title: 'Contact Us',
     fields: [
         {
             name: 'seoDescription',

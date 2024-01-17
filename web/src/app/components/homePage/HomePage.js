@@ -30,8 +30,9 @@ export default function Home() {
   const section2 = useRef();
   const section3 = useRef();
   const section4 = useRef();
+  const section5 = useRef();
 
-  const sectionRefs = [section1, section2, section3, section4];
+  const sectionRefs = [section1, section2, section3, section4, section5];
 
   function scrollTo(section) {
     if (section && section.current) {
@@ -56,6 +57,7 @@ export default function Home() {
           <button onClick={() => scrollTo(section2)}></button>
           <button onClick={() => scrollTo(section3)}></button>
           <button onClick={() => scrollTo(section4)}></button>
+          <button onClick={() => scrollTo(section5)}></button>
         </div>
         <div ref={section1}>
           <Mysection
@@ -104,10 +106,22 @@ export default function Home() {
             image="/images/Banner3.svg"
             headline={data && data[2] && data[2].heading}
             goToSectionRef={sectionRefs}
-            scrollTo={() => scrollTo(section4)}
-            showArrow={false}
+            scrollTo={() => scrollTo(section5)}
+            showArrow={true}
             sectionIndex={2}
             link='/billDiscounting/'
+            totalSections={sectionRefs.length}
+            goToNextSection={() => goToNextSection(section5)}
+          />
+        </div>
+        <div ref={section5}>
+        <Mysection
+            image="/images/Banner5.svg"
+            goToSectionRef={sectionRefs}
+            scrollTo={() => scrollTo(section4)}
+            showArrow={false}
+            linkSection={true}
+            sectionIndex={2}
             totalSections={sectionRefs.length}
             goToNextSection={() => goToNextSection(section3)}
           />
