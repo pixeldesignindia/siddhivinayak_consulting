@@ -19,7 +19,8 @@ export default function Mysection({
   sectionIndex,
   totalSections,
   link,
-  video
+  video,
+  linkSection
 }) {
   const router = useRouter()
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -120,14 +121,15 @@ export default function Mysection({
       <div className='section' ref={sectionRef}>
         
         <div className='copy' ref={headlineRef}>
-          <h1 className="heading">{headline}</h1> 
-          <button onClick={() => router.push(link)} > <div> EXPLORE NOW  </div> <div><Image src={arr} alt='image'/></div> </button>
+          {headline && <h1 className="heading">{headline}</h1> }
+          {link && <button onClick={() => router.push(link)} > <div> EXPLORE NOW  </div> <div><Image src={arr} alt='image'/></div> </button>}
         </div>
-        <div className="row home-link-container">
-          <div className="col-4"><div className="home-link" ><p>For Portraits</p><h5>Siddhiart.in</h5></div></div>
-          <div className="col-4"><div className="home-link" onClick={handleLink2Click}><p>M & A in healthcare sector</p><h5>Hospitalsforsale.biz</h5></div></div>
-          <div className="col-4"><div className="home-link" onClick={handleLink3Click}><p>M & A in hospitality sector</p><h5>Hotels4sale.co.in</h5></div></div>
-        </div>
+        {linkSection && <div className=" home-link-container">
+          {/* <div className="link-box"><div className="home-link" ><p>For Portraits</p><h5>Siddhiart.in</h5></div></div> */}
+          <div className="link-box"><div className="home-link" onClick={handleLink2Click}><p>M & A in healthcare sector</p><h5>Hospitalsforsale.biz</h5></div></div>
+          <div className="link-box"><div className="home-link" onClick={handleLink3Click}><p>M & A in hospitality sector</p><h5>Hotels4sale.co.in</h5></div></div>
+        </div>}
+        
         {image &&<Image src={image} layout={`fill`} ref={imageRef} className="image-bg" alt='image'/>}
         {video && 
         <video autoPlay muted loop id="background-video" ref={imageRef} className="image-bg" >

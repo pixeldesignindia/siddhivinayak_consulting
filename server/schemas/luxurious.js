@@ -1,7 +1,7 @@
 export default {
     name: 'luxurious',
     type: 'document',
-    title: 'Luxurious',
+    title: 'Dubai Properties',
     fields: [
         {
             name: 'seoDescription',

@@ -229,7 +229,7 @@ function page(props) {
           {propertyData && propertyData.imgages && propertyData.imgages.length !==0 &&
           <div className="property-content">
             <h2 className="property-heading">
-              DISCOVER "SIDDHIVINAYAK" LIVING
+              DISCOVER "D-Consult" LIVING
             </h2>
             <div className='property-Content-Box center'>
 

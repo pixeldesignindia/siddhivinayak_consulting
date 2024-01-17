@@ -108,16 +108,16 @@ padding: 1rem 6.25rem;justify-content: center;align-items: center;gap: 0.625rem;
 	width: 100%;
 	-ms-overflow-style: none;
 	scrollbar-width: none;}
-  .dot-btns{position: fixed !important;right: 45px; z-index: 50;top: 35%;}
-.dot-btns> button{    margin: 1.5rem 0;
+  .dot-btns{position: fixed !important;right: 45px; z-index: 50;top: 28%;}
+.dot-btns> button{    margin: 3rem 0;
   background: #b8b8b8;
-  height: 0.7rem;
-  width: 0.7rem;
+  height: 0.5rem;
+  width: 0.5rem;
   display: flex;
   flex-direction: column;
   padding: 0;
-  border-radius: 50% !important;opacity: .9;transition: all 0.3s ease;box-sizing: border-box;}
-  .dot-btns> button:hover{  height: .8rem;
+  border-radius: 0 !important;opacity: .9;transition: all 0.3s ease;box-sizing: border-box;}
+  .dot-btns> button:hover{  height: .65rem;
 opacity: 1;  background: #ffffff;}
 .company-person{display: flex;align-items: center;justify-content: space-between;}
 .company-person>h6{color: #272727;font-weight: 550; font-size: 20px;}
