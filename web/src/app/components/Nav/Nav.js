@@ -27,7 +27,7 @@ function MainNav() {
             <Link className={`link d-flex align-items-center ${pathname === '/' ? 'activeNav' : ''}`}href="/">HOME</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/aboutUs' ? 'activeNav' : ''}`}href="/aboutUs">ABOUT</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/privateEqity' ? 'activeNav' : ''}`}href="/privateEqity">PRIVATE EQUITY</Link>
-            <Link className={`link d-flex align-items-center ${pathname === '/demateAccount' ? 'activeNav' : ''}`}href="/demateAccount">DEMATE ACCOUNT</Link>
+            <Link className={`link d-flex align-items-center ${pathname === '/demateAccount' ? 'activeNav' : ''}`}href="/demateAccount">DEMAT ACCOUNT</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/dubaiProperty' ? 'activeNav' : ''}`}href="/dubaiProperty">DUBAI PROPERTY</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/billDiscounting' ? 'activeNav' : ''}`}href="/billDiscounting">BILL DISCOUNTING</Link>
             <Link className={`link d-flex align-items-center ${pathname === '/contact' ? 'activeNav' : ''}`}href="/contact" style={{color:'#fff'}}>CONTACT US</Link>
