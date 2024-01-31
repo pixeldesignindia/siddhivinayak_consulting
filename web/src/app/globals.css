@@ -159,11 +159,56 @@ input[type="number"]::-webkit-outer-spin-button {
 .accordion-item{border: 0 !important;}
 .accordion-button.collapsed{background: #fff !important;color: #000 !important;border-bottom: 1px solid #e3cc71}
 .accordion-button:not(.collapsed){background: none !important;color: #000 !important;}
+
+
+/* NOT FOUND */
+.not-found-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  .not-found-content {
+	text-align: center;
+  }
+  
+  .not-found-heading {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+  }
+  
+  .not-found-title {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+  }
+  
+  .not-found-message {
+	font-size: 1.25rem;
+	color: #666;
+	margin-bottom: 1.5rem;
+  }
+  
+  .not-found-link {
+	font-size: 1.25rem;
+	color: #007bff;
+	text-decoration: none;
+	transition: color 0.3s ease;
+  }
+  
+  .not-found-link:hover {
+	color: #0056b3;
+  }
+  .not-found-content>a{text-decoration: none; color: #0056b3;font-size: 1.3rem; font-weight: 500;}
+
 @media (min-width:1200px){
 .container{max-width: 1321px !important;}
 .cI{width: 8rem !important;}
 }
 @media (max-width:500px){
+	.not-found-title {
+		font-size: 1.5rem !important;
+		margin-bottom: 0.5rem;}
 	html,body {overflow-y:scroll !important;}
 	input{font-size: 18px!important;}
 	p {line-height: 180% !important}

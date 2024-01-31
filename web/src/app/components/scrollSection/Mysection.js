@@ -134,7 +134,6 @@ export default function Mysection({
         {video && 
         <video autoPlay muted loop id="background-video" ref={imageRef} className="image-bg" >
         <source src={video} type="video/mp4" />
-
       </video>}
         {showArrow && (
           <button
