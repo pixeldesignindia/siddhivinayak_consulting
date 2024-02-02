@@ -1,3 +1,9 @@
+'use client'
+// import { redirect } from "next/navigation";
+// export default function NotFoundPage(){
+//   redirect("/");
+// }
+
 import Link from 'next/link';
 
 export default function NotFound() {
